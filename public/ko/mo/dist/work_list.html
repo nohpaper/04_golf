@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>골프조인플랫폼 / Mobile</title>
+	<style type="text/css">
+
+		body{width:100%; height:100%;  font-family:vernada; margin:20px auto;}
+		#secretWrapper{width :98%; margin:0 auto;}
+		#secretWrapper h1{font-size:30px; text-align:center; margin:0 0 119px;}
+		#secretWrapper h2{font-size:20px; margin:30px 0 20px;}
+		#secretWrapper table{width:100%; border-top:1px solid #99948e; border-left:1px solid #99948e; border-collapse:collapse;}
+		#secretWrapper table .title1{background-color:#e6002d; color:#fff; padding:7px 0 5px; text-align:center;}
+		#secretWrapper table .title2{background-color:#f7f7f7; color:#707070; padding:7px 0 5px; text-align:center;}
+		#secretWrapper table .title3{background-color:#dfdfdf; color:#707070; padding:7px 0 5px; text-align:center;}
+		#secretWrapper table th{border-right:1px solid #99948e; border-bottom:1px solid #99948e; padding:5px 0;}
+		#secretWrapper table td{border-right:1px solid #99948e; border-bottom:1px solid #99948e;}
+		#secretWrapper table tbody td{padding:8px 20px; font-size:12px;}
+		#secretWrapper table tbody tr td a {color:#333; text-decoration:underline;}
+
+		#secretWrapper table tbody tr.ok th,
+		#secretWrapper table tbody tr.ok td{background:#9f9f95; color:#fff;}
+		#secretWrapper table tbody tr.ok td.dev{background:#9f9f95; color:#fff;}
+		#secretWrapper table tbody tr.ok td a{color:#fff;}
+
+		#secretWrapper table tbody tr.ok2 td{background:#c62b4a; color:#fff;}
+		#secretWrapper table tbody tr.ok2 td.dev {background:#c62b4a; color:#fff;}
+		#secretWrapper table tbody tr.ok2 td a{color:#fff;}
+
+		#secretWrapper table tbody tr.ok3 td{background:#6e58c6; color:#fff;}
+		#secretWrapper table tbody tr.ok3 td.dev {background:#a07fff; color:#333}
+		#secretWrapper table tbody tr.ok3 td a{color:#fff;}
+		#secretWrapper table tbody tr.del td{background:#999; color:#333;}
+
+		.caution {background-color:lightblue;}
+
+		body *{margin:0; padding:0;}
+		#secretWrapper .depth_info { width:98%; position:absolute; top:83px;}
+		#secretWrapper .depth_info.fix { position:fixed; top:0;}
+
+		.ia_guide {padding:30px 0 0;}
+		.ia_guide strong {font-size:20px;}
+		.ia_guide div {padding:20px 0 20px 30px; color:#fff; margin:20px 0 0;}
+		.ia_guide .ok {background-color:#9f9f95;}
+		.ia_guide .ok2 {background-color:#c62b4a;}
+		.ia_guide .ok3 {background-color:#6e58c6;}
+
+		.last_update {position:absolute; right:1%; top:40px;}
+	</style>
+	<script src="javascripts/jquery-1.8.2.min.js"></script>
+	<script>
+		$(function () {
+			var $table = $("table");
+			var $tbody = $table.find("tbody");
+			$table.each(function () {
+				var _this = $(this);
+				var divisionDepth = _this.find("tbody > tr");
+				var divisionLength = divisionDepth.length;
+
+				divisionDepth.eq(0).find("td").eq(0).attr("rowspan", divisionLength);
+			});
+
+			var $depthInfo = $(".depth_info");
+			$(window).scroll(function () {
+				var st = $(this).scrollTop();
+				if(st > 83){
+					$depthInfo.addClass("fix");
+				} else {
+					$depthInfo.removeClass("fix");
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+<div id="secretWrapper">
+	<table class="depth_info">
+		<colgroup>
+			<col width="10%">
+			<col width="35%">
+			<col width="15%">
+			<col width="25%">
+			<col>
+		</colgroup>
+		<thead>
+		<tr class="title1">
+			<th colspan="2">DEPTH</th>
+			<th colspan="2">코딩현황</th>
+			<th>개발현황</th>
+		</tr>
+		<tr class="title2">
+			<th></th>
+			<th>1depth</th>
+			<th colspan="2">마크업 파일명</th>
+			<th>작업처리</th>
+		</tr>
+		<tr class="title3">
+			<th>구분</th>
+			<th>Label</th>
+			<th>Folder</th>
+			<th>File</th>
+			<th>상태</th>
+		</tr>
+		</thead>
+	</table>
+
+	<h1>골프조인플랫폼 / Mobile</h1>
+	<div class="ia_guide">
+		<strong>테이블에 색에 따른 진행 상태 분류</strong>
+		<div class="ok">퍼블 진행중</div>
+		<div class="ok2">퍼블 완료됬지만 - 디자인/기획에서 수정/변경이 있어서 차후 수정이 필요한 페이지</div>
+		<div class="ok3">퍼블 완료 - 디자인/기획까지 컨펌 완료</div>
+	</div>
+
+	<!-- 메인 -->
+	<h2>Main</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="35%">
+			<col width="15%">
+			<col width="25%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="">
+			<td>Main</td>
+			<td></td>
+			<td></td>
+			<td><a href="index.html" target="_blank">index</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+	<!-- //메인 -->
+
+	<!-- 공통 -->
+	<h2>Common</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="35%">
+			<col width="15%">
+			<col width="25%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="">
+			<td rowspan="2">Common</td>
+			<td>form Guide</td>
+			<td>/common</td>
+			<td><a href="./html/common/form.html" target="_blank">form</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>popup Guide</td>
+			<td>/common</td>
+			<td><a href="./html/common/popup.html" target="_blank">popup</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+	<!-- //공통 -->
+
+	<!-- 회원 -->
+	<h2>Member</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="35%">
+			<col width="15%">
+			<col width="25%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="">
+			<td rowspan="25">member</td>
+			<td>로그인</td>
+			<td>/member</td>
+			<td><a href="./html/member/login.html" target="_blank">login</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>로그인 > 입력</td>
+			<td>/member</td>
+			<td><a href="./html/member/login_ok.html" target="_blank">login_ok</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>로그인 > 오류</td>
+			<td>/member</td>
+			<td><a href="./html/member/login_error.html" target="_blank">login_error</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>아이디 찾기</td>
+			<td>/member</td>
+			<td><a href="./html/member/find_id.html" target="_blank">find_id</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>아이디 찾기 > PASS 인증</td>
+			<td>/member</td>
+			<td><a href="./html/member/find_id_ok.html" target="_blank">find_id_ok</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>비밀번호 찾기</td>
+			<td>/member</td>
+			<td><a href="./html/member/find_pw.html" target="_blank">find_pw</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>비밀번호 찾기 > 입력</td>
+			<td>/member</td>
+			<td><a href="./html/member/find_pw_ok.html" target="_blank">find_pw_ok</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>비밀번호 변경</td>
+			<td>/member</td>
+			<td><a href="./html/member/find_pw_change.html" target="_blank">find_pw_change</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>비밀번호 변경 > PASS 인증</td>
+			<td>/member</td>
+			<td><a href="./html/member/find_pw_change_pass.html" target="_blank">find_pw_change_pass</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>비밀번호 변경 > PASS 인증 > 입력</td>
+			<td>/member</td>
+			<td><a href="./html/member/find_pw_change_pass_ok.html" target="_blank">find_pw_change_pass_ok</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>비밀번호 변경 완료</td>
+			<td>/member</td>
+			<td><a href="./html/member/find_pw_change_done.html" target="_blank">find_pw_change_done</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>회원가입 > 약관동의</td>
+			<td>/member</td>
+			<td><a href="./html/member/terms.html" target="_blank">terms</a></td>
+			<td class="">진행중</td>
+		</tr>
+
+		<tr class="">
+			<td>회원가입 > 약관동의</td>
+			<td>/member</td>
+			<td><a href="./html/member/terms_ok.html" target="_blank">terms_ok</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>회원가입 > 계정생성</td>
+			<td>/member</td>
+			<td><a href="./html/member/registration.html" target="_blank">registration</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>회원가입 > 계정생성</td>
+			<td>/member</td>
+			<td><a href="./html/member/registration_ok.html" target="_blank">registration_ok</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>회원가입 > 본인인증</td>
+			<td>/member</td>
+			<td><a href="./html/member/self-authentication.html" target="_blank">self-authentication</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>회원가입 > 본인인증 > PASS 인증 완료</td>
+			<td>/member</td>
+			<td><a href="./html/member/self-authentication_ok.html" target="_blank">self-authentication_ok</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>회원가입 완료</td>
+			<td>/member</td>
+			<td><a href="./html/member/signup_done.html" target="_blank">signup_done</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td colspan="4">&nbsp;</td>
+		</tr>
+		<tr class="">
+			<td>회원 목록 > 가까운 지역</td>
+			<td>/member</td>
+			<td><a href="./html/member/list_location.html" target="_blank">list_location</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>회원 목록 > 비슷한 타수</td>
+			<td>/member</td>
+			<td><a href="./html/member/list_hit.html" target="_blank">list_hit</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>회원 목록 > 비슷한 나이</td>
+			<td>/member</td>
+			<td><a href="./html/member/list_age.html" target="_blank">list_age</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>회원 상세</td>
+			<td>/member</td>
+			<td><a href="./html/member/view_default.html" target="_blank">view_default</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>회원 상세 > 골프치는천사</td>
+			<td>/member</td>
+			<td><a href="./html/member/view_setted.html" target="_blank">view_setted</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>회원 상세 > 골프치는천사 (조인 모집 현황 포함)</td>
+			<td>/member</td>
+			<td><a href="./html/member/view_join.html" target="_blank">view_join</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+	<!-- //회원 -->
+
+	<!-- 조인 -->
+	<h2>Join</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="35%">
+			<col width="15%">
+			<col width="25%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="">
+			<td rowspan="38">join</td>
+			<td>조인</td>
+			<td>/join</td>
+			<td><a href="./html/join/list.html" target="_blank">list</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 > 필터</td>
+			<td>/join</td>
+			<td><a href="./html/join/filter.html" target="_blank">filter</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>필드 조인 모집</td>
+			<td>/join</td>
+			<td><a href="./html/join/field_recruit.html" target="_blank">field_recruit</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>필드 조인 모집 > 입력</td>
+			<td>/join</td>
+			<td><a href="./html/join/field_recruit_ok.html" target="_blank">field_recruit_ok</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>필드 조인 모집 > 입력 (동반자 추가 포함)</td>
+			<td>/join</td>
+			<td><a href="./html/join/field_recruit_ok2.html" target="_blank">field_recruit_ok2</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>스크린 조인 모집</td>
+			<td>/join</td>
+			<td><a href="./html/join/screen_recruit.html" target="_blank">screen_recruit</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>스크린 조인 모집 > 입력</td>
+			<td>/join</td>
+			<td><a href="./html/join/screen_recruit_ok.html" target="_blank">screen_recruit_ok</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>필드 조인 매칭</td>
+			<td>/join</td>
+			<td><a href="./html/join/field_match.html" target="_blank">field_match</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>필드 조인 매칭 > 입력</td>
+			<td>/join</td>
+			<td><a href="./html/join/field_match_confirm.html" target="_blank">field_match_confirm</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>필드 조인 매칭 > 조인 매칭 요청하기</td>
+			<td>/join</td>
+			<td><a href="./html/join/field_match_ok.html" target="_blank">field_match_ok</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>스크린 조인 매칭</td>
+			<td>/join</td>
+			<td><a href="./html/join/screen_match.html" target="_blank">screen_match</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>스크린 조인 매칭 > 입력</td>
+			<td>/join</td>
+			<td><a href="./html/join/screen_match_ok.html" target="_blank">screen_match_ok</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>스크린 조인 매칭 > 조인 매칭 요청하기</td>
+			<td>/join</td>
+			<td><a href="./html/join/screen_match_confirm.html" target="_blank">screen_match_confirm</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>나의 조인 현황 > 모집 (모집중+모집완료)</td>
+			<td>/join</td>
+			<td><a href="./html/join/my_history.html" target="_blank">my_history</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>나의 조인 현황 > 모집 (전체)</td>
+			<td>/join</td>
+			<td><a href="./html/join/my_history_all.html" target="_blank">my_history_all</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>나의 조인 현황 > 신청 (모집중+모집완료)</td>
+			<td>/join</td>
+			<td><a href="./html/join/my_history_recruit.html" target="_blank">my_history_recruit</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>나의 조인 현황 > 신청 (전체)</td>
+			<td>/join</td>
+			<td><a href="./html/join/my_history_recruit_all.html" target="_blank">my_history_recruit_all</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>나의 조인 현황 > 매칭 (매칭중+매칭완료)</td>
+			<td>/join</td>
+			<td><a href="./html/join/my_history_match.html" target="_blank">my_history_match</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>나의 조인 현황 > 신청 (전체)</td>
+			<td>/join</td>
+			<td><a href="./html/join/my_history_match_all.html" target="_blank">my_history_match_all</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>골프치는천사님의 모집 현황</td>
+			<td>/join</td>
+			<td><a href="./html/join/others_history.html" target="_blank">others_history</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 모집 상세 > 모집중</td>
+			<td>/join</td>
+			<td><a href="./html/join/recruit_detail_ing.html" target="_blank">recruit_detail_ing</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 모집 상세 > 모집 완료</td>
+			<td>/join</td>
+			<td><a href="./html/join/recruit_detail_full.html" target="_blank">recruit_detail_full</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 모집 상세 > 조인 완료</td>
+			<td>/join</td>
+			<td><a href="./html/join/recruit_detail_done.html" target="_blank">recruit_detail_done</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 모집 상세 > 모집 취소</td>
+			<td>/join</td>
+			<td><a href="./html/join/recruit_detail_cancel.html" target="_blank">recruit_detail_cancel</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 모집 상세 > 모집중</td>
+			<td>/join</td>
+			<td><a href="./html/join/recruit_detail_participant_before.html" target="_blank">recruit_detail_participant_before</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 모집 상세 > 모집중</td>
+			<td>/join</td>
+			<td><a href="./html/join/recruit_detail_participant_in.html" target="_blank">recruit_detail_participant_in</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 모집 상세 > 모집 완료</td>
+			<td>/join</td>
+			<td><a href="./html/join/recruit_detail_participant_full.html" target="_blank">recruit_detail_participant_full</a></td>
+			<td class=""></td>
+		</tr>
+
+		<tr class="">
+			<td>조인 매칭 상세 > 매칭 대기중</td>
+			<td>/join</td>
+			<td><a href="./html/join/match_detail_ing.html" target="_blank">match_detail_ing</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 매칭 상세 > 매칭 취소</td>
+			<td>/join</td>
+			<td><a href="./html/join/match_detail_cancel.html" target="_blank">match_detail_cancel</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 매칭 상세 > 매칭 완료</td>
+			<td>/join</td>
+			<td><a href="./html/join/match_detail_full.html" target="_blank">match_detail_full</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 매칭 상세 > 매칭 취소</td>
+			<td>/join</td>
+			<td><a href="./html/join/match_detail_full_cancel.html" target="_blank">match_detail_full_cancel</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 매칭 상세 > 매칭 요청 취소 확인</td>
+			<td>/join</td>
+			<td><a href="./html/join/match_detail_cancel_confirm.html" target="_blank">match_detail_cancel_confirm</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 매칭 상세 > 매칭 완료</td>
+			<td>/join</td>
+			<td><a href="./html/join/match_detail_done.html" target="_blank">match_detail_done</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 매칭 상세 > 매칭 취소</td>
+			<td>/join</td>
+			<td><a href="./html/join/match_detail_done_cancel.html" target="_blank">match_detail_done_cancel</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 매칭 상세 > 조인 완료</td>
+			<td>/join</td>
+			<td><a href="./html/join/match_detail_done_done.html" target="_blank">match_detail_done_done</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 매칭 결제</td>
+			<td>/join</td>
+			<td><a href="./html/join/match_payment.html" target="_blank">match_payment</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 매칭 결제 > 신용카드</td>
+			<td>/join</td>
+			<td><a href="./html/join/match_payment_credit.html" target="_blank">match_payment_credit</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>조인 매칭 결제 > 계좌이체</td>
+			<td>/join</td>
+			<td><a href="./html/join/match_payment_transfer.html" target="_blank">match_payment_transfer</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+	<!-- //조인 -->
+
+	<!-- 내정보 -->
+	<h2>Mypage</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="35%">
+			<col width="15%">
+			<col width="25%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="">
+			<td rowspan="28">mypage</td>
+			<td>내 정보</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/default.html" target="_blank">default</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>내 정보 > 정보입력</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/type1.html" target="_blank">type1</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>내 정보 > 정보입력(pay-request)</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/type2.html" target="_blank">type2</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>내 정보 > 정보입력(after-pay)</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/type3.html" target="_blank">type3</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>내 정보 수정</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/modify.html" target="_blank">modify</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>내 정보 수정 (대표 이미지 포함)</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/modify_photo.html" target="_blank">modify_photo</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>계정 설정</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/account.html" target="_blank">account</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>계정 설정 > 멤버십 정기결제</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/account_membership_regular.html" target="_blank">account_membership_regular</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>계정 설정 > 멤버십 기간제</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/account_membership_fixed.html" target="_blank">account_membership_fixed</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>멤버십 가입하기 > 안내</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/info.html" target="_blank">info</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>멤버십 가입하기 > 신용카드 등록</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/add_credit.html" target="_blank">add_credit</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>멤버십 가입하기 > 유료 멤버십 시작</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/registration.html" target="_blank">registration</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>멤버십 정기결제</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/regular_payment.html" target="_blank">regular_payment</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>멤버십 정기결제 관리</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/regular_payment_list.html" target="_blank">regular_payment_list</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>멤버십 정기결제 관리 > 결제수단 추가</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/regular_payment_add.html" target="_blank">regular_payment_add</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>멤버십 정기결제 관리</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/regular_payment_list2.html" target="_blank">regular_payment_list2</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>멤버십 정기결제 관리 > 결제수단 순서 변경</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/regular_payment_align.html" target="_blank">regular_payment_align</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>멤버십 해지하기</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/membership_cancel.html" target="_blank">membership_cancel</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>멤버십 해지하기 > 입력</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/membership_cancel_ok.html" target="_blank">membership_cancel_ok</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>회원 탈퇴하기</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/withdrawal.html" target="_blank">withdrawal</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>회원 탈퇴하기 > 입력</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/withdrawal_ok.html" target="_blank">withdrawal_ok</a></td>
+			<td class=""></td>
+		</tr>
+
+		<tr class="">
+			<td>기간제 멤버십 구매하기</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/membership_oneoff.html" target="_blank">fixed_term_info</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>기간제 멤버십 구매하기 > 결제</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/fixed_term_payment.html" target="_blank">fixed_term_payment</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>기간제 멤버십 구매하기 > 결제 > 신용카드</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/fixed_term_payment_credit.html" target="_blank">fixed_term_payment_credit</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>기간제 멤버십 구매하기 > 결제 > 계좌이체</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/fixed_term_payment_transfer.html" target="_blank">fixed_term_payment_transfer</a></td>
+			<td class=""></td>
+		</tr>
+
+		<tr class="">
+			<td>결제 내역</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/payment.html" target="_blank">payment</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>결제 내역 > 목록</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/payment_list.html" target="_blank">payment_list</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>결제 내역 > 목록 (결제취소 포함)</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/payment_list_type1.html" target="_blank">payment_list_type1</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>결제 내역 > 목록 (결제 부분취소 포함)</td>
+			<td>/mypage</td>
+			<td><a href="./html/mypage/payment_list_type2.html" target="_blank">payment_list_type2</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+	<!-- //내정보 -->
+
+	<!-- 기타 페이지 -->
+	<h2>Customer</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="35%">
+			<col width="15%">
+			<col width="25%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="">
+			<td rowspan="4">customer</td>
+			<td>알림 설정</td>
+			<td>/customer</td>
+			<td><a href="./html/customer/setting.html" target="_blank">setting</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>알림 목록</td>
+			<td>/customer</td>
+			<td><a href="./html/customer/list.html" target="_blank">list</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>알림 상세</td>
+			<td>/customer</td>
+			<td><a href="./html/customer/view.html" target="_blank">view</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td>고객센터</td>
+			<td>/customer</td>
+			<td><a href="./html/customer/info.html" target="_blank">info</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+	<!-- //기타 페이지 -->
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

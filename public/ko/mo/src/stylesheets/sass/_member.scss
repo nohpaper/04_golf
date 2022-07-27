@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.signup {
+  position: relative; padding: vw(40) vw(40) 0;
+  @extend %clearfix;
+  .signup_first { float: left; }
+  .signup_second { float: left; @include posxCenter(vw(95), absolute);  }
+  .signup_third { float: right; }
+  .signup_row {
+    width: vw(90); height: vw(90); background-color: $gray1; border: vw(4) solid $gray1; border-radius: 100%; box-sizing: border-box;
+    .signup_number { padding: vw(28) 0 0 0; color: $gray4; font-size: vw(36); font-weight: $bold; text-align: center; }
+    .signup_check { width: vw(70); height: vw(70); display: none; padding: vw(5) 0 0 vw(5); }
+    &.active {
+      background-color: $white; border: vw(4) solid $green1;
+      .signup_number { color: $green1; }
+    }
+    &.checked {
+      background-color: $green1;
+      .signup_number { display: none; }
+      .signup_check { display: block; }
+    }
+  }
+  .signup_txt { padding: vw(24) 0 0 0; color: $gray4; font-size: vw(24); font-weight: $medium; letter-spacing: -1px; }
+  .signup_row.active ~ .signup_txt, .signup_row.checked ~ .signup_txt { color: $gray9;}
+}
+
+.member_terms {
+  padding: vw(70) vw(40) 0;
+  .terms_explanation { color: #414549; font-size: vw(26); }
+}

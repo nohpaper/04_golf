@@ -7,7 +7,10 @@ var winSc = $(window).scrollTop();
 var $popupBtn = $(".btn_popup"),
     $popupBox = $(".popup"),
     $popupBg = $(".dimmed"),
-    $closePopupBtn = $(".btn_popup_close");
+    $closePopupBtn = $(".btn_popup_close")
+
+var $bottomBar = $(".bottom_navi_wrap"),
+    $requestBtn = $bottomBar.find(".btn_request");
 
 $window.load(function () {
     var _this =  $(this);

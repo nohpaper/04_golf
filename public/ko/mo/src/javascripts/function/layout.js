@@ -21,4 +21,9 @@ function layout() {
         });
         e.preventDefault();
     });
+
+    // bottomBar
+    $requestBtn.on("click", function(){
+        $bottomBar.toggleClass("navi_active")
+    });
 }

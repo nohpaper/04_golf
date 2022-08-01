@@ -1,2 +1,174 @@
 @charset "UTF-8";
 
+
+.mypage_wrap {
+    letter-spacing:vw(-0.6);
+    .my_profile {
+        padding:0 vw(40) vw(40);
+        .title_wrap {
+            display:flex; justify-content:space-between; align-items:center; margin:0 0 vw(40);
+            h2 { color:$gray9; font-size:vw(40); line-height:vw(64); font-weight:$medium; }
+            a { display:inline-block; font-size:vw(24); line-height:vw(52); padding:0 vw(22); background-color:$gray1; color:$gray7; font-weight:$medium; border-radius:vw(10)}
+        }
+        &.bg {
+            background-color:$green1;
+            .title_wrap h2 { color:$white; }
+            .my_profile_ui {
+                .info_wrap {
+                    .user_name { color:$white; }
+                    .user_info {
+                        @include opacity(.7);
+                        ul {
+                            &:before { color:$white; }
+                            li {
+                                color:$white;
+                                &:before { background-color:$white; }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* 계정 설정 상단 start */
+    .account_set {
+        .account_info_wrap {
+            padding:vw(60) vw(40) 0;
+            .form_type02 {
+                padding:0 0 vw(39);
+                dd { display: flex; justify-content: space-between; }
+                &:nth-child(2) {
+                    #txt_password { width:vw(486); }
+                    .btn_default { width:vw(142); height:vw(98); font-size:vw(26); }
+                }
+                &:nth-child(3) {
+                    padding:0 0 vw(29);
+                    #txt_phone_number { width:vw(438); }
+                    .btn_default { width:vw(190); height:vw(98); font-size:vw(26);  }
+                }
+            }
+        }
+    }
+    /* 계정 설정 상단 end */
+    /* 계정 설정 하단(멤버십 정보) start */
+    .membership_wrap {
+        padding:vw(90) vw(40) 0;
+        .membership_title { display:block; padding:0 0 vw(40); font-size:vw(30); font-weight:$semi-bold; }
+        .membership_info {
+            padding:vw(24) 0 vw(24) vw(30); border-radius:vw(15); color:$white; font-size:vw(26); font-weight:$bold; line-height:vw(32);
+            &.membership_normal { background-color:$green1; }
+            &.membership_vip {
+                background-color:$gray9;
+                .membership_member { padding:0 0 0 vw(42); margin: 0 0 0 vw(5); background:url(../../images/mypage/membership_vip.svg) center left /contain no-repeat; }
+            }
+        }
+        /* 결제 활성화 start */
+        .payment_details {
+            padding:vw(29) vw(39) vw(40) vw(37); margin:vw(20) 0 vw(16); border:vw(3) solid $violet1; border-radius:vw(15); box-sizing:border-box;
+            .form_type03_2 {
+                padding:0 0 vw(40);
+                input[type="checkbox"] {
+                    left:inherit; right:0;
+                    & + label {
+                        display:block; padding:0 vw(40) 0 0; color:$gray9; font-size:vw(28);
+                        &:before { left:inherit; right:0; }
+                        &:after { left:inherit; right:0; }
+                    }
+                    &:checked + label:before { background-color:$violet1; }
+                }
+            }
+            .membership_list_cont {
+                padding:0 0 vw(30);
+                ul {
+                    display: flex; justify-content: space-between; padding:0 0 vw(26) 0;
+                    li:nth-child(1) { color:$gray7; font-size:vw(26); }
+                    li:nth-child(2) { width:70%; color:$gray9; font-size:vw(28); font-weight:$semi-bold; text-align:right; line-height:vw(40); }
+                    &:last-child { padding:0; }
+                }
+            }
+            .membership_btn {
+                text-align:right;
+                .membership_check_btn {
+                    position:relative; color:$gray5; font-size:vw(24);
+                    &:before { width:100%; height:vw(2); content:""; position:absolute; bottom:vw(-4); left:0; background-color:$gray5; }
+                }
+            }
+        }
+        /* 결제 활성화 end */
+        .membership_li {
+            display: flex; justify-content: space-between; padding:vw(42) vw(34) vw(42) vw(40); margin:vw(20) 0 vw(16); background-color:$gray1; color:$gray9; text-align:left; border-radius:vw(15);
+            .membership_li_tit { width:70%; color:$gray9; font-size:vw(28); overflow:hidden; white-space: normal; }
+            .membership_go {
+                position:relative; padding:0 vw(44) 0 0; color:$gray7; font-size:vw(24);
+                &:before {
+                    width:vw(34); height:vw(34); content:""; position:absolute; top:50%; right:0; background:url(../../images/mypage/membership_arrow.svg) center/130% no-repeat;
+                    @include translate(0, -55%);
+                }
+
+            }
+        }
+    }
+    /* 계정 설정 하단(멤버십 정보) end */
+    /* 회원 탈퇴하기 start */
+    .account_btn {
+        padding:vw(64) vw(40) vw(120);
+        .btn_default { background-color:#e1e5e8; }
+    }
+    /* 회원 탈퇴하기 end */
+}
+/* 멤버십 가입 start */
+.membership_join_wrap {
+    padding:0 vw(40) 0; letter-spacing:vw(-0.6);
+    .title_wrap {
+        display:flex; justify-content:space-between; align-items:center; margin:0 0 vw(40);
+        h2 { color:$gray9; font-size:vw(40); line-height:vw(64); font-weight:$medium; }
+    }
+    /* 멤버십 선택 start */
+    .membership_list_wrap {
+        padding:vw(60) 0 0;
+        .membership_subtit { line-height:vw(32); font-size:vw(30); font-weight:$medium; }
+        .membership_table {
+            display:flex; margin:vw(30) 0 vw(52); border:vw(2) solid $gray2; font-size:vw(24); font-weight:$semi-bold; text-align:center;
+            ul {
+                border-right:vw(2) solid $gray2;
+                li {
+                    width:vw(190); padding:vw(30) 0 vw(28) 0; color:$gray4; border-bottom:vw(2) solid $gray2;
+                    &.bg { color:$gray5; background-color:$gray1; }
+                    &:last-child { border-bottom:none; }
+                }
+                &.table_title {
+                    width:vw(247); text-align:left; font-weight:$regular;
+                    li { width:100%; padding-left:vw(28); color:$gray7; }
+                }
+                &.membership_vip {
+                    border:vw(2) solid $violet1;
+                    li {
+                        color:$violet1; border-bottom:vw(2) solid rgba(156, 4, 250, 0.08); background-color:rgba(156, 4, 250, 0.08);
+                        &:nth-child(1) { border-bottom:vw(2) solid rgba(156, 4, 250, 0.5); background-color:rgba(156, 4, 250, 0.16); }
+                        &:last-child { border-bottom:none; }
+                    }
+                }
+            }
+        }
+        .vip_guide { padding:vw(32) vw(40); background-color:$gray1; border-radius:vw(15); font-size:vw(26); font-weight:$medium; line-height:vw(40); }
+    }
+    /* 멤버십 선택 end */
+    /* 신용카드 등록 start */
+    .credit_list {
+        padding:vw(30) 0 0;
+        .form_type01 { padding:0 0 vw(24); }
+    }
+    /* 신용카드 등록 end */
+    /* 버튼 공통 start */
+    .membership_btn {
+        .btn_default { width:vw(640); position: fixed; bottom: vw(120); background-color:$violet1; }
+    }
+    .membership_btn02 {
+        width:vw(640); display:flex; position:fixed; bottom:vw(120); justify-content:space-between;
+        .btn_default { width:vw(314); }
+    }
+    /* 버튼 공통 end */
+}
+/* 멤버십 가입 end */
+
+

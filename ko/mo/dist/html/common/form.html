@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>골프조인플랫폼</title>
+        <title>골프 조인 서비스</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -22,7 +22,7 @@
     <body>
         <div id="wrap">
             <!-- container -->
-            <div class="form-style">
+            <div class="guide-style">
                 <h2>Form style 1</h2>
                 <strong>기본</strong>
                 <em>input id = label for 값을 동일하게 적용해주세요.</em>
@@ -79,13 +79,25 @@
 
                 <br><br>
 
-                <strong>비밀번호 - 데이터 입력 중 버튼노출</strong>
+                <strong>비밀번호 - 데이터 입력 중 버튼노출 (보기)</strong>
                 <em>div:pw_chk 클래스명 추가 / input:vaildFiled 클래스명 추가</em>
                 <div class="form_type01">
                     <div class="pw_chk">
                         <input type="password" name="" id="pass_type01-3" placeholder="알파벳 소문자+숫자+특수문자 8자 이상" value="123456" class="validField">
                         <label for="pass_type01-3">Default + Write + Button</label>
                         <button type="button" class="btn_pwChk">보기</button>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <strong>비밀번호 - 데이터 입력 중 버튼노출 (가리기)</strong>
+                <em>div:pw_chk 클래스명 추가 / input:vaildFiled 클래스명 추가</em>
+                <div class="form_type01">
+                    <div class="pw_chk">
+                        <input type="text" name="" id="pass_type01-4" placeholder="알파벳 소문자+숫자+특수문자 8자 이상" value="123456" class="validField">
+                        <label for="pass_type01-4">Default + Write + Button</label>
+                        <button type="button" class="btn_pwChk">가리기</button>
                     </div>
                 </div>
 
@@ -182,6 +194,14 @@
 
                 <br><br>
 
+                <strong>textarea</strong>
+                <div class="form_type03">
+                    <textarea name="" id="" cols="" rows="" placeholder="간단한 자기 소개를 통해 다른 회원들에게 자신을 소개 할 수 있어요."></textarea>
+                    <span><em>0</em>/500</span>
+                </div>
+
+                <br><br>
+
                 <strong>Checkbox / Radio</strong>
 
                 <div class="form_type03_1">
@@ -240,7 +260,19 @@
                     <a href="#" class="btn_default btn_type02">버튼 타입 2 (a) - default</a>
                     <br>
                     <a href="#" class="btn_default btn_type02 btn_disabled">버튼 타입 2 (a) - disabled</a>
+
+                    <br>
+
+                    <button type="button" class="btn_default btn_type03"><span>버튼 타입 3 (button) - default</span></button>
+                    <br>
+                    <button type="button" class="btn_default btn_type03" disabled><span>버튼 타입 3 (button) - disabled</span></button>
+                    <br>
+                    <a href="#" class="btn_default btn_type03"><span>버튼 타입 3 (a) - default</span></a>
+                    <br>
+                    <a href="#" class="btn_default btn_type03 btn_disabled"><span>버튼 타입 3 (a) - disabled</span></a>
                 </div>
+
+                <br><br><br><br>
 
 
             </div>
@@ -249,7 +281,7 @@
 
         <script>
             $(".btn_pwChk").click(function(){
-                alert("보기 버튼 클릭")
+                alert($(this).text() + " 버튼 클릭")
             });
         </script>
     </body>

@@ -152,12 +152,14 @@
         }
       }
       .terms_agree_each {
-        padding:vw(36) 0 0 vw(44);
+        padding:vw(36) vw(20) 0 vw(44);
         .form_type03_1 {
-          padding:0 0 vw(30);
+          display:flex; justify-content:space-between; padding:0 0 vw(30);
           &:last-child { padding:0; }
-          label { font-weight:$semi-bold; letter-spacing:vw(-0.6); }
+          .btn { width:vw(48); height:vw(48); text-indent: -999999px; background:url(../../images/common/icon_arrow3_gray.svg) center/cover no-repeat; }
+          label { width:80%; font-weight:$semi-bold; letter-spacing:vw(-0.6); }
           & input[type="checkbox"]:checked + label { color: $gray9; }
+          & input[type="checkbox"]:checked ~ .btn { background-image:url(../../images/common/icon_arrow3_black.svg); }
         }
       }
     }

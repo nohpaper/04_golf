@@ -233,6 +233,12 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 	}
 }
 
+.btn_type04 {
+	color:$white; padding:vw(37) 0; background-color:$violet1; border-radius:vw(16);
+	&:active { background-color:$violet2; }
+	&:disabled, &:disabled:active { background-color:$gray4 }
+	&.btn_disabled { background-color:$gray4 }
+}
 ///**
 // * Swiper 5.1.0
 // * Most modern mobile touch slider and framework with hardware accelerated transitions

@@ -161,6 +161,7 @@
       display:inline-block; margin:0 0 vw(7); font-size:vw(20); line-height:vw(20); padding:vw(7) vw(12); /*line-height:vw(33); padding:0 vw(12);*/ border-radius:vw(8); font-weight:$medium; color:$white;
       &.label_normal { background-color:$green3; }
       &.label_vip { background-color:$violet1; font-weight:$bold; }
+      &.label_celeb { background-color:$red; font-weight:$bold; }
     }
     .user_name { display:block; font-size:vw(32); line-height:vw(49); font-weight:$medium; letter-spacing:vw(-0.6); }
     .user_info {

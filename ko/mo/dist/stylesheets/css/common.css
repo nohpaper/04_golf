@@ -273,6 +273,8 @@ label, button { cursor: pointer; }
 
 .my_profile_ui .info_wrap .user_label.label_vip { background-color: #9c04fa; font-weight: 700; }
 
+.my_profile_ui .info_wrap .user_label.label_celeb { background-color: #f02121; font-weight: 700; }
+
 .my_profile_ui .info_wrap .user_name { display: block; font-size: 4.44444vw; line-height: 6.80556vw; font-weight: 500; letter-spacing: -0.08333vw; }
 
 .my_profile_ui .info_wrap .user_info { font-size: 0; }
@@ -411,15 +413,19 @@ label, button { cursor: pointer; }
 
 .signup_wrap .signup_content .terms_wrap .terms_agree_all .form_type03_2 input[type="checkbox"]:checked + label { color: #010509; }
 
-.signup_wrap .signup_content .terms_wrap .terms_agree_each { padding: 5vw 0 0 6.11111vw; }
+.signup_wrap .signup_content .terms_wrap .terms_agree_each { padding: 5vw 2.77778vw 0 6.11111vw; }
 
-.signup_wrap .signup_content .terms_wrap .terms_agree_each .form_type03_1 { padding: 0 0 4.16667vw; }
+.signup_wrap .signup_content .terms_wrap .terms_agree_each .form_type03_1 { display: flex; justify-content: space-between; padding: 0 0 4.16667vw; }
 
 .signup_wrap .signup_content .terms_wrap .terms_agree_each .form_type03_1:last-child { padding: 0; }
 
-.signup_wrap .signup_content .terms_wrap .terms_agree_each .form_type03_1 label { font-weight: 600; letter-spacing: -0.08333vw; }
+.signup_wrap .signup_content .terms_wrap .terms_agree_each .form_type03_1 .btn { width: 6.66667vw; height: 6.66667vw; text-indent: -999999px; background: url(../../images/common/icon_arrow3_gray.svg) center/cover no-repeat; }
+
+.signup_wrap .signup_content .terms_wrap .terms_agree_each .form_type03_1 label { width: 80%; font-weight: 600; letter-spacing: -0.08333vw; }
 
 .signup_wrap .signup_content .terms_wrap .terms_agree_each .form_type03_1 input[type="checkbox"]:checked + label { color: #010509; }
+
+.signup_wrap .signup_content .terms_wrap .terms_agree_each .form_type03_1 input[type="checkbox"]:checked ~ .btn { background-image: url(../../images/common/icon_arrow3_black.svg); }
 
 .signup_wrap .signup_content .registration_form { padding: 9.72222vw 0 0; }
 
@@ -448,15 +454,18 @@ label, button { cursor: pointer; }
 
 .signup_done_wrap .done_explanation { padding: 4.72222vw 0 22.22222vw; font-size: 3.88889vw; line-height: 5.55556vw; color: #616569; }
 
-.mypage_wrap { letter-spacing: -0.08333vw; /* 계정 설정 상단 start */ /* 계정 설정 상단 end */ /* 계정 설정 하단(멤버십 정보) start */ /* 계정 설정 하단(멤버십 정보) end */ /* 회원 탈퇴하기 start */ /* 회원 탈퇴하기 end */ }
+/* 과장님과 공통 start */
+.mypage_wrap { letter-spacing: -0.08333vw; /* 과장님과 공통 end */ /* 계정 설정 상단 start */ /* 계정 설정 상단 end */ /* 계정 설정 하단(멤버십 정보) start */ /* 계정 설정 하단(멤버십 정보) end */ /* 회원 탈퇴하기 start */ /* 회원 탈퇴하기 end */ /* 멤버십 선택 start */ /* 버튼 공통 start */ /* 버튼 공통 end */ /* 과장님css-------------------------------start */ /* 기본정보 */ /* 내 정보 수정 */ /* 기간제 멤버십  */ /* 버튼 */ }
 
 .mypage_wrap .my_profile { padding: 0 5.55556vw 5.55556vw; }
 
-.mypage_wrap .my_profile .title_wrap { display: flex; justify-content: space-between; align-items: center; margin: 0 0 5.55556vw; }
+.mypage_wrap .my_profile .title_wrap { display: flex; justify-content: space-between; align-items: center; }
 
-.mypage_wrap .my_profile .title_wrap h2 { color: #010509; font-size: 5.55556vw; line-height: 8.88889vw; font-weight: 500; }
+.mypage_wrap .my_profile .title_wrap h2 { color: #010509; font-size: 5.55556vw; line-height: 8.88889vw; font-weight: 600; }
 
 .mypage_wrap .my_profile .title_wrap a { display: inline-block; font-size: 3.33333vw; line-height: 7.22222vw; padding: 0 3.05556vw; background-color: #f5f6f7; color: #616569; font-weight: 500; border-radius: 1.38889vw; }
+
+.mypage_wrap .my_profile .my_profile_ui { margin: 5.55556vw 0 0; }
 
 .mypage_wrap .my_profile.bg { background-color: #00a789; }
 
@@ -478,15 +487,15 @@ label, button { cursor: pointer; }
 
 .mypage_wrap .account_set .account_info_wrap .form_type02 dd { display: flex; justify-content: space-between; }
 
-.mypage_wrap .account_set .account_info_wrap .form_type02:nth-child(2) #txt_password { width: 67.5vw; }
+.mypage_wrap .account_set .account_info_wrap .form_type02.account_password #txt_password { width: 67.5vw; }
 
-.mypage_wrap .account_set .account_info_wrap .form_type02:nth-child(2) .btn_default { width: 19.72222vw; height: 13.61111vw; font-size: 3.61111vw; }
+.mypage_wrap .account_set .account_info_wrap .form_type02.account_password .btn_default { width: 19.72222vw; height: 13.61111vw; font-size: 3.61111vw; }
 
-.mypage_wrap .account_set .account_info_wrap .form_type02:nth-child(3) { padding: 0 0 4.02778vw; }
+.mypage_wrap .account_set .account_info_wrap .form_type02.account_phone { padding: 0 0 4.02778vw; }
 
-.mypage_wrap .account_set .account_info_wrap .form_type02:nth-child(3) #txt_phone_number { width: 60.83333vw; }
+.mypage_wrap .account_set .account_info_wrap .form_type02.account_phone #txt_phone_number { width: 60.83333vw; }
 
-.mypage_wrap .account_set .account_info_wrap .form_type02:nth-child(3) .btn_default { width: 26.38889vw; height: 13.61111vw; font-size: 3.61111vw; }
+.mypage_wrap .account_set .account_info_wrap .form_type02.account_phone .btn_default { width: 26.38889vw; height: 13.61111vw; font-size: 3.61111vw; }
 
 .mypage_wrap .membership_wrap { padding: 12.5vw 5.55556vw 0; /* 결제 활성화 start */ /* 결제 활성화 end */ }
 
@@ -518,17 +527,19 @@ label, button { cursor: pointer; }
 
 .mypage_wrap .membership_wrap .payment_details .membership_list_cont ul { display: flex; justify-content: space-between; padding: 0 0 3.61111vw 0; }
 
-.mypage_wrap .membership_wrap .payment_details .membership_list_cont ul li:nth-child(1) { color: #616569; font-size: 3.61111vw; }
+.mypage_wrap .membership_wrap .payment_details .membership_list_cont ul li:nth-child(1) { width: 25%; color: #616569; font-size: 3.61111vw; }
 
 .mypage_wrap .membership_wrap .payment_details .membership_list_cont ul li:nth-child(2) { width: 70%; color: #010509; font-size: 3.88889vw; font-weight: 600; text-align: right; line-height: 5.55556vw; }
 
+.mypage_wrap .membership_wrap .payment_details .membership_list_cont ul li:nth-child(2) strong { font-size: 4.16667vw; font-weight: 600; }
+
 .mypage_wrap .membership_wrap .payment_details .membership_list_cont ul:last-child { padding: 0; }
 
-.mypage_wrap .membership_wrap .payment_details .membership_btn { text-align: right; }
+.mypage_wrap .membership_wrap .payment_details .payment_details_btn { text-align: right; }
 
-.mypage_wrap .membership_wrap .payment_details .membership_btn .membership_check_btn { position: relative; color: #919599; font-size: 3.33333vw; }
+.mypage_wrap .membership_wrap .payment_details .payment_details_btn .membership_check_btn { position: relative; color: #919599; font-size: 3.33333vw; }
 
-.mypage_wrap .membership_wrap .payment_details .membership_btn .membership_check_btn:before { width: 100%; height: 0.27778vw; content: ""; position: absolute; bottom: -0.55556vw; left: 0; background-color: #919599; }
+.mypage_wrap .membership_wrap .payment_details .payment_details_btn .membership_check_btn:before { width: 100%; height: 0.27778vw; content: ""; position: absolute; bottom: -0.55556vw; left: 0; background-color: #919599; }
 
 .mypage_wrap .membership_wrap .membership_li { display: flex; justify-content: space-between; padding: 5.83333vw 4.72222vw 5.83333vw 5.55556vw; margin: 2.77778vw 0 2.22222vw; background-color: #f5f6f7; color: #010509; text-align: left; border-radius: 2.08333vw; }
 
@@ -542,52 +553,304 @@ label, button { cursor: pointer; }
 
 .mypage_wrap .account_btn .btn_default { background-color: #e1e5e8; }
 
-/* 멤버십 가입 start */
-.membership_join_wrap { padding: 0 5.55556vw 0; letter-spacing: -0.08333vw; /* 멤버십 선택 start */ /* 멤버십 선택 end */ /* 신용카드 등록 start */ /* 신용카드 등록 end */ /* 버튼 공통 start */ /* 버튼 공통 end */ }
+.mypage_wrap .membership_list_wrap { padding: 1.38889vw 5.55556vw 36.38889vw; /* 멤버십 선택 end */ /* 신용카드 등록 start */ /* 신용카드 등록 end */ /* 등록된 결제 수단 start */ /* 등록된 결제 수단 end */ /* 결제정보 확인 start */ /* 결제정보 확인 end */ }
 
-.membership_join_wrap .title_wrap { display: flex; justify-content: space-between; align-items: center; margin: 0 0 5.55556vw; }
+.mypage_wrap .membership_list_wrap > strong { line-height: 4.44444vw; font-size: 4.16667vw; font-weight: 500; }
 
-.membership_join_wrap .title_wrap h2 { color: #010509; font-size: 5.55556vw; line-height: 8.88889vw; font-weight: 500; }
+.mypage_wrap .membership_list_wrap .membership_table { margin: 4.16667vw 0 7.22222vw; border: 0.13889vw solid #e4e7ec; font-size: 3.33333vw; font-weight: 600; text-align: center; }
 
-.membership_join_wrap .membership_list_wrap { padding: 8.33333vw 0 0; }
+.mypage_wrap .membership_list_wrap .membership_table thead tr { border-right: 0.27778vw solid #e4e7ec; }
 
-.membership_join_wrap .membership_list_wrap .membership_subtit { line-height: 4.44444vw; font-size: 4.16667vw; font-weight: 500; }
+.mypage_wrap .membership_list_wrap .membership_table thead tr th { width: 28.19444vw; padding: 3.88889vw 0 3.61111vw 0; color: #919599; background-color: #f5f6f7; border-bottom: 0.13889vw solid #e4e7ec; border-right: 0.13889vw solid #e4e7ec; text-align: center; }
 
-.membership_join_wrap .membership_list_wrap .membership_table { display: flex; margin: 4.16667vw 0 7.22222vw; border: 0.27778vw solid #e4e7ec; font-size: 3.33333vw; font-weight: 600; text-align: center; }
+.mypage_wrap .membership_list_wrap .membership_table thead tr th:nth-child(1) { width: 34.30556vw; padding-left: 4.16667vw; text-align: left; }
 
-.membership_join_wrap .membership_list_wrap .membership_table ul { border-right: 0.27778vw solid #e4e7ec; }
+.mypage_wrap .membership_list_wrap .membership_table thead tr th.vip { border: 0.27778vw solid #9c04fa; border-bottom: 0.27778vw solid rgba(156, 4, 250, 0.5); color: #9c04fa; background-color: rgba(156, 4, 250, 0.16); }
 
-.membership_join_wrap .membership_list_wrap .membership_table ul li { width: 26.38889vw; padding: 4.16667vw 0 3.88889vw 0; color: #c1c5c9; border-bottom: 0.27778vw solid #e4e7ec; }
+.mypage_wrap .membership_list_wrap .membership_table tr { border-right: 0.27778vw solid #e4e7ec; }
 
-.membership_join_wrap .membership_list_wrap .membership_table ul li.bg { color: #919599; background-color: #f5f6f7; }
+.mypage_wrap .membership_list_wrap .membership_table tr th { padding-left: 4.16667vw; text-align: left; color: #616569; }
 
-.membership_join_wrap .membership_list_wrap .membership_table ul li:last-child { border-bottom: none; }
+.mypage_wrap .membership_list_wrap .membership_table tr td { padding: 4.16667vw 0 3.88889vw 0; color: #c1c5c9; line-height: 5vw; border-bottom: 0.13889vw solid #e4e7ec; border-right: 0.13889vw solid #e4e7ec; }
 
-.membership_join_wrap .membership_list_wrap .membership_table ul.table_title { width: 34.30556vw; text-align: left; font-weight: 400; }
+.mypage_wrap .membership_list_wrap .membership_table tr td.vip { border: 0.27778vw solid #9c04fa; border-bottom: 0.13889vw solid rgba(156, 4, 250, 0.08); border-top: none; color: #9c04fa; background-color: rgba(156, 4, 250, 0.08); }
 
-.membership_join_wrap .membership_list_wrap .membership_table ul.table_title li { width: 100%; padding-left: 3.88889vw; color: #616569; }
+.mypage_wrap .membership_list_wrap .membership_table tr td.vip strong { font-size: 3.88889vw; font-family: "SUIT", Arial, Apple SD Gothic Neo, sans-serif; }
 
-.membership_join_wrap .membership_list_wrap .membership_table ul.membership_vip { border: 0.27778vw solid #9c04fa; }
+.mypage_wrap .membership_list_wrap .membership_table tr:last-child td.vip { border-bottom: 0.13889vw solid #9c04fa; }
 
-.membership_join_wrap .membership_list_wrap .membership_table ul.membership_vip li { color: #9c04fa; border-bottom: 0.27778vw solid rgba(156, 4, 250, 0.08); background-color: rgba(156, 4, 250, 0.08); }
+.mypage_wrap .membership_list_wrap .vip_guide { position: relative; padding: 4.44444vw 5.55556vw; background-color: #f5f6f7; border-radius: 2.08333vw; font-size: 3.61111vw; font-weight: 500; line-height: 5.55556vw; }
 
-.membership_join_wrap .membership_list_wrap .membership_table ul.membership_vip li:nth-child(1) { border-bottom: 0.27778vw solid rgba(156, 4, 250, 0.5); background-color: rgba(156, 4, 250, 0.16); }
+.mypage_wrap .membership_list_wrap .vip_guide:before { width: 5.69444vw; height: 4.16667vw; content: ""; position: absolute; top: -3.33333vw; right: 11.11111vw; background: url(../../images/mypage/vip_guide_polygon.svg) center/cover no-repeat; }
 
-.membership_join_wrap .membership_list_wrap .membership_table ul.membership_vip li:last-child { border-bottom: none; }
+.mypage_wrap .membership_list_wrap .credit_list { padding: 4.16667vw 0 0; }
 
-.membership_join_wrap .membership_list_wrap .vip_guide { padding: 4.44444vw 5.55556vw; background-color: #f5f6f7; border-radius: 2.08333vw; font-size: 3.61111vw; font-weight: 500; line-height: 5.55556vw; }
+.mypage_wrap .membership_list_wrap .credit_list .form_type01 { padding: 0 0 3.33333vw; }
 
-.membership_join_wrap .credit_list { padding: 4.16667vw 0 0; }
+.mypage_wrap .membership_list_wrap > button { float: right; font-size: 3.33333vw; line-height: 4.44444vw; color: #919599; font-weight: 500; }
 
-.membership_join_wrap .credit_list .form_type01 { padding: 0 0 3.33333vw; }
+.mypage_wrap .membership_list_wrap > button.save_btn { color: #010509; }
 
-.membership_join_wrap .membership_btn .btn_default { width: 88.88889vw; position: fixed; bottom: 16.66667vw; background-color: #9c04fa; }
+.mypage_wrap .membership_list_wrap .registered_credit > ol { padding: 5.55556vw 0; }
 
-.membership_join_wrap .membership_btn02 { width: 88.88889vw; display: flex; position: fixed; bottom: 16.66667vw; justify-content: space-between; }
+.mypage_wrap .membership_list_wrap .registered_credit > ol li { display: flex; position: relative; padding: 3.75vw 0 3.88889vw 6.25vw; margin: 0 0 4.16667vw; justify-content: space-between; }
 
-.membership_join_wrap .membership_btn02 .btn_default { width: 43.61111vw; }
+.mypage_wrap .membership_list_wrap .registered_credit > ol li .registered_cont { font-size: 3.61111vw; }
 
-/* 멤버십 가입 end */
+.mypage_wrap .membership_list_wrap .registered_credit > ol li .registered_cont strong { position: relative; color: #010509; }
+
+.mypage_wrap .membership_list_wrap .registered_credit > ol li .registered_cont p { padding: 2.5vw 0 0 0; color: #919599; }
+
+.mypage_wrap .membership_list_wrap .registered_credit > ol li > button { height: 7.22222vw; padding: 0 2.77778vw; color: #616569; font-size: 3.33333vw; border-radius: 1.38889vw; background-color: #f5f6f7; font-weight: 500; }
+
+.mypage_wrap .membership_list_wrap .registered_credit > ol li > button.list_btn { width: 5.55556vw; padding: 0; background-color: inherit; background: url(../../images/mypage/credit_list.svg) center/cover no-repeat; }
+
+.mypage_wrap .membership_list_wrap .registered_credit > ol li:nth-child(1) .registered_cont strong { position: relative; }
+
+.mypage_wrap .membership_list_wrap .registered_credit > ol li:nth-child(1) .registered_cont strong:before { width: 6.66667vw; height: 6.66667vw; content: ""; position: absolute; top: -1.66667vw; right: -6.94444vw; background: url(../../images/common/icon_chk_black.svg) center/cover no-repeat; }
+
+.mypage_wrap .membership_list_wrap .registered_credit > ol li:last-child { margin: 0; }
+
+.mypage_wrap .membership_list_wrap .registered_credit > ol li:before { width: 1.94444vw; height: 13.88889vw; content: ""; position: absolute; top: 50%; left: 0; border-radius: 6.94444vw; background-color: #FFD675; -webkit-transform: translate(0, -50%); -moz-transform: translate(0, -50%); -ms-transform: translate(0, -50%); -o-transform: translate(0, -50%); transform: translate(0, -50%); }
+
+.mypage_wrap .membership_list_wrap .registered_credit > ol li.green:before { background-color: #00a789; }
+
+.mypage_wrap .membership_list_wrap .registered_credit > ol li.blue:before { background-color: #3FC6F1; }
+
+.mypage_wrap .membership_list_wrap .registered_credit .btn_default { margin: 0 0 5.55556vw; }
+
+.mypage_wrap .membership_list_wrap .payment_info_chk { margin: 5.55556vw 0; }
+
+.mypage_wrap .membership_list_wrap .payment_info_chk > em { display: block; padding: 5vw 5.55556vw; color: #fff; background-color: #9c04fa; font-size: 3.88889vw; line-height: 4.44444vw; border-radius: 2.08333vw 2.08333vw 0 0; font-weight: 600; }
+
+.mypage_wrap .membership_list_wrap .payment_info_chk .membership_list { padding: 5.55556vw 5.41667vw 5vw 5.55556vw; border: 0.41667vw solid #9c04fa; border-radius: 0 0 2.08333vw 2.08333vw; box-sizing: border-box; }
+
+.mypage_wrap .membership_list_wrap .payment_info_chk .membership_list .membership_list_cont { padding: 0 0 4.16667vw; }
+
+.mypage_wrap .membership_list_wrap .payment_info_chk .membership_list .membership_list_cont ul { display: flex; justify-content: space-between; padding: 0 0 3.61111vw 0; }
+
+.mypage_wrap .membership_list_wrap .payment_info_chk .membership_list .membership_list_cont ul li:nth-child(1) { color: #616569; font-size: 3.61111vw; }
+
+.mypage_wrap .membership_list_wrap .payment_info_chk .membership_list .membership_list_cont ul li:nth-child(2) { width: 70%; color: #010509; font-size: 3.88889vw; font-weight: 500; text-align: right; line-height: 5.55556vw; }
+
+.mypage_wrap .membership_list_wrap .payment_info_chk .membership_list .membership_list_cont ul li:nth-child(2) strong { font-size: 4.16667vw; font-weight: 600; }
+
+.mypage_wrap .membership_list_wrap .payment_info_chk .membership_list .membership_list_cont ul:last-child { padding: 0; }
+
+.mypage_wrap .membership_list_wrap .payment_info_chk .membership_list .payment_details_btn { text-align: right; }
+
+.mypage_wrap .membership_list_wrap .payment_info_chk .membership_list .payment_details_btn .membership_check_btn { position: relative; color: #919599; font-size: 3.33333vw; }
+
+.mypage_wrap .membership_list_wrap .payment_info_chk .membership_list .payment_details_btn .membership_check_btn:before { width: 100%; height: 0.27778vw; content: ""; position: absolute; bottom: -0.55556vw; left: 0; background-color: #919599; }
+
+.mypage_wrap .membership_list_wrap .payment_info_chk .membership_disclaimer { padding: 2.22222vw 0 0 0; }
+
+.mypage_wrap .membership_list_wrap .payment_agree_wrap { padding: 0 0 36.38889vw; }
+
+.mypage_wrap .membership_list_wrap .payment_agree_wrap .payment_agree_all { padding: 4.44444vw 5.83333vw; background-color: #f5f6f7; border-radius: 2.08333vw; }
+
+.mypage_wrap .membership_list_wrap .payment_agree_wrap .payment_agree_all .form_type03_2 { display: flex; justify-content: space-between; align-items: center; }
+
+.mypage_wrap .membership_list_wrap .payment_agree_wrap .payment_agree_all .form_type03_2 > button { width: 7.77778vw; height: 7.77778vw; position: relative; text-indent: -999999px; }
+
+.mypage_wrap .membership_list_wrap .payment_agree_wrap .payment_agree_all .form_type03_2 > button:after { width: 100%; height: 100%; content: ""; position: absolute; top: 0; left: 0; background: url(../../images/common/icon_arrow2.svg) center/cover no-repeat; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); -ms-transform: rotate(-90deg); -o-transform: rotate(-90deg); transform: rotate(-90deg); }
+
+.mypage_wrap .membership_list_wrap .payment_agree_wrap .payment_agree_all .form_type03_2 label { width: 80%; }
+
+.mypage_wrap .membership_list_wrap .payment_agree_wrap .payment_agree_all .form_type03_2 input[type="checkbox"]:checked ~ label:before { background-color: #9c04fa; }
+
+.mypage_wrap .membership_list_wrap .payment_agree_wrap .payment_agree_all.active .form_type03_2 button:after { -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); }
+
+.mypage_wrap .membership_list_wrap .payment_agree_wrap .payment_agree_singly { padding: 5vw 5.55556vw 0 6.11111vw; }
+
+.mypage_wrap .membership_list_wrap .payment_agree_wrap .payment_agree_singly .form_type03_1 { display: flex; padding: 0 0 4.16667vw; justify-content: space-between; align-items: center; }
+
+.mypage_wrap .membership_list_wrap .payment_agree_wrap .payment_agree_singly .form_type03_1 label { width: 80%; }
+
+.mypage_wrap .membership_list_wrap .payment_agree_wrap .payment_agree_singly .form_type03_1 .btn { width: 6.66667vw; height: 6.66667vw; text-indent: -999999px; background: url(../../images/common/icon_arrow3_gray.svg) center/cover no-repeat; }
+
+.mypage_wrap .membership_list_wrap .payment_agree_wrap .payment_agree_singly .form_type03_1 input[type="checkbox"]:checked ~ .btn { background-image: url(../../images/common/icon_arrow3_black.svg); }
+
+.mypage_wrap .membership_btn { position: fixed; bottom: 16.66667vw; left: 5.55556vw; }
+
+.mypage_wrap .membership_btn .btn_default { width: 88.88889vw; }
+
+.mypage_wrap .membership_btn02 { width: 88.88889vw; display: flex; position: fixed; bottom: 16.66667vw; left: 5.55556vw; justify-content: space-between; }
+
+.mypage_wrap .membership_btn02 .btn_default { width: 43.61111vw; }
+
+.mypage_wrap .status_wrap { padding: 0 5.55556vw; margin: 0 0 8.05556vw; position: relative; }
+
+.mypage_wrap .status_wrap:before { width: 50%; height: 100%; content: ""; background-color: #00a789; position: absolute; top: 0; left: 0; z-index: -2; }
+
+.mypage_wrap .status_wrap:after { width: 50%; height: calc(100% - 11.38889vw); content: ""; background-color: #fff; position: absolute; top: 11.38889vw; left: 0; border-radius: 6.94444vw 0 0 0; z-index: -1; }
+
+.mypage_wrap .status_wrap ul { padding: 4.16667vw 0; display: flex; justify-content: space-around; background-color: #e0f4f0; border-radius: 2.77778vw; }
+
+.mypage_wrap .status_wrap ul:after { width: 50%; height: 11.38889vw; content: ""; background-color: #00a789; position: absolute; top: 0; right: 0; border-radius: 0 0 6.94444vw 0; z-index: -1; }
+
+.mypage_wrap .status_wrap ul li { width: 33.333%; text-align: center; position: relative; }
+
+.mypage_wrap .status_wrap ul li a { display: block; }
+
+.mypage_wrap .status_wrap ul li strong { display: block; color: #03a084; font-weight: 700; font-size: 5.55556vw; line-height: 6.94444vw; letter-spacing: 0vw; }
+
+.mypage_wrap .status_wrap ul li span { display: block; color: #010509; font-size: 3.33333vw; line-height: 5vw; letter-spacing: -0.13889vw; font-weight: 500; }
+
+.mypage_wrap .status_wrap ul li:before { width: 0.27778vw; height: 100%; background-color: #ccede7; content: ""; position: absolute; top: 0; left: 0; }
+
+.mypage_wrap .status_wrap ul li:first-child:before { display: none; }
+
+.mypage_wrap .status_wrap ul li p strong, .mypage_wrap .status_wrap ul li p span { color: #010509; opacity: 0.2; filter: alpha(opacity=20); }
+
+.mypage_wrap .status_wrap div { margin: 2.5vw 0 0; position: relative; z-index: 1; }
+
+.mypage_wrap .profile_details { padding: 0 5.55556vw 33.61111vw; }
+
+.mypage_wrap .profile_details > div { margin: 6.94444vw 0 0; padding: 6.94444vw 0 0; border-top: 0.27778vw solid #e4e7ec; }
+
+.mypage_wrap .profile_details > div:first-child { padding: 0; margin: 0; border: none; }
+
+.mypage_wrap .profile_details > div > strong { display: block; font-size: 4.44444vw; line-height: 7.22222vw; margin: 0 0 4.02778vw; }
+
+.mypage_wrap .profile_details .photo { margin: 0 0 3.47222vw; display: flex; flex-wrap: wrap; }
+
+.mypage_wrap .profile_details .photo li { width: 22.22222vw; height: 22.22222vw; margin: 0 1.38889vw 1.38889vw 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; overflow: hidden; border-radius: 1.38889vw; }
+
+.mypage_wrap .profile_details .photo li:last-child { margin: 0; }
+
+.mypage_wrap .profile_details .photo li.my_pick { position: relative; }
+
+.mypage_wrap .profile_details .photo li.my_pick:before { content: "대표"; padding: 1.11111vw 1.66667vw; font-size: 2.77778vw; border-radius: 1.38889vw 0; font-weight: 500; background-color: #00a789; color: #fff; display: inline-block; }
+
+.mypage_wrap .profile_details .info_type01 .info_list li { margin: 2.63889vw 0 0; position: relative; font-size: 3.33333vw; line-height: 5.55556vw; color: #c1c5c9; padding: 0 0 0 26.66667vw; }
+
+.mypage_wrap .profile_details .info_type01 .info_list li span { position: absolute; top: 0; left: 0; color: #919599; font-size: 3.61111vw; }
+
+.mypage_wrap .profile_details .info_type01 .info_list li strong { color: #010509; font-weight: 600; font-size: 3.61111vw; }
+
+.mypage_wrap .profile_details .info_type01 .info_list li:first-child { margin: 0; }
+
+.mypage_wrap .profile_details .info_type02 .info_list li { margin: 2.63889vw 0 0; position: relative; font-size: 3.61111vw; line-height: 5.55556vw; color: #010509; padding: 0 0 0 37.77778vw; color: #010509; font-weight: 600; }
+
+.mypage_wrap .profile_details .info_type02 .info_list li span { position: absolute; top: 0; left: 0; color: #919599; font-size: 3.61111vw; font-weight: 400; }
+
+.mypage_wrap .profile_details .info_type02 .info_list li:first-child { margin: 0; }
+
+.mypage_wrap .profile_details .info_type03 p { background-color: #f5f6f7; border-radius: 2.77778vw; padding: 4.16667vw; font-size: 3.61111vw; line-height: 5.55556vw; color: #616569; }
+
+.mypage_wrap .profile_modify { border-top: 2.22222vw solid #f2f5f8; }
+
+.mypage_wrap .profile_modify > div { padding: 6.94444vw 5.55556vw; border-top: 2.22222vw solid #f2f5f8; }
+
+.mypage_wrap .profile_modify > div:first-child { border: none; }
+
+.mypage_wrap .profile_modify > div > strong { display: block; color: #000; font-size: 4.16667vw; font-weight: 600; line-height: 7.22222vw; margin: 0 0 4.16667vw; }
+
+.mypage_wrap .profile_modify .photo { margin: 0 0 8.33333vw; }
+
+.mypage_wrap .profile_modify .photo .photo_list { display: flex; flex-wrap: wrap; }
+
+.mypage_wrap .profile_modify .photo .photo_list li { width: 33.333%; overflow: hidden; margin: 0 0 1.5%; }
+
+.mypage_wrap .profile_modify .photo .photo_list li:nth-of-type(3n+1) .photo_box { float: left; }
+
+.mypage_wrap .profile_modify .photo .photo_list li:nth-of-type(3n+2) .photo_box { margin: 0 auto; }
+
+.mypage_wrap .profile_modify .photo .photo_list li:nth-of-type(3n+3) .photo_box { float: right; }
+
+.mypage_wrap .profile_modify .photo .photo_list li.my_pick .photo_box:before { content: "대표"; padding: 1.11111vw 1.66667vw; font-size: 2.77778vw; border-radius: 0 0 1.38889vw 0; font-weight: 500; background-color: #00a789; color: #fff; display: inline-block; position: absolute; top: 0; left: 0; z-index: 1; }
+
+.mypage_wrap .profile_modify .photo .photo_list li .photo_box { width: 97%; padding: 97% 0 0; background-position: 50% 50%; background-repeat: no-repeat; background-size: cover; position: relative; }
+
+.mypage_wrap .profile_modify .photo .photo_list li .btn_add_photo { width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: #f5f6f7; text-indent: -99999px; }
+
+.mypage_wrap .profile_modify .photo .photo_list li .btn_add_photo:before { width: 5.55556vw; height: 5.55556vw; content: ""; position: absolute; top: 50%; left: 50%; background: url(../../images/common/btn_more.svg) no-repeat 50% 50%; background-size: cover; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+.mypage_wrap .profile_modify .photo .photo_list li .btn_delete_photo { position: absolute; top: 0; right: 0; width: 6.11111vw; height: 6.11111vw; text-indent: -99999px; background: url(../../images/common/btn_page_close_white.svg) no-repeat 50% 50% rgba(1, 5, 9, 0.4); background-size: cover; }
+
+.mypage_wrap .profile_modify .photo .noti_wrap { text-align: center; }
+
+.mypage_wrap .profile_modify .photo .noti_wrap p { display: inline-block; }
+
+.mypage_wrap .profile_modify .modify_forms > div { margin: 6.94444vw 0 0; }
+
+.mypage_wrap .profile_modify .modify_forms > div:first-child { margin: 0; }
+
+.mypage_wrap .profile_modify .modify_forms > div.form_half { display: flex; justify-content: space-between; }
+
+.mypage_wrap .profile_modify .modify_forms > div.form_half div { width: calc(50% - 0.83333vw); }
+
+.mypage_wrap .profile_modify .modify_forms .form_phone dd { display: flex; justify-content: space-between; }
+
+.mypage_wrap .profile_modify .modify_forms .form_phone dd input { width: calc(100% - 28.05556vw); }
+
+.mypage_wrap .profile_modify .modify_forms .form_phone dd button { width: 26.38889vw; }
+
+.mypage_wrap .fixed_term { padding: 1.38889vw 5.55556vw 5.55556vw; }
+
+.mypage_wrap .fixed_term .membership_list { margin: 0 0 2.22222vw; }
+
+.mypage_wrap .fixed_term .membership_list li { margin: 2.22222vw 0 0; position: relative; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"], .mypage_wrap .fixed_term .membership_list li input[type="radio"] { position: absolute; top: 0; left: 0; z-index: -1; opacity: 0; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label { display: block; border-radius: 2.77778vw; border: 0.27778vw solid #e4e7ec; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .info, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .info { padding: 4.16667vw 5.55556vw; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .info p, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .info p { position: relative; padding: 0 0 0 10.27778vw; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .info p:before, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .info p:before { width: 7.22222vw; height: 7.22222vw; content: ""; box-sizing: border-box; background-color: #e4e7ec; position: absolute; top: 0; left: 0; border-radius: 100%; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .info p:after, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .info p:after { width: 6.66667vw; height: 6.66667vw; content: ""; display: block; position: absolute; top: 0.27778vw; left: 0.27778vw; background-image: url(../../images/common/icon_chk_white_circle.svg); -ms-background-position-x: 50%; background-position-x: 50%; -ms-background-position-y: 50%; background-position-y: 50%; -webkit-background-size: cover; background-size: cover; background-repeat: no-repeat; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .info p strong, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .info p strong { display: block; font-size: 4.16667vw; line-height: 5.55556vw; padding: 1.11111vw 0 2.22222vw; font-weight: 600; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .info p span, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .info p span { display: block; font-size: 3.33333vw; line-height: 4.44444vw; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .price, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .price { font-size: 0; padding: 5.83333vw 5.55556vw 5.55556vw; text-align: right; position: relative; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .price:before, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .price:before { width: 100%; height: 0.27778vw; position: absolute; top: 0; left: 0; content: ""; background: url(../../images/common/dashed_line.svg) repeat-x 0 0; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .price span, .mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .price strong, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .price span, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .price strong { display: inline-block; vertical-align: middle; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .price span, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .price span { font-size: 3.61111vw; font-weight: 400; color: #c1c5c9; position: relative; margin: 0 2.77778vw 0 0; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .price span:after, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .price span:after { width: 100%; height: 0.13889vw; background-color: #c1c5c9; position: absolute; top: 50%; left: 0; content: ""; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .price span em, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .price span em { font-size: 3.88889vw; font-weight: 500; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .price strong, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .price strong { font-size: 3.88889vw; font-weight: 400; color: #010509; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"] + label .price strong em, .mypage_wrap .fixed_term .membership_list li input[type="radio"] + label .price strong em { font-size: 4.72222vw; font-weight: 700; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"]:checked ~ label, .mypage_wrap .fixed_term .membership_list li input[type="radio"]:checked ~ label { background-color: #9c04fa; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"]:checked ~ label .info p:before, .mypage_wrap .fixed_term .membership_list li input[type="radio"]:checked ~ label .info p:before { background-color: #fff; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"]:checked ~ label .info p:after, .mypage_wrap .fixed_term .membership_list li input[type="radio"]:checked ~ label .info p:after { background-image: url(../../images/common/icon_chk_violet_circle.svg); }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"]:checked ~ label .info p strong, .mypage_wrap .fixed_term .membership_list li input[type="checkbox"]:checked ~ label .info p span, .mypage_wrap .fixed_term .membership_list li input[type="radio"]:checked ~ label .info p strong, .mypage_wrap .fixed_term .membership_list li input[type="radio"]:checked ~ label .info p span { color: #fff; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"]:checked ~ label .info p span, .mypage_wrap .fixed_term .membership_list li input[type="radio"]:checked ~ label .info p span { opacity: 0.6; filter: alpha(opacity=60); }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"]:checked ~ label .price:before, .mypage_wrap .fixed_term .membership_list li input[type="radio"]:checked ~ label .price:before { opacity: 0.3; filter: alpha(opacity=30); }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"]:checked ~ label .price span, .mypage_wrap .fixed_term .membership_list li input[type="checkbox"]:checked ~ label .price strong, .mypage_wrap .fixed_term .membership_list li input[type="radio"]:checked ~ label .price span, .mypage_wrap .fixed_term .membership_list li input[type="radio"]:checked ~ label .price strong { color: #fff; }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"]:checked ~ label .price span, .mypage_wrap .fixed_term .membership_list li input[type="radio"]:checked ~ label .price span { opacity: 0.6; filter: alpha(opacity=60); }
+
+.mypage_wrap .fixed_term .membership_list li input[type="checkbox"]:checked ~ label .price span:after, .mypage_wrap .fixed_term .membership_list li input[type="radio"]:checked ~ label .price span:after { background-color: #fff; }
+
+.mypage_wrap .fixed_term .membership_list li:first-child { margin: 0; }
+
+.mypage_wrap .btn_wrap { margin: 6.94444vw 0 0; box-sizing: border-box; padding: 0 5.55556vw; }
+
+.mypage_wrap .btn_wrap.btn_half { display: flex; justify-content: space-between; }
+
+.mypage_wrap .btn_wrap.btn_half .btn_default { width: calc(50% - 0.83333vw); }
+
 /* 서비스 이용약관 */
 .terms_service_wrap { padding: 6.94444vw 5.55556vw; }
 
@@ -806,6 +1069,14 @@ caption { width: 1px; height: 1px; overflow: hidden; margin: -1px; }
 .btn_type03.btn_disabled span { color: #c1c5c9; }
 
 .btn_type03.btn_disabled span:before { background-color: #e4e7ec; }
+
+.btn_type04 { color: #fff; padding: 5.13889vw 0; background-color: #9c04fa; border-radius: 2.22222vw; }
+
+.btn_type04:active { background-color: #840bcd; }
+
+.btn_type04:disabled, .btn_type04:disabled:active { background-color: #c1c5c9; }
+
+.btn_type04.btn_disabled { background-color: #c1c5c9; }
 
 @font-face { font-family: swiper-icons; src: url("data:application/font-woff;charset=utf-8;base64, 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") format("woff"); font-weight: 400; font-style: normal; }
 

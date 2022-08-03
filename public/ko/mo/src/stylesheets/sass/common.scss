@@ -55,7 +55,7 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 	div {
 		position:relative;
 		input {
-			width:100%; font-size:vw(34); line-height:vw(46); padding:vw(60) vw(40) vw(24); color:$gray9; box-sizing:border-box; border-radius:vw(20); border:vw(2) solid $gray1; background-color:$gray1;
+			width:100%; font-size:vw(34); line-height:vw(46); padding:vw(60) vw(40) vw(24); color:$gray9; box-sizing:border-box; border-radius:vw(20); border:vw(2) solid $gray1; background-color:$gray1; letter-spacing:vw(-0.6);
 			@include transition();
 			//&.validField, &:focus {outline:none; background-color:$white; border-color:$black;}
 			&:focus {outline:none; background-color:$white; border-color:$black;}
@@ -63,11 +63,11 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 			&:-ms-input-placeholder { color: $gray4; } /* Internet Explorer 10-11 */
 			&::placeholder { color: $gray4; }
 		}
-		label { position:absolute; top:vw(24); left:vw(40); color:$gray7; font-size:vw(22); line-height:vw(32); font-weight:$medium; }
-		button { display:none; position:absolute; bottom:vw(24); right:vw(30); padding:0 vw(20); font-size:vw(23); line-height:vw(45); color:$gray5; background-color:$gray1; border-radius:vw(10); z-index:2; }
+		label { position:absolute; top:vw(24); left:vw(40); color:$gray7; font-size:vw(22); line-height:vw(32); font-weight:$medium; letter-spacing:vw(-1); }
+		button { display:none; position:absolute; bottom:vw(24); right:vw(30); padding:0 vw(20); font-size:vw(23); line-height:vw(45); color:$gray5; background-color:$gray1; border-radius:vw(10); z-index:2; letter-spacing:vw(-1); }
 		&.error_msg {
-			input, input:focus { border-color:$red; background-color:$white; }
-			+ span { display:block; font-size:vw(24); line-height:vw(36); color:$red; padding:vw(11) vw(20) 0}
+			input, input:focus { border-color:$red !important; background-color:$white; }
+			+ span { display:block; font-size:vw(24); line-height:vw(36); color:$red; padding:vw(12) vw(20) 0; letter-spacing:vw(-1); }
 		}
 		&.correct_msg {
 			&:after {
@@ -75,7 +75,10 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 				@include backgroundSoltC();
 			}
 			input, input:focus { border-color:$gray1; background-color:$gray1 }
-			+ span { display:block; font-size:vw(24); line-height:vw(36); color:$blue; padding:vw(11) vw(20) 0}
+			input.validField { border-color:$gray1 !important; background-color:$gray1 !important }
+			input.validField ~ button { opacity:0 !important; display:none; }
+			input.validField:focus ~ button { opacity:0 !important; }
+			+ span { display:block; font-size:vw(24); line-height:vw(36); color:$blue; padding:vw(12) vw(20) 0; letter-spacing:vw(-1); }
 		}
 		&.pw_chk {
 			button { display:block; opacity:0; }
@@ -98,7 +101,7 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 		}
 		dd {
 			input[type=text], input[type=password] {
-				width:100%; font-size:vw(26); line-height:vw(38); padding:vw(29) vw(30); border-radius:vw(16); color:$gray9; border:1px solid $gray1; background-color:$gray1; box-sizing:border-box;
+				width:100%; font-size:vw(26); line-height:vw(38); padding:vw(29) vw(30); border-radius:vw(16); color:$gray9; border:1px solid $gray1; background-color:$gray1; box-sizing:border-box; letter-spacing:vw(-0.6);
 				&:focus {outline:none; background-color:$white; border-color:$black;}
 				&::-webkit-input-placeholder { color: $gray4; } /* Edge */
 				&:-ms-input-placeholder { color: $gray4; } /* Internet Explorer 10-11 */
@@ -106,7 +109,7 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 				&:disabled { background-color:$gray2; color:$gray4; }
 			}
 			select {
-				width:100%; font-size:vw(26); line-height:vw(38); padding:vw(29) vw(88) vw(29) vw(30); border-radius:vw(16); color:$gray4; border:1px solid $gray1; background-color:$gray1; box-sizing:border-box;
+				width:100%; font-size:vw(26); line-height:vw(38); padding:vw(29) vw(88) vw(29) vw(30); border-radius:vw(16); color:$gray4; border:1px solid $gray1; background-color:$gray1; box-sizing:border-box; letter-spacing:vw(-0.6);
 				background-image:url(../../images/common/icon_arrow.svg); background-repeat:no-repeat; background-position:calc(100% - 4.16667vw) 50%; background-size:vw(38) vw(38);
 				&:focus { outline:none; background-color:$white; border-color:$black; color:$gray9; }
 				&:visited { color:$gray9; }
@@ -153,6 +156,7 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 			}
 		}
 		&:checked ~ label {
+			color:$gray7;
 			&:before { background-color:$violet1; }
 		}
 	}
@@ -162,7 +166,7 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 	input[type="checkbox"] {
 		position:absolute; top:0; left:0; z-index:-1; opacity:0;
 		& + label {
-			display:inline-block; padding:0 0 0 vw(60); font-size:vw(30); color:$gray5; line-height:vw(48); position:relative;
+			display:inline-block; padding:0 0 0 vw(60); font-size:vw(30); color:$gray5; line-height:vw(48); position:relative; letter-spacing:vw(-1);
 			&:before {width:vw(48); height:vw(48); content:""; box-sizing:border-box; background-color:$gray2; position:absolute; top:0; left:0; border-radius:100%;}
 			&:after {
 				width:vw(48); height:vw(48); content:""; display:block; position:absolute; top:0; left:0; background-image:url(../../images/common/icon_chk_white_circle.svg);
@@ -170,6 +174,7 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 			}
 		}
 		&:checked ~ label {
+			color:$gray7;
 			&:before { background-color:$green1 }
 		}
 	}
@@ -190,7 +195,7 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 }
 
 /* button style */
-.btn_default { width:100%; font-size:vw(30); line-height:vw(30); text-align:center; font-weight:$medium; display:block; box-sizing:border-box; }
+.btn_default { width:100%; font-size:vw(30); line-height:vw(30); text-align:center; font-weight:$medium; display:block; box-sizing:border-box; letter-spacing:vw(-1); }
 .btn_type01 {
 	color:$white; padding:vw(37) 0; background-color:$green1; border-radius:vw(16);
 	&:active { background-color:$green2; }
@@ -198,14 +203,14 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 	&.btn_disabled { background-color:$gray4 }
 }
 .btn_type02 {
-	color:$gray7; padding:vw(37) 0; position:relative;
+	color:$gray7; padding:vw(37) 0; position:relative; border-radius:vw(16); background-color:$white;
 	&:after { width:100%; height:100%; content:""; border:vw(2) solid $gray4; box-sizing:border-box; position:absolute; top:0; left:0; border-radius:vw(16); }
 	&:active:after { border-color:$gray7; }
 	&:disabled:after, &:disabled:active:after { border-color:$gray2; color:$gray5; }
 	&.btn_disabled:after, &.btn_disabled:active:after { border-color:$gray2; color:$gray5; }
 }
 .btn_type03 {
-	text-align:center; border:vw(2) solid $gray2; border-radius:vw(20); padding:vw(28) 0;
+	text-align:center; border:vw(2) solid $gray2; border-radius:vw(20); padding:vw(28) 0; letter-spacing:vw(-0.6);
 	span {
 		font-size:vw(26); line-height:vw(44); color:$gray7; letter-spacing:vw(-0.6); position:relative; padding:0 0 0 vw(60); font-weight:$regular;
 		&:before,&:after {
@@ -228,6 +233,12 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 	}
 }
 
+.btn_type04 {
+	color:$white; padding:vw(37) 0; background-color:$violet1; border-radius:vw(16);
+	&:active { background-color:$violet2; }
+	&:disabled, &:disabled:active { background-color:$gray4 }
+	&.btn_disabled { background-color:$gray4 }
+}
 ///**
 // * Swiper 5.1.0
 // * Most modern mobile touch slider and framework with hardware accelerated transitions

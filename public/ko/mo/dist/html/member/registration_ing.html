@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>골프조인플랫폼</title>
+        <title>골프 조인 서비스</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -24,65 +24,53 @@
             <div class="guide_center"></div>
         </div>
         <div id="wrap">
+            <div class="page_wrap">
+                <div class="btn_align_left">
+                    <button type="button" class="btn_page_prev">이전페이지로 이동</button>
+                </div>
+                <h2>회원가입</h2>
+            </div>
+            <!-- container -->
             <div class="signup_wrap">
-                <div class="page_wrap">
-                    <div class="btn_align_left">
-                        <button type="button" class="btn_page_prev">이전페이지로 이동</button>
-                    </div>
-                    <h2>회원가입</h2>
+                <div class="signup_content">
+                    <ol class="signup_process">
+                        <li class="on">약관 동의</li>
+                        <li class="ing">계정 생성</li>
+                        <li>본인 인증</li>
+                    </ol>
+                    <form action="">
+                        <fieldset>
+                            <legend>회원가입 정보입력</legend>
+                            <div class="registration_form">
+                                <div class="form_type01">
+                                    <div>
+                                        <input type="text" name="" id="txt_email" placeholder="사용 가능한 이메일 주소" value="gildong@na">
+                                        <label for="txt_email">이메일</label>
+                                    </div>
+                                </div>
+                                <div class="form_type01">
+                                    <div class="pw_chk">
+                                        <input type="password" name="" id="txt_password" placeholder="알파벳 소문자+숫자+특수문자 8자 이상" value="123456" class="validField">
+                                        <label for="txt_password">비밀번호</label>
+                                        <button type="button" class="btn_pwChk">보기</button>
+                                    </div>
+                                </div>
+                                <div class="form_type01">
+                                    <div class="pw_chk">
+                                        <input type="password" name="" id="txt_password_chk" placeholder="입력한 비밀번호 확인">
+                                        <label for="txt_password_chk">비밀번호 확인</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
-                <!-- container -->
-                <div class="signup_top_wrap">
-                    <div class="signup">
-                        <ol>
-                            <li>
-                                <div class="signup_row checked">
-                                    <img class="signup_check" src="../../images/common/icon_chk_white_circle.svg" alt="약관 동의 완료">
-                                </div>
-                                <p class="signup_txt">약관 동의</p>
-                            </li>
-                            <li>
-                                <div class="signup_row active">
-                                    <p class="signup_number">2</p>
-                                </div>
-                                <p class="signup_txt">계정 생성</p>
-                            </li>
-                            <li>
-                                <div class="signup_row">
-                                    <p class="signup_number">3</p>
-                                </div>
-                                <p class="signup_txt">본인 인증</p>
-                            </li>
-                        </ol>
-                    </div>
-                    <div class="registration_input">
-                        <div class="form_type01">
-                            <div>
-                                <input type="text" name="registration email" id="registration_email" placeholder="사용 가능한 이메일 주소" value="gildong@na" class="validField">
-                                <label for="registration_email">이메일</label>
-                            </div>
-                        </div>
-                        <div class="form_type01">
-                            <div class="pw_chk">
-                                <input type="password" name="registration password" id="registration_password" placeholder="알파벳 소문자+숫자+특수문자 8자 이상" value="123456" class="validField">
-                                <label for="registration_password">비밀번호</label>
-                                <button type="button" class="btn_pwChk">보기</button>
-                            </div>
-                        </div>
-                        <div class="form_type01">
-                            <div class="pw_chk">
-                                <input type="password" name="registration password check" id="registration_password_check" placeholder="입력한 비밀번호 확인">
-                                <label for="registration_password_check">비밀번호 확인</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="signup_btn_wrap02">
+                <div class="btn_wrap btn_half">
                     <a href="#" class="btn_default btn_type02">이전</a>
                     <a href="#" class="btn_default btn_type01 btn_disabled">다음</a>
                 </div>
-            <!-- //container -->
             </div>
+            <!-- //container -->
             <script src="../../javascripts/plugin.js"></script>
             <script src="../../javascripts/design_common.js"></script>
         </div>

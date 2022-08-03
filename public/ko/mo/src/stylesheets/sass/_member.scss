@@ -1,115 +1,208 @@
 @charset "UTF-8";
 
-.signup_top_wrap {
-  padding:vw(40) vw(40) 0;
-  // signup common start
-  .signup {
-    position:relative;
-    @extend %clearfix;
-    li:nth-child(1) { float:left; }
-    li:nth-child(2) {
-      float:left;
-      @include posxCenter(vw(95), absolute);
-      & .signup_row:before {
-        content:""; height:vw(6); position:absolute; top:50%; left:50%; background-color:$gray2; z-index:-1;
-        @include posxCenter(vw(482), absolute);
-      }
-    }
-    li:nth-child(3) { float:right; }
-    .signup_row {
-      width:vw(90); height:vw(90); position:relative; background-color:$gray1; border:vw(4) solid $gray1; border-radius:100%; box-sizing:border-box;
-      .signup_number { padding:vw(28) 0 0 0; color:$gray4; font-size:vw(36); font-weight:$bold; text-align:center; }
-      .signup_check { width:vw(70); height:vw(70); display:none; padding:vw(5) 0 0 vw(5); }
-      &.active {
-        background-color:$white; border:vw(4) solid $green1;
-        .signup_number { color:$green1; }
-      }
-      &.checked {
-        background-color:$green1; border:vw(4) solid $green1;
-        .signup_number { display:none; }
-        .signup_check { display:block; }
-      }
-
-    }
-    .signup_txt { padding:vw(24) 0 0 0; color:$gray4; font-size:vw(24); font-weight:$medium; letter-spacing:vw(-1); }
-    .signup_row.active ~ .signup_txt, .signup_row.checked ~ .signup_txt { color:$gray9;}
+/* 로그인 */
+.login_form_wrap {
+  padding:vw(74) vw(40) vw(184);
+  .login_title {
+    font-size:vw(44); line-height:vw(64); letter-spacing:vw(-0.6); color:$gray9; margin:0 0 vw(70);
+    strong { font-weight:$bold; }
   }
-  // signup common end
-  // terms start
-  .member_terms {
-    padding:vw(70) 0 0;
-    .terms_explanation { color:#414549; font-size:vw(26); letter-spacing:vw(-0.6); line-height:vw(40);  }
-    .terms_agree_all {
-      width:100%; margin:vw(40) 0 0 0; background-color:$gray1; border-radius:vw(20);
-      .form_type03_2 {
-        display:flex; align-items:center; padding:vw(32) vw(40);
-        label {
-          padding-top:vw(6); color:$gray7; font-size:vw(28); font-weight:$medium; letter-spacing:vw(-1); line-height:vw(41);
-          &:before { background-color:$gray4; }
-        }
-        & input[type="checkbox"]:checked + label { color:$gray9; }
-      }
+  .login_form {
+    > div {
+      margin:vw(20) 0 0;
+      &:first-child { margin:0; }
     }
-    .terms_agree_each {
-      padding:vw(51) 0 0 vw(44);
-      .form_type03_1 {
-        padding-bottom:vw(36);
-        label { font-weight:$medium; letter-spacing:vw(-0.6); }
-        & input[type="checkbox"]:checked + label { color: $gray9; }
+  }
+  .login_chk { padding:vw(26) vw(20) 0 }
+  .btn_wrap {
+    margin:vw(76) 0 0;
+    div { margin:0 0 vw(256) }
+    ul { padding:vw(30) vw(20) 0; font-size:0; }
+    li {
+      display:inline-block; font-size:vw(26); line-height:vw(38); letter-spacing:vw(-0.6); position:relative; padding:0 0 0 vw(24); margin:0 0 0 vw(24); letter-spacing:vw(-1);
+      &:before {
+        width:vw(2); height:vw(24); background-color:$gray2; position:absolute; top:50%; left:0; content:"";
+        @include translate(0, -50%);
+      }
+      &:first-child { padding:0; margin:0; }
+      &:first-child:before { display:none; }
+      a { color:$gray7; }
+    }
+    p {
+      font-size:vw(26); line-height:vw(46); color:$gray5; letter-spacing:vw(-1); text-align:center;
+      a {
+        font-weight:$bold; color:$gray9; font-size:vw(28); letter-spacing:vw(-0.6); position:relative; margin:0 0 0 vw(20);
+        &:after { width:100%; height:vw(2); background-color:$gray9; position:absolute; bottom:vw(-6); left:0; content:""; }
       }
     }
   }
-  // terms end
-  //registration start
-  .registration_input {
-    padding:vw(70) 0 0;
-    .form_type01 {
-      padding:0 0 vw(24) 0;
-      div.correct_msg + span { letter-spacing:vw(-1); }
-    }
-  }
-  //registration end
-  //self-authentication start
-  .member_pass {
-    padding:vw(70) 0 0;
-    .pass_explanation { padding:0 0 vw(40); color:#414549; font-size:vw(26); letter-spacing:vw(-0.6); line-height:vw(40); }
-    .btn_default {
-      color:$gray7; font-size:vw(30); font-weight:$semi-bold; line-height:vw(38); background-color:$gray1; letter-spacing:vw(-1);
-      &:disabled { color:$gray5; background-color:#E4E7EC; }
-    }
-  }
-  //self-authentication end
 }
 
-.signup_done {
-  padding:vw(70) vw(40) 0;
+/* 아이디 찾기 & 비밀번호 변경 */
+.find_idpw_wrap {
+   padding:vw(50) vw(40) vw(224); box-sizing:border-box; position:relative;
+  .pass_chk {
+    > p { font-size:vw(26); line-height:vw(40); letter-spacing:vw(-0.6); margin:0 0 vw(40) }
+    .user_id {
+      div { background-color:$gray1; padding:vw(40); border-radius:vw(20); margin:0 0 vw(21) }
+      strong {
+        display:block; font-size:vw(36); line-height:vw(46); color:$gray9; font-weight:$semi-bold; position:relative; padding:0 vw(70) 0 0;
+        &:after { width:vw(46); height:vw(46); position:absolute; top:0; right:0; background:url(../../images/common/icon_chk_black.svg) no-repeat 50% 50%; background-size:cover; content:""; }
+      }
+      span { display:block; font-size:vw(26); line-height:vw(38); letter-spacing:vw(-1); color:$gray5; padding:vw(26) 0 0 }
+    }
+    button { background-color:$gray1; color:$gray7 }
+    .find_info_form > div {
+      margin:vw(24) 0 0;
+      &:first-child { margin:0; }
+    }
+  }
+
+  .btn_wrap {
+    width:100%; position:fixed; bottom:vw(120); left:0; box-sizing:border-box; padding:0 vw(40);
+    &.btn_half {
+      display:flex; justify-content:space-between;
+      .btn_default { width:calc(50% - 0.83333vw) }
+    }
+  }
+}
+
+/* 비밀번호 변경완료 */
+.pw_change_done {
+  padding:vw(74) vw(40);
+  .title_wrap {
+    margin:0 0 vw(168);
+    p { font-size:vw(44); line-height:vw(64); color:$gray9; letter-spacing:vw(-0.6); padding:0 0 vw(34) }
+    strong { font-weight:$bold; }
+    span { font-size:vw(28); color:$gray7; }
+  }
+}
+
+/* 회원가입 */
+.signup_wrap {
+  padding:0 0 vw(184); position:relative;
+  .signup_content {
+    padding:vw(40) vw(40) 0;
+    .signup_process {
+      position:relative; display:flex; justify-content:space-between;
+      &:before { width:100%; height:vw(6); background-color:$gray2; content:""; z-index:-1; position:absolute; top:vw(42); left:0; }
+      li {
+        width:vw(90); font-size:vw(24); line-height:vw(35); padding:vw(106) 0 0; color:$gray4; position:relative;
+        &:before,&:after { width:vw(90); position:absolute; left:0; }
+        &:before { top:0; content:""; height:vw(90); background-color:$gray1; border-radius:100%; box-sizing:border-box; }
+        &:after { top:vw(4); font-size:vw(34); line-height:vw(90); color:$gray4; text-align:center; font-weight:$bold; }
+        &:nth-of-type(1):after { content:"1"; }
+        &:nth-of-type(2):after { content:"2"; }
+        &:nth-of-type(3):after { content:"3"; }
+        &.ing {
+          color:$gray9; font-weight:$semi-bold;
+          &:before { border:vw(4) solid $green1; background-color:$white; }
+          &:after { color:$green1; }
+        }
+        &.on {
+          color:$gray9; font-weight:$semi-bold;
+          &:before { background-color:$green1; }
+          &:after {
+            width:vw(70); height:vw(70); content:""; background:url(../../images/common/icon_chk_white_circle.svg) no-repeat 50% 50%; background-size:cover; top:vw(10); left:50%;
+            @include translate(-50%, 0);
+          }
+        }
+      }
+    }
+    /* 기존종희씨 작업했던 css
+    .signup_process_no {
+      position:relative;
+      @extend %clearfix;
+      li:nth-child(1) { float:left; }
+      li:nth-child(2) {
+        float:left;
+        @include posxCenter(vw(95), absolute);
+        & .signup_row:before {
+          content:""; height:vw(6); position:absolute; top:50%; left:50%; background-color:$gray2; z-index:-1;
+          @include posxCenter(vw(482), absolute);
+        }
+      }
+      li:nth-child(3) { float:right; }
+      .signup_row {
+        width:vw(90); height:vw(90); position:relative; background-color:$gray1; border:vw(4) solid $gray1; border-radius:100%; box-sizing:border-box;
+        .signup_number { padding:vw(28) 0 0 0; color:$gray4; font-size:vw(36); font-weight:$bold; text-align:center; }
+        .signup_check { width:vw(70); height:vw(70); display:none; padding:vw(5) 0 0 vw(5); }
+        &.active {
+          background-color:$white; border:vw(4) solid $green1;
+          .signup_number { color:$green1; }
+        }
+        &.checked {
+          background-color:$green1; border:vw(4) solid $green1;
+          .signup_number { display:none; }
+          .signup_check { display:block; }
+        }
+
+      }
+      .signup_txt { padding:vw(24) 0 0 0; color:$gray4; font-size:vw(24); font-weight:$semi-bold; letter-spacing:vw(-1); }
+      .signup_row.active ~ .signup_txt, .signup_row.checked ~ .signup_txt { color:$gray9;}
+    } */
+    .terms_wrap {
+      padding:vw(70) 0 0;
+      p { color:#414549; font-size:vw(26); letter-spacing:vw(-0.6); line-height:vw(40);  }
+      .terms_agree_all {
+        margin:vw(40) 0 0 0; background-color:$gray1; border-radius:vw(20);
+        .form_type03_2 {
+          padding:vw(34) vw(44);
+          label { color:$gray7; font-size:vw(28); font-weight:$semi-bold; }
+          & input[type="checkbox"]:checked + label { color:$gray9; }
+        }
+      }
+      .terms_agree_each {
+        padding:vw(36) vw(20) 0 vw(44);
+        .form_type03_1 {
+          display:flex; justify-content:space-between; padding:0 0 vw(30);
+          &:last-child { padding:0; }
+          .btn { width:vw(48); height:vw(48); text-indent: -999999px; background:url(../../images/common/icon_arrow3_gray.svg) center/cover no-repeat; }
+          label { width:80%; font-weight:$semi-bold; letter-spacing:vw(-0.6); }
+          & input[type="checkbox"]:checked + label { color: $gray9; }
+          & input[type="checkbox"]:checked ~ .btn { background-image:url(../../images/common/icon_arrow3_black.svg); }
+        }
+      }
+    }
+    .registration_form {
+      padding:vw(70) 0 0;
+      .form_type01 {
+        padding:0 0 vw(24);
+        &:last-child { padding:0; }
+      }
+    }
+    .pass_chk {
+      padding:vw(70) 0 0;
+      .pass_explanation { padding:0 0 vw(40); color:#414549; font-size:vw(26); letter-spacing:vw(-0.6); line-height:vw(40); }
+      .btn_default {
+        color:$gray7; font-size:vw(30); font-weight:$semi-bold; line-height:vw(38); background-color:$gray1; letter-spacing:vw(-1);
+        &:disabled { color:$gray5; background-color:$gray2; }
+      }
+    }
+    /* 220803 추가된 내용만 가져가주시면 됩니다!!!!!>< */
+    .pass_cont {
+      padding:vw(30); margin:vw(50) 0 0; background-color:$gray1; border-radius:vw(16);
+      ul {
+        padding:0 0 vw(10); display:flex; justify-content:space-between; font-size: vw(24); line-height: vw(40);
+        li:nth-child(1) { width:vw(153); color:$gray5; }
+        li:nth-child(2) { width:vw(427); }
+        &:last-child { padding:0; }
+      }
+    }
+    /* 220803 추가 end */
+  }
+  .btn_wrap {
+    width:100%; position:fixed; bottom:vw(120); left:0; box-sizing:border-box; padding:0 vw(40);
+    &.btn_half {
+      display:flex; justify-content:space-between;
+      .btn_default { width:calc(50% - 0.83333vw) }
+    }
+  }
+}
+
+/* 회원가입 완료 */
+.signup_done_wrap {
+  padding:vw(70) vw(40);
   .done_title { font-size:vw(44); line-height:vw(64); letter-spacing:vw(-0.6); }
   .done_explanation { padding:vw(34) 0 vw(160); font-size:vw(28); line-height:vw(40); color:$gray7; }
 }
-
-// service start
-.terms_service_wrap {
-  padding:vw(50) vw(40) 0;
-  .service_title { padding:0 0 vw(50); font-size:vw(44); line-height:vw(64); font-weight:$medium; letter-spacing:-0.6px; }
-  .service_cont { color:$gray5; font-size:vw(24); line-height:vw(38); letter-spacing:vw(-0.6); }
-}
-// service end
-
-
-
-.signup_btn_wrap01 {
-  padding: 0 vw(40) 0;
-  .btn_default { width:vw(640); position:fixed; bottom:vw(120); letter-spacing:vw(-1); }
-}
-.signup_btn_wrap01-1 { padding: 0 vw(40) 0; }
-.signup_btn_wrap02 {
-  position:fixed; bottom:vw(120); padding:0 vw(40);
-  .btn_default {
-    width:vw(314); float:left;
-    &:last-child { margin:0 0 0 vw(12); }
-  }
-}
-
-//registration page email 부분 css
-.form_type01 div input.validField { background-color:#fff; border-color:#000; }
-.form_type01 div.pw_chk.error_msg input.validField  { border-color: #f02121; }

@@ -64,29 +64,36 @@ function layout() {
     $requestBtn.on("click", function(){
         $bottomBar.toggleClass("navi_active")
     });
+
+    // tabMenu
+    var $tabMenu = $(".tab_menu li"),
+        $tabCont = $(".tab_contents > div");
+
+    $tabMenu.click(function(){
+        var _idx = $(this).index();
+        $tabMenu.removeClass("active");
+        $tabCont.hide();
+
+       $(this).addClass("active");
+        $tabCont.eq(_idx).show();
+    });
 }
 function main() {
 }
 function member() {
 }
 function mypage() {
-    var mypageWrap = $(".mypage_wrap");
-    var paymentAgreeWrap = mypageWrap.find(".membership_list_wrap .payment_agree_wrap");
-    var paymentAgreeAll = paymentAgreeWrap.find(".payment_agree_all");
+    var $termsWrap = $(".payment_agree_wrap"),
+        $termsAllBtn = $(".payment_agree_all button"),
+        $termsContent = $(".payment_agree_singly");
 
-    paymentAgreeAll.find(".form_type03_2 > button").click(function(e){
-        if(paymentAgreeAll.hasClass("active")){
-            paymentAgreeAll.find(".form_type03_2 > button").text("열기");
-            $(".payment_agree_singly").slideDown(function(){
-                paymentAgreeAll.removeClass("active");
-            });
-        }else {
-            paymentAgreeAll.find(".form_type03_2 > button").text("접기");
-            $(".payment_agree_singly").slideUp(function(){
-                paymentAgreeAll.addClass("active");
-            });
+    $termsAllBtn.click(function(){
+        if ($termsWrap.hasClass("active")) {
+            $termsWrap.removeClass("active");
+            TweenMax.to($termsContent, .3, {height: "auto"});
+        } else {
+            $termsWrap.addClass("active");
+            TweenMax.to($termsContent, .3, {height: 0});
         }
-        e.preventDefault();
     });
-
 }

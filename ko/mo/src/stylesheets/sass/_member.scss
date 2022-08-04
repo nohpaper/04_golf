@@ -13,26 +13,35 @@
       &:first-child { margin:0; }
     }
   }
-  .login_chk { padding:vw(26) vw(20) 0 }
+  .login_chk {
+    padding:vw(26) vw(20) 0;
+    label { font-size:vw(26) !important; }
+  }
   .btn_wrap {
     margin:vw(76) 0 0;
-    div { margin:0 0 vw(256) }
-    ul { padding:vw(30) vw(20) 0; font-size:0; }
-    li {
-      display:inline-block; font-size:vw(26); line-height:vw(38); letter-spacing:vw(-0.6); position:relative; padding:0 0 0 vw(24); margin:0 0 0 vw(24); letter-spacing:vw(-1);
-      &:before {
-        width:vw(2); height:vw(24); background-color:$gray2; position:absolute; top:50%; left:0; content:"";
-        @include translate(0, -50%);
+    div {
+      //margin:0 0 vw(256);
+      margin:0 0 vw(130);
+      ul { padding:vw(40) vw(20) 0; font-size:0; display:flex; text-align:center; }
+      li {
+        width:50%; font-size:vw(26); line-height:vw(38); position:relative; letter-spacing:vw(-1);
+        &:before {
+          width:vw(2); height:vw(32); background-color:$gray4; position:absolute; top:50%; left:0; content:"";
+          @include translate(0, -50%);
+        }
+        &:first-child:before { display:none; }
+        a { color:$gray7; }
       }
-      &:first-child { padding:0; margin:0; }
-      &:first-child:before { display:none; }
-      a { color:$gray7; }
     }
-    p {
-      font-size:vw(26); line-height:vw(46); color:$gray5; letter-spacing:vw(-1); text-align:center;
-      a {
-        font-weight:$bold; color:$gray9; font-size:vw(28); letter-spacing:vw(-0.6); position:relative; margin:0 0 0 vw(20);
-        &:after { width:100%; height:vw(2); background-color:$gray9; position:absolute; bottom:vw(-6); left:0; content:""; }
+    > ul {
+      li {
+        font-size:vw(26); line-height:vw(50); color:$gray5; letter-spacing:vw(-1); margin:vw(14) 0 0;
+        &:nth-of-type(1) { color:$green2; margin:0; }
+        &:nth-of-type(2) { color:$pink }
+        a {
+          font-weight:$bold; color:$gray9; font-size:vw(28); letter-spacing:vw(-0.6); position:relative; margin:0 0 0 vw(20);
+          &:after { width:100%; height:vw(2); background-color:$gray9; position:absolute; bottom:vw(-4); left:0; content:""; }
+        }
       }
     }
   }
@@ -40,7 +49,7 @@
 
 /* 아이디 찾기 & 비밀번호 변경 */
 .find_idpw_wrap {
-   padding:vw(50) vw(40) vw(224); box-sizing:border-box; position:relative;
+   padding:vw(50) vw(40) vw(262); box-sizing:border-box; position:relative;
   .pass_chk {
     > p { font-size:vw(26); line-height:vw(40); letter-spacing:vw(-0.6); margin:0 0 vw(40) }
     .user_id {
@@ -79,7 +88,7 @@
 
 /* 회원가입 */
 .signup_wrap {
-  padding:0 0 vw(184); position:relative;
+  padding:0 0 vw(262); position:relative;
   .signup_content {
     padding:vw(40) vw(40) 0;
     .signup_process {
@@ -89,7 +98,7 @@
         width:vw(90); font-size:vw(24); line-height:vw(35); padding:vw(106) 0 0; color:$gray4; position:relative;
         &:before,&:after { width:vw(90); position:absolute; left:0; }
         &:before { top:0; content:""; height:vw(90); background-color:$gray1; border-radius:100%; box-sizing:border-box; }
-        &:after { top:vw(4); font-size:vw(34); line-height:vw(90); color:$gray4; text-align:center; font-weight:$bold; }
+        &:after { top:vw(4); font-size:vw(36); line-height:vw(90); color:$gray4; text-align:center; font-weight:$bold; }
         &:nth-of-type(1):after { content:"1"; }
         &:nth-of-type(2):after { content:"2"; }
         &:nth-of-type(3):after { content:"3"; }
@@ -108,38 +117,6 @@
         }
       }
     }
-    /* 기존종희씨 작업했던 css
-    .signup_process_no {
-      position:relative;
-      @extend %clearfix;
-      li:nth-child(1) { float:left; }
-      li:nth-child(2) {
-        float:left;
-        @include posxCenter(vw(95), absolute);
-        & .signup_row:before {
-          content:""; height:vw(6); position:absolute; top:50%; left:50%; background-color:$gray2; z-index:-1;
-          @include posxCenter(vw(482), absolute);
-        }
-      }
-      li:nth-child(3) { float:right; }
-      .signup_row {
-        width:vw(90); height:vw(90); position:relative; background-color:$gray1; border:vw(4) solid $gray1; border-radius:100%; box-sizing:border-box;
-        .signup_number { padding:vw(28) 0 0 0; color:$gray4; font-size:vw(36); font-weight:$bold; text-align:center; }
-        .signup_check { width:vw(70); height:vw(70); display:none; padding:vw(5) 0 0 vw(5); }
-        &.active {
-          background-color:$white; border:vw(4) solid $green1;
-          .signup_number { color:$green1; }
-        }
-        &.checked {
-          background-color:$green1; border:vw(4) solid $green1;
-          .signup_number { display:none; }
-          .signup_check { display:block; }
-        }
-
-      }
-      .signup_txt { padding:vw(24) 0 0 0; color:$gray4; font-size:vw(24); font-weight:$semi-bold; letter-spacing:vw(-1); }
-      .signup_row.active ~ .signup_txt, .signup_row.checked ~ .signup_txt { color:$gray9;}
-    } */
     .terms_wrap {
       padding:vw(70) 0 0;
       p { color:#414549; font-size:vw(26); letter-spacing:vw(-0.6); line-height:vw(40);  }
@@ -148,16 +125,21 @@
         .form_type03_2 {
           padding:vw(34) vw(44);
           label { color:$gray7; font-size:vw(28); font-weight:$semi-bold; }
+          label:before { background-color:$gray4 }
           & input[type="checkbox"]:checked + label { color:$gray9; }
+          & input[type="checkbox"]:checked + label:before { background-color:$green1; }
         }
       }
       .terms_agree_each {
-        padding:vw(36) vw(20) 0 vw(44);
+        padding:vw(40) vw(20) 0 vw(44);
         .form_type03_1 {
           display:flex; justify-content:space-between; padding:0 0 vw(30);
           &:last-child { padding:0; }
           .btn { width:vw(48); height:vw(48); text-indent: -999999px; background:url(../../images/common/icon_arrow3_gray.svg) center/cover no-repeat; }
-          label { width:80%; font-weight:$semi-bold; letter-spacing:vw(-0.6); }
+          label {
+            width:80%; font-weight:$medium; letter-spacing:vw(-0.6); font-size:vw(27);
+            &:after { top:vw(-3); }
+          }
           & input[type="checkbox"]:checked + label { color: $gray9; }
           & input[type="checkbox"]:checked ~ .btn { background-image:url(../../images/common/icon_arrow3_black.svg); }
         }
@@ -166,7 +148,7 @@
     .registration_form {
       padding:vw(70) 0 0;
       .form_type01 {
-        padding:0 0 vw(24);
+        margin:0 0 vw(24); border:1px solid pink;
         &:last-child { padding:0; }
       }
     }
@@ -176,6 +158,15 @@
       .btn_default {
         color:$gray7; font-size:vw(30); font-weight:$semi-bold; line-height:vw(38); background-color:$gray1; letter-spacing:vw(-1);
         &:disabled { color:$gray5; background-color:$gray2; }
+      }
+      .pass_info {
+        margin:vw(40) 0 0; background-color:$gray1; border-radius:vw(16); padding:vw(30);
+        dl {
+          margin:vw(10) 0 0; display:flex; font-size:vw(24); line-height:vw(40); letter-spacing:vw(-0.6);
+          &:first-child { margin:0; }
+          dt { width:vw(153); color:$gray5; }
+          dd { width:calc(100% - 21.25vw); color:$gray7; font-weight:$semi-bold; }
+        }
       }
     }
   }
@@ -193,4 +184,142 @@
   padding:vw(70) vw(40);
   .done_title { font-size:vw(44); line-height:vw(64); letter-spacing:vw(-0.6); }
   .done_explanation { padding:vw(34) 0 vw(160); font-size:vw(28); line-height:vw(40); color:$gray7; }
+  .join {
+    margin:vw(16) 0 0;
+    .notification_type04 { margin:vw(54) 0 0; }
+  }
+}
+
+/* 회원 리스트 */
+.member_wrap {
+  h2 { color:$gray9; font-size:vw(40); font-weight:$semi-bold; padding:vw(12) vw(40) vw(34); }
+  .member_menu {
+    position:relative; padding:0 vw(40); display:flex;
+    &:after { width:100%; height:vw(2); content:""; position:absolute; bottom:0; left:0; z-index:-1; background-color:$gray2; }
+    li { width:33.333%; }
+    a { display:block; font-size:vw(30); line-height:vw(98); color:$gray7; position:relative; text-align:center; }
+    li.active a { color:$gray9; font-weight:$semi-bold; }
+    li.active a:after { width:100%; height:vw(4); content:""; background-color:$gray9; position:absolute; bottom:0; left:0; }
+  }
+  .member_contents { padding:vw(30) vw(40) vw(200); }
+  .member_list > li { padding:vw(25) 0; }
+  .member_list a { display:flex; align-items:center }
+  .member_list .photo { width:vw(100); height:vw(100); display:block; text-indent:-99999px; background:url(../../images/common/no_image.svg) no-repeat 50% 50% $gray1; background-size:cover; border-radius:100%; margin:0 vw(30) 0 0; }
+  .member_list .info {
+    width:calc(100% - 18.05556vw);
+    strong { display:block; font-size:vw(28); line-height:vw(41); font-weight:$semi-bold; color:$gray9; text-overflow:ellipsis; overflow: hidden; white-space: nowrap; }
+    div {
+      font-size:0; margin:vw(5) 0 0;
+      ul {
+        font-size:0; display:inline-block; margin:0 0 0 vw(12); padding:0 0 0 vw(20); position:relative;
+        &:first-child { margin:0; padding:0; }
+        &:first-child:before { display:none; }
+        &:before { content:"/"; font-size:vw(20); color:$gray4; font-weight:$bold; position:absolute; top:vw(6); left:0; }
+        li {
+          display:inline-block; font-size:vw(24); line-height:vw(32); font-weight:$medium; color:$gray5; position:relative; padding:0 0 0 vw(12); margin:0 0 0 vw(6);
+          &:first-child { margin:0; padding:0; }
+          &:first-child:before { display:none; }
+          &:before { content:""; width:vw(6); height:vw(6); background-color:$gray2; border-radius:100%; position:absolute; top:vw(12); left:0; }
+        }
+      }
+    }
+  }
+}
+
+/* 회원 상세 */
+.member_view_wrap {
+  .profile_wrap { padding:vw(30) vw(40) vw(60); }
+  .status_wrap {
+    padding:vw(54) 0 vw(10);
+    a { display:flex; line-height:vw(56); justify-content:space-between; background-color:$green05; border-radius:vw(20); padding:vw(28) vw(36) vw(28) vw(40) }
+    span {
+      font-size:vw(26); font-weight:$semi-bold; letter-spacing:vw(-1); color:$gray9;
+      @include opacity(.7);
+    }
+    strong {
+      display:block; font-size:vw(30); font-weight:$bold; color:#03a084; position:relative; padding:0 vw(56) 0 0;
+      &:after {
+        width:vw(56); height:vw(56); content:""; position:absolute; top:50%; right:0; background:url(../../images/common/icon_arrow2_green.svg) no-repeat 50% 50%; background-size:cover; margin:vw(-2) 0 0;
+        @include translate(0, -50%);
+      }
+    }
+  }
+  /* 기본정보 */
+  .profile_details {
+    padding:0 vw(40) vw(242);
+    > div {
+      margin:vw(50) 0 0; padding:vw(50) 0 0; border-top:vw(2) solid $gray2;
+      &:first-child { padding:0; margin:0; border:none; }
+      > strong { display:block; font-size:vw(30); line-height:vw(52); margin:0 0 vw(29); }
+    }
+    .photo {
+      margin:0 0 vw(25); display:flex; flex-wrap:wrap;
+      li {
+        width:vw(160); height:vw(160); margin:0 vw(10) vw(10) 0; background-repeat:no-repeat; background-size:cover; background-position:50% 50%; overflow:hidden; border-radius:vw(10);
+        &:last-child { margin:0; }
+        &.my_pick {
+          position:relative;
+          &:before { content:"대표"; padding:vw(8) vw(12); font-size:vw(20); border-radius:vw(10) 0; font-weight:$medium; background-color:$green1; color:$white; display:inline-block; }
+        }
+      }
+    }
+    .info_type01 {
+      .info_list {
+        li {
+          margin:vw(19) 0 0; position:relative; font-size:vw(24); line-height:vw(40); color:$gray4; padding:0 0 0 vw(192);
+          span { position:absolute; top:0; left:0; color:$gray5; font-size:vw(26) }
+          strong { color:$gray9; font-weight:$semi-bold; font-size:vw(26) }
+          &:first-child { margin:0; }
+        }
+      }
+    }
+    .info_type02 {
+      .info_list {
+        li {
+          margin:vw(19) 0 0; position:relative; font-size:vw(26); line-height:vw(40); color:$gray9; padding:0 0 0 vw(272); color:$gray9; font-weight:$semi-bold;
+          span { position:absolute; top:0; left:0; color:$gray5; font-size:vw(26); font-weight:$regular; }
+          &:first-child { margin:0; }
+        }
+      }
+    }
+    .info_type03 {
+      p { background-color:$gray1; border-radius:vw(20); padding:vw(30); font-size:vw(26); line-height:vw(40); color:$gray7; }
+    }
+  }
+}
+
+/* 셀럽 회원가입 승인 상태 */
+.celeb_singup_wrap {
+  padding:vw(50) vw(40) vw(262); box-sizing:border-box; position:relative;
+  .status_wrap {
+    background-color:$gray1; padding:vw(40); border-radius:vw(20); margin:0 0 vw(21);
+    strong {
+      display:block; font-size:vw(36); line-height:vw(46); color:$gray9; font-weight:$medium; position:relative; padding:0 vw(70) 0 0;
+      &:after { width:vw(56); height:vw(56); position:absolute; top:0; right:0; content:""; }
+    }
+    span { display:block; font-size:vw(26); line-height:vw(38); letter-spacing:vw(-1); color:$gray5; padding:vw(26) 0 0 }
+  }
+  .status_appoval { background-color:$green05; }
+  .status_appoval strong { color:$green2; }
+  .status_appoval strong:after { background:url(../../images/common/icon_chk_green.svg) no-repeat 50% 50%; background-size:cover; }
+  .status_denial { background-color:$red05 }
+  .status_denial strong { color:$red }
+  .status_denial strong:after { background:url(../../images/common/icon_denial.svg) no-repeat 50% 50%; background-size:cover; }
+  .info_txt { font-size:vw(26); line-height:vw(40); letter-spacing:vw(-0.6); color:#414549; padding:vw(40) 0 0; }
+  .ask_wrap {
+    margin:vw(100) 0 0;
+    li { margin:vw(16) 0 0; }
+    li:first-child { margin:0; }
+    a { display:block; text-align:center; padding:vw(40) 0; background-color:$gray1; border-radius:vw(20); }
+    span { display:inline-block; font-size:vw(28); line-height:vw(40); position:relative; color:$gray9; font-weight:$semi-bold; letter-spacing:vw(-0.6); padding:0 0 0 vw(54) }
+    span:before { width:vw(40); height:vw(40); content:""; position:absolute; top:0; left:0; }
+    li.ask_tel {
+      span { font-size:vw(32); }
+      span:before { background:url(../../images/common/icon_tel.svg) no-repeat 50% 50%; background-size:cover; }
+    }
+    li.ask_kakao span:before { background:url(../../images/common/icon_kakao.svg) no-repeat 50% 50%; background-size:cover; }
+  }
+  .btn_wrap {
+    width:100%; position:fixed; bottom:vw(120); left:0; box-sizing:border-box; padding:0 vw(40);
+  }
 }

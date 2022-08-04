@@ -6,37 +6,37 @@
             </div>
             <!-- container -->
             <div class="mypage_wrap">
-                <div class="my_profile">
-                    <div class="title_wrap">
-                        <h2>멤버십 가입하기</h2>
-                    </div>
+                <div class="sub_title_wrap">
+                    <h2>멤버십 정기결제 관리</h2>
                 </div>
                 <div class="membership_list_wrap">
-                    <strong>신용카드 등록</strong>
-                    <button type="button" class="save_btn">저장하기</button>
+                    <strong>등록된 결제 수단</strong>
+                    <a href="#" class="edit_btn save">저장하기</a>
                     <div class="registered_credit">
+                        <!-- 1. 카드 등록 시 class에 등록 순서대로 green - yellow - blue 부여(최대 3개까지 등록 가능), 카드 순서가 변경되어도 등록했던 색상 유지 -->
+                        <!-- class "represen_credit"로 결제 카드 체크 표기 -->
                         <ol>
-                            <li>
+                            <li class="green represen_credit">
                                 <div class="registered_cont">
                                     <strong>국민</strong>
                                     <p>**** **** **** 8429</p>
                                 </div>
                                 <button type="button" class="list_btn"></button>
                             </li>
-                            <li class="green">
+                            <li class="yellow">
                                 <div class="registered_cont">
                                     <strong>하나</strong>
                                     <p>**** **** **** 1063</p>
                                 </div>
                                 <button type="button" class="list_btn"></button>
                             </li>
-                            <li class="blue">
+                            <!--<li class="blue">
                                 <div class="registered_cont">
                                     <strong>신한</strong>
                                     <p>**** **** **** 1063</p>
                                 </div>
                                 <button type="button" class="list_btn"></button>
-                            </li>
+                            </li>-->
                         </ol>
                         <a href="#" class="btn_default btn_type03"><span>결제수단 추가</span></a>
                     </div>

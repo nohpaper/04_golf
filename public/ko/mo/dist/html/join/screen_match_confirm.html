@@ -25,7 +25,39 @@
         </div>
         <div id="wrap">
             <!-- container -->
+            <!--<button type="button" class="btn_popup" data-popup="공통이름">버튼</button>-->
+            <div class="popup" tabindex="0" style="display:flex;">
+                <div class="popup_wrap popup_fix_end">
+                    <div class="popup_content popup_match">
+                        <div class="popup_title_wrap">
+                            <strong>스크린 매칭 요청하기</strong>
+                            <button type="button" class="btn_popup_close">close</button>
+                        </div>
+                        <div class="popup_cont_wrap">
+                            <p>스크린 매칭 요청 시 모집 인원만큼의 셀럽을 매칭받을 수 있으며, 매칭
+                                완료 시 이에 따른 매칭 수수료를 결제해주셔야 합니다.</p>
+                            <ul class="notification_type01">
+                                <li>요청 시 24시간 이내에 셀럽이 매칭됩니다.</li>
+                                <li>매칭 완료 시 1시간 이내에 결제를 완료해주셔야
+                                    서비스를 정상적으로 이용할 수 있습니다.</li>
+                                <li>미결제 시 매칭은 자동으로 취소됩니다.</li>
+                                <li>미결제 또는 매칭 요청 취소(철회) 시 서비스 정책에 따라 최대 7일간 매칭 서비스 이용이 제한될 수 있습니다.</li>
+                            </ul>
+                            <strong>스크린 매칭 요청을 접수하시겠습니까?</strong>
+                        </div>
+                        <div class="btn_wrap btn_half">
+                            <button type="button" class="btn_default btn_type02">취소</button>
+                            <button type="button" class="btn_default btn_type01">확인</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="dimmed"></p>
+            </div>
 
+            <style>
+                /* 작업하는 팝업 사이즈 기재 */
+                .popup_content {max-width:1000px; background-color:white;}
+            </style>
             <!-- //container -->
             <script src="../../javascripts/plugin.js"></script>
             <script src="../../javascripts/design_common.js"></script>

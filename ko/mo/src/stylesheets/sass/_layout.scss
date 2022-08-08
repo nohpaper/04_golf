@@ -2,9 +2,9 @@
 
 /* header */
 #header {
-  height:vw(120); display:flex; justify-content:flex-end; align-items:center;
+  height:vw(120); padding:0 vw(8); display:flex; justify-content:flex-end; align-items:center;
   button {
-    width:vw(72); height:vw(72); margin:0 vw(5); text-indent:-999999px; background-position:0 0; background-size:cover; background-repeat:no-repeat;
+    width:vw(72); height:vw(72); margin:0 vw(6); text-indent:-999999px; background-position:0 0; background-size:cover; background-repeat:no-repeat;
     &.btn_alarm {
       background-image:url('../../images/common/btn_alarm.svg'); position:relative;
       &.active:after { width:vw(10); height:vw(10); content:""; position:absolute; top:vw(14); right:vw(14); border-radius:100%; background-color:$red; }
@@ -21,7 +21,7 @@
 
 /* 바텀 네비게이션 */
 .bottom_navi_wrap {
-  padding:vw(56) 0 0; /*positoin:relative;*/ position:fixed; bottom:0; left:0; width:100%; z-index:100;
+  padding:vw(53) 0 0; /*positoin:relative;*/ position:fixed; bottom:0; left:0; width:100%; z-index:100;
   nav {
     display:flex; justify-content: space-between; position:relative; padding:vw(13) vw(10);
     &:before { width:100%; height:100%; background:url(../../images/common/bottom_navi_bg.svg) no-repeat 50% 50%; background-size:cover; position:absolute; bottom:0; left:0; content:""; border-radius:vw(16) vw(16) 0 0; }
@@ -45,7 +45,12 @@
   }
 
   &.bottom_navi_celeb {
-    background-color:$pink;
+    &:after {
+      background-color:$pink;
+      width:vw(102); height:vw(102); content:""; position:absolute; top:0; left:50%; text-indent:-99999px; /*background:url(../../images/common/btn_request.svg) no-repeat 50% 50%; background-size:cover;*/ border-radius:100%; z-index:101;
+      @include translate(-50%, 0);
+      @include transition();
+    }
   }
 
   .btn_request {
@@ -142,7 +147,7 @@
 }
 
 .notification_type03 {
-  background-color:#fef2f2; border-radius:vw(16); padding:vw(26) 0; text-align:center;
+  background-color:#fef2f2; border-radius:vw(16); padding:vw(22) 0; text-align:center;
   span {
     display:inline-block; padding:0 0 0 vw(46); position:relative; font-size:vw(24); line-height:vw(36); color:$red; letter-spacing:vw(-0.6);
     &:before { width:vw(36); height:vw(36); content:""; background:url(../../images/common/icon_alert_red.svg) no-repeat 0 0; background-size:cover; position:absolute; top:0; left:0; }
@@ -153,6 +158,10 @@
   font-size:vw(26); line-height:vw(40); background-color:$gray1; padding:vw(32) vw(40); position:relative; border-radius:vw(16); letter-spacing:vw(-0.6); font-weight:$medium; margin:vw(24) 0 0;
   strong { font-weight:$extra-bold }
   &:after { width:vw(41); height:vw(30); position:absolute; top:vw(-24); right:vw(74); content:""; background:url(../../images/common/icon_bubble_arr.svg) no-repeat 50% 50%; background-size:cover; }
+}
+
+.notification_type05 {
+  background-color:$gray05; padding:vw(30) vw(40); border-radius:vw(16); color:$gray5; font-size:vw(24); line-height:vw(38); letter-spacing:vw(-0.6);
 }
 
 /* 탭메뉴 */
@@ -197,4 +206,9 @@
       }
     }
   }
+}
+
+/* 조인모집 */
+.join_item {
+
 }

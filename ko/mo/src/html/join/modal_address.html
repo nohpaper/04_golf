@@ -1,0 +1,35 @@
+@@include("../../include/header.html")
+            <!-- container -->
+            <!--<button type="button" class="btn_popup" data-popup="공통이름">버튼</button>-->
+            <div class="popup" tabindex="0" style="display:flex;">
+                <div class="popup_wrap popup_fix_end">
+                    <div class="popup_content popup_address">
+                        <div>
+                            <div class="popup_title_wrap">
+                                <strong>주소 찾기</strong>
+                                <button type="button" class="btn_popup_close">close</button>
+                            </div>
+                            <div class="popup_txt_chk">
+                                <div class="form_type02">
+                                    <div>
+                                        <input type="text" name="" id="txt_search" placeholder="예시) 반포대로 56, 독립기념관, 삼성동 25" value="">
+                                        <button type="button" class="search">검색하기</button>
+                                    </div>
+                                </div>
+                                <div class="form_type03_2">
+                                    <input type="checkbox" id="chk_search">
+                                    <label for="chk_search">변동된 주소정보 포함</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="dimmed"></p>
+            </div>
+
+            <style>
+                /* 작업하는 팝업 사이즈 기재 */
+                .popup_content {max-width:1000px; background-color:white;}
+            </style>
+            <!-- //container -->
+@@include("../../include/footer.html")

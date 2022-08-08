@@ -137,7 +137,7 @@
           &:last-child { padding:0; }
           .btn { width:vw(48); height:vw(48); text-indent: -999999px; background:url(../../images/common/icon_arrow3_gray.svg) center/cover no-repeat; }
           label {
-            width:80%; font-weight:$medium; letter-spacing:vw(-0.6); font-size:vw(27);
+            width:80%; font-weight:$semi-bold; letter-spacing:vw(-0.6); font-size:vw(26);
             &:after { top:vw(-3); }
           }
           & input[type="checkbox"]:checked + label { color: $gray9; }
@@ -148,7 +148,7 @@
     .registration_form {
       padding:vw(70) 0 0;
       .form_type01 {
-        margin:0 0 vw(24); border:1px solid pink;
+        margin:0 0 vw(24);
         &:last-child { padding:0; }
       }
     }
@@ -170,8 +170,18 @@
       }
     }
   }
+  .btn_wrap_fix {
+    width:100%; position:fixed; bottom:vw(120); left:0; box-sizing:border-box; padding:0 vw(40); z-index:50;
+    &.btn_half {
+      display:flex; justify-content:space-between;
+      .btn_default { width:calc(50% - 0.83333vw) }
+    }
+  }
+
+  /* 버튼영역 fix 아닌경우 */
+  &.signup_wrap_none { padding:0; }
   .btn_wrap {
-    width:100%; position:fixed; bottom:vw(120); left:0; box-sizing:border-box; padding:0 vw(40);
+    box-sizing:border-box; padding:vw(100) vw(40) vw(120);
     &.btn_half {
       display:flex; justify-content:space-between;
       .btn_default { width:calc(50% - 0.83333vw) }
@@ -320,6 +330,14 @@
     li.ask_kakao span:before { background:url(../../images/common/icon_kakao.svg) no-repeat 50% 50%; background-size:cover; }
   }
   .btn_wrap {
+    box-sizing:border-box; padding:vw(100) 0 vw(120);
+  }
+
+  /* 버튼영역 fix 아닌경우 */
+  &.celeb_singup_wrap_none {
+    padding:vw(50) vw(40) 0;
+  }
+  .btn_wrap_fix {
     width:100%; position:fixed; bottom:vw(120); left:0; box-sizing:border-box; padding:0 vw(40);
   }
 }

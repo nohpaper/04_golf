@@ -8,7 +8,7 @@
   .my_profile {
     padding:0 vw(40) vw(40);
     .title_wrap {
-      display:flex; justify-content:space-between; align-items:center; /*margin:0 0 vw(40);*/border:1px solid red;
+      display:flex; justify-content:space-between; align-items:center; /*margin:0 0 vw(40);*/
       h2 { color:$gray9; font-size:vw(40); line-height:vw(64); font-weight:$semi-bold; }
       a { display:inline-block; font-size:vw(24); line-height:vw(52); padding:0 vw(22); background-color:$gray1; color:$gray7; font-weight:$medium; border-radius:vw(10)}
     }
@@ -55,7 +55,7 @@
 
   /* 기본 타이틀 */
   .sub_title_wrap {
-    padding:0 vw(40) vw(40); border:1px solid blue;
+    padding:0 vw(40) vw(40);
     h2 { color:$gray9; font-size:vw(40); line-height:vw(64); font-weight:$semi-bold; }
   }
 
@@ -230,9 +230,15 @@
       .buy {
         position:relative; padding:0 0 0 vw(174); margin:0 0 vw(40);
         &:before {
-          width:vw(150); height:vw(150); content:""; position:absolute; top:50%; left:0; background:url(../../images/common/icon_membership.svg) no-repeat 50% 50%; background-size:cover;
+          width:vw(150); height:vw(150); content:""; position:absolute; top:50%; left:0; background-size:cover !important;
           @include translate(0, -50%);
         }
+        &.buy_1day:before { background:url(../../images/common/icon_membership_1day.svg) no-repeat 50% 50%; }
+        &.buy_1month:before { background:url(../../images/common/icon_membership_1m.svg) no-repeat 50% 50%; }
+        &.buy_3month:before { background:url(../../images/common/icon_membership_3m.svg) no-repeat 50% 50%; }
+        &.buy_6month:before { background:url(../../images/common/icon_membership_6m.svg) no-repeat 50% 50%; }
+        &.buy_1year:before { background:url(../../images/common/icon_membership_1y.svg) no-repeat 50% 50%; }
+        &.buy_spring:before { background:url(../../images/common/icon_membership_spring.svg) no-repeat 50% 50%; }
         p { font-size:vw(26); line-height:vw(38); font-weight:$semi-bold; color:$gray9; }
         span { display:block; font-size:vw(28); font-weight:$semi-bold; padding:vw(20) 0 vw(5); }
         em { font-size:vw(36); font-weight:$bold }
@@ -303,7 +309,7 @@
 
   /* 멤버십 해지하기 */
   .membership_cancel {
-    padding:vw(10) vw(40) vw(380); letter-spacing:vw(-0.6);
+    padding:vw(10) vw(40) vw(50)/*vw(380)*/; letter-spacing:vw(-0.6);
     div {
       background-color:$gray1; position:relative; padding:vw(78) vw(40) vw(42);
       > em { font-size:vw(24); line-height:vw(48); padding:0 vw(20); display:block; position:absolute; top:0; left:vw(30); color:$white; border-radius:0 0 vw(20) vw(20); }
@@ -335,6 +341,11 @@
       display:flex; justify-content:space-between;
       .btn_default { width:calc(50% - 0.83333vw) }
     }
+    .form_type03_2 { margin:0 0 vw(50); }
+    .form_type03_2 label { color:$gray7; }
+    .form_type03_2 label:before { background-color:$gray4 }
+    .form_type03_2 input[type=checkbox]:checked ~ label { color:$gray9; }
+    .form_type03_2 input[type=checkbox]:checked ~ label:before { background-color:$violet1; }
   }
   .btn_wrap_fix {
     width:100%; box-sizing:border-box; padding:0 vw(40); position:fixed; bottom:vw(120); left:0;
@@ -348,8 +359,6 @@
     .form_type03_2 input[type=checkbox]:checked ~ label { color:$gray9; }
     .form_type03_2 input[type=checkbox]:checked ~ label:before { background-color:$violet1; }
   }
-
-  /* 종희씨 css start */
 
   /* 계정 설정 */
   .account_set {
@@ -435,9 +444,8 @@
     margin:vw(78) 0 0 0;
     .btn_default { background-color:#e1e5e8; }
   }
-
   .membership_list_wrap {
-    padding:vw(15) vw(40) vw(193);
+    padding:vw(15) vw(40) vw(100);
     > strong { line-height:vw(32); font-size:vw(30); font-weight:$semi-bold; }
 
     /* 멤버십 선택 */
@@ -577,12 +585,11 @@
     }
   }
 
-
   /* 회원 탈퇴 */
   .withdrawal_wrap {
     padding:0 vw(40);
     .withdrawal_title {
-      padding:vw(20) 0 vw(16); font-weight:$semi-bold; font-size:vw(30); line-height:vw(32);
+      padding:vw(20) 0 vw(10); font-weight:$semi-bold; font-size:vw(30); line-height:vw(32);
       & .level.normal { color:$green3; }
       & .level.vip { color:$violet1; font-family:$SUIT; }
       & .level.celeb { color:#e71a57; }
@@ -597,14 +604,15 @@
         input[type=text]:disabled, input[type=password]:disabled { font-weight:$medium; }
       }
     }
-    .withdrawal_again { margin:vw(50) 0 vw(200) 0; }
+    .withdrawal_again { margin:vw(50) 0 vw(50) 0; }
   }
   .withderwal_chk_wrap {
     margin:0 0 vw(50);
     input[type="checkbox"] + label {
       padding:0 0 0 vw(70); color:$gray7;
-      &:before { background-color:$gray4; }
+      &:before { background-color:$gray4 !important; }
     }
+    input[type="checkbox"]:checked + label:before { background-color:$green1 !important }
 
   }
 
@@ -627,22 +635,23 @@
       display:flex; justify-content:space-between;
       > strong { width:80%; display:flex; align-items:center; font-size:vw(28); line-height:vw(40); font-weight:$semi-bold; }
       > span {
-        max-height:vw(52); display:inline-block; padding:vw(6) vw(20); font-size:vw(24); line-height:vw(40); font-weight:$medium; background-color:$gray1; border-radius:vw(50);
+        display:inline-block; padding:vw(18) vw(20) vw(12); font-size:vw(24); font-weight:$medium; background-color:$gray1; border-radius:vw(50);
         &.payment_complete { color:#008A69; }
         &.payment_cancel { color:$red; }
       }
     }
     .payment_cont_wrap {
       padding:vw(44) 0 0;
-      ul {
-        padding:vw(18) 0 0; display:flex; flex-wrap:wrap; line-height:vw(32);
+      li {
+        padding:vw(18) 0 0; line-height:vw(32);
+        @extend %clearfix;
         &:nth-child(1) { padding:0; }
-      }
-      li:nth-child(1) { width:vw(137); display:flex; align-items:center; font-size:vw(24); color:$gray7; }
-      li:nth-child(2) {
-        width:vw(493); font-size:vw(26); line-height:vw(32); font-weight:$medium; font-family:$SUIT;
-        strong { font-size:vw(24); font-weight:$medium; font-family:$NotosansKR; }
-        span { margin:0 vw(6) 0 0; color:$gray4; text-decoration:line-through; }
+        > strong:nth-child(1) { float:left; padding:0 vw(60) 0 0; font-weight:$regular; font-size:vw(24); color:$gray7; }
+        > p:nth-child(2) {
+          width:vw(400); float:left; font-size:vw(26); line-height:vw(32); font-weight:$medium; font-family:$SUIT;
+          span { font-size:vw(24); font-weight:$medium; font-family:$NotosansKR; }
+          s { margin:0 vw(6) 0 0; color:$gray4; text-decoration:line-through; }
+        }
       }
     }
     &.list_no {

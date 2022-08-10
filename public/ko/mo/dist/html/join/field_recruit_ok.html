@@ -59,32 +59,23 @@
                                     <div class="form_type02 form_date">
                                         <dl>
                                             <dt><label for="txt_startDate" class="required">조인 날짜<em>필수입력</em></label></dt>
-                                            <dd>
-                                                <input type="text" name="" id="txt_startDate" placeholder="만나는 날짜를 선택해주세요" value="2022.07.29 (금)">
-                                                <button type="button" class="btn_default btn_type02">날짜선택</button>
-                                            </dd>
+                                            <dd><input type="text" name="" id="txt_startDate" placeholder="만나는 날짜를 선택해주세요" value="2022.07.29 (금)" class="datepicker" readonly></dd>
                                         </dl>
                                         <div class="form_type03_2">
                                             <input type="checkbox" id="chk_overDay" checked>
                                             <label for="chk_overDay">1박 이상</label>
                                         </div>
                                     </div>
-                                    <div class="form_type02 form_date">
+                                    <div class="form_type02">
                                         <dl>
                                             <dt><label for="txt_time" class="required">조인 시간<em>필수입력</em></label></dt>
-                                            <dd>
-                                                <input type="text" name="" id="txt_time" placeholder="만나는 시간을 선택해주세요" value="오전 10:00">
-                                                <button type="button" class="btn_default btn_type02">시간선택</button>
-                                            </dd>
+                                            <dd><input type="time" name="" id="txt_time" placeholder="만나는 시간을 선택해주세요" required></dd>
                                         </dl>
                                     </div>
                                     <!--<div class="form_type02 form_date">
                                         <dl>
                                             <dt><label for="txt_endDate" class="required">종료 날짜<em>필수입력</em></label></dt>
-                                            <dd>
-                                                <input type="text" name="" id="txt_endDate" placeholder="종료 날짜를 선택해주세요">
-                                                <button type="button" class="btn_default btn_type02">날짜선택</button>
-                                            </dd>
+                                            <dd><input type="text" name="" id="txt_endDate" placeholder="종료 날짜를 선택해주세요" class="datepicker" readonly></dd>
                                         </dl>
                                         <div class="notification_type03 noti_green">
                                             <span>2022.07.29 ~ 2022.07.31 (2박 3일)</span>
@@ -104,7 +95,7 @@
                                         <dl>
                                             <dt><label for="sel_people" class="required">전체 인원(본인 포함)<em>필수입력</em></label></dt>
                                             <dd>
-                                                <select name="" id="sel_people" class="vaildFiled">
+                                                <select name="" id="sel_people" class="validField">
                                                     <option value="">본인 포함 전체 모집 인원을 선택해주세요</option>
                                                     <option value="" selected>4명</option>
                                                     <option value="">선택 2</option>
@@ -164,7 +155,7 @@
                                         <dl>
                                             <dt><label for="sel_hit">평균 타수</label></dt>
                                             <dd>
-                                                <select name="" id="sel_hit" class="vaildFiled">
+                                                <select name="" id="sel_hit" class="validField">
                                                     <option value="">평균 타수를 선택해주세요</option>
                                                     <option value="" selected>평균 90타</option>
                                                     <option value="">선택 2</option>

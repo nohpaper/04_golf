@@ -56,7 +56,7 @@
   .btn_request {
     width:vw(102); height:vw(102); position:absolute; top:0; left:50%; text-indent:-99999px; background:url(../../images/common/btn_request.svg) no-repeat 50% 50%; background-size:cover; border-radius:100%; z-index:101;
     @include translate(-50%, 0);
-    @include transition();
+    @include transition(transform);
   }
   .bottom_navi_bg_wrap { width:0; height:0; }
   .request_list_wrap {
@@ -175,11 +175,12 @@
   display:flex;
   .picture_wrap {
     width:vw(130); margin:0 vw(32) 0 0; position:relative;
-    span { display:block; width:vw(130); height:vw(130); text-indent:-99999px; background:url(../../images/common/no_image.svg) no-repeat 50% 50% $gray2; background-size:cover; border-radius:100%; overflow:hidden; }
+    span { display:block; width:vw(130); height:vw(130); text-indent:-99999px; background:url(../../images/common/no_image.svg) no-repeat 50% 50% $gray1; background-size:cover; border-radius:100%; overflow:hidden; }
     /*button {
       width:vw(54); height:vw(54); position:absolute; bottom:0; right:vw(-4); background:url(../../images/common/icon_upload.png) no-repeat 50% 50% #f1f3f5; background-size:cover; border-radius:100%; text-indent:-99999px; box-siizng:border-box;
       &:after { width:100%; height:100%; border:vw(6) solid $white; border-radius:100%; position:absolute; top:0; left:0; content:""; box-sizing:border-box; }
     }*/
+    //&.picture_blur span { @include blur(vw(2)) }
   }
   .info_wrap {
     width:calc(100% - 18.05556vw);

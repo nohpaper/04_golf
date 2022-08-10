@@ -62,6 +62,7 @@
   /* 기본정보 */
   .profile_details {
     padding:0 vw(40) vw(242);
+    &.profile_line { border-top:vw(16) solid $gray05; padding:vw(50) vw(40) vw(242) }
     > div {
       margin:vw(50) 0 0; padding:vw(50) 0 0; border-top:vw(2) solid $gray2;
       &:first-child { padding:0; margin:0; border:none; }

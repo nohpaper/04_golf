@@ -4,11 +4,6 @@ var winH;
 var $window = $(window);
 var winSc = $(window).scrollTop();
 
-var $popupBtn = $(".btn_popup"),
-    $popupBox = $(".popup"),
-    $popupBg = $(".dimmed"),
-    $closePopupBtn = $(".btn_popup_close")
-
 var $bottomBar = $(".bottom_navi_wrap"),
     $requestBtn = $bottomBar.find(".btn_request");
 

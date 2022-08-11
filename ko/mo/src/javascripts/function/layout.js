@@ -1,30 +1,19 @@
 function layout() {
-    // popup
-    var _seletePopup;
-    $popupBtn.on("click", function(e){
-        $popupBox.css({"display":"none"});
-        _seletePopup = $(this).data("popup");
-        $("."+_seletePopup).css({"display":"flex"});
-        $("."+_seletePopup).focus();
-        $("body,html").css({"overflow-y":"hidden"});
+    // nav
+    $navBtn.click(function(){
+        // TweenMax.to($navWrap, .3, { opacity:1, visibility:"visible" });
+        TweenMax.to($navWrap, .3, { left:0 });
+        TweenMax.to("body,html", .3, { "overflow-y":"hidden" });
+    });
 
-        var _this = $(this);
-        $closePopupBtn.on("click focusout", function(){
-            _this.focus();
-            $popupBox.fadeOut();
-            $("body,html").css({"overflow-y":"auto"});
-        });
-        $popupBg.on("click", function(){
-            _this.focus();
-            $popupBox.fadeOut();
-            $("body,html").css({"overflow-y":"auto"});
-        });
-        e.preventDefault();
+    $navCloseBtn.click(function(){
+        TweenMax.to($navWrap, .3, { left:"100vw" });
+        TweenMax.to("body,html", .3, { "overflow-y":"auto" });
     });
 
     // bottomBar
     $requestBtn.on("click", function(){
-        $bottomBar.toggleClass("navi_active")
+        $bottomBar.toggleClass("navi_active");
     });
 
     // tabMenu

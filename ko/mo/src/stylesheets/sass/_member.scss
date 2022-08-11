@@ -95,7 +95,7 @@
       position:relative; display:flex; justify-content:space-between;
       &:before { width:100%; height:vw(6); background-color:$gray2; content:""; z-index:-1; position:absolute; top:vw(42); left:0; }
       li {
-        width:vw(90); font-size:vw(24); line-height:vw(35); padding:vw(106) 0 0; color:$gray4; position:relative;
+        width:vw(90); font-size:vw(24); line-height:vw(35); padding:vw(106) 0 0; color:$gray4; position:relative; white-space:nowrap;
         &:before,&:after { width:vw(90); position:absolute; left:0; }
         &:before { top:0; content:""; height:vw(90); background-color:$gray1; border-radius:100%; box-sizing:border-box; }
         &:after { top:vw(4); font-size:vw(36); line-height:vw(90); color:$gray4; text-align:center; font-weight:$bold; }
@@ -149,7 +149,7 @@
       padding:vw(70) 0 0;
       .form_type01 {
         margin:0 0 vw(24);
-        &:last-child { padding:0; }
+        &:last-child { margin:0; }
       }
     }
     .pass_chk {

@@ -16,6 +16,7 @@
         <meta property="og:image" content="">
         <meta property="og:site_name" content="">
         <link rel="shortcut icon" href="" type="image/png"/>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../../stylesheets/css/common.css">
         <script src="../../javascripts/jquery-1.8.2.min.js"></script>
     </head>
@@ -59,10 +60,7 @@
                                     <div class="form_type02 form_date">
                                         <dl>
                                             <dt><label for="txt_startDate" class="required">조인 날짜<em>필수입력</em></label></dt>
-                                            <dd>
-                                                <input type="text" name="" id="txt_startDate" placeholder="만나는 날짜를 선택해주세요" class="datepicker">
-                                                <button type="button" class="btn_default btn_type02 btn_date">날짜선택</button>
-                                            </dd>
+                                            <dd><input type="text" name="" id="txt_startDate" placeholder="만나는 날짜를 선택해주세요" class="datepicker" readonly></dd>
                                         </dl>
                                         <div class="form_type03_2">
                                             <input type="checkbox" id="chk_overDay">
@@ -78,10 +76,7 @@
                                     <!--<div class="form_type02 form_date">
                                         <dl>
                                             <dt><label for="txt_endDate" class="required">종료 날짜<em>필수입력</em></label></dt>
-                                            <dd>
-                                                <input type="text" name="" id="txt_endDate" placeholder="만나는 날짜를 선택해주세요">
-                                                <button type="button" class="btn_default btn_type02">날짜선택</button>
-                                            </dd>
+                                            <dd><input type="text" name="" id="txt_endDate" placeholder="만나는 날짜를 선택해주세요" class="datepicker" readonly></dd>
                                         </dl>
                                         <div class="notification_type03 noti_green">
                                             <span>2022.07.29 ~ 2022.07.31 (2박 3일)</span>
@@ -320,38 +315,10 @@
                             </div>-->
                         </div>
                         <div class="btn_wrap">
-                            <!--<button type="button" class="btn_default btn_type01" disabled>조인 모집 등록하기</button>-->
-                            <button type="button" class="btn_default btn_type01 match_btn">조인 모집 등록하기</button>
+                            <button type="button" class="btn_default btn_type01" disabled>조인 모집 등록하기</button>
                         </div>
                     </fieldset>
                 </form>
-            </div>
-
-            <!--필드조인모집 팝업-->
-            <div class="popup_match_wrap" tabindex="0">
-                <div class="popup_match">
-                    <div class="popup_title_wrap">
-                        <strong>조인 매칭 요청하기</strong>
-                        <button type="button" class="btn_popup_close">close</button>
-                    </div>
-                    <div class="popup_cont_wrap">
-                        <p>조인 매칭 요청 시 모집 인원만큼의 셀럽을 매칭받을 수 있으며, 매칭
-                            완료 시 이에 따른 매칭 수수료를 결제해주셔야 합니다.</p>
-                        <ul class="notification_type01">
-                            <li>요청 시 24시간 이내에 셀럽이 매칭됩니다.</li>
-                            <li>매칭 완료 시 1시간 이내에 결제를 완료해주셔야
-                                서비스를 정상적으로 이용할 수 있습니다.</li>
-                            <li>미결제 시 매칭은 자동으로 취소됩니다.</li>
-                            <li>미결제 또는 매칭 요청 취소(철회) 시 서비스 정책에 따라 최대 7일간 매칭 서비스 이용이 제한될 수 있습니다.</li>
-                        </ul>
-                        <strong>조인 매칭 요청을 접수하시겠습니까?</strong>
-                    </div>
-                    <div class="btn_wrap btn_half">
-                        <button type="button" class="btn_default btn_type02">취소</button>
-                        <button type="button" class="btn_default btn_type01">확인</button>
-                    </div>
-                </div>
-                <p class="dimmed"></p>
             </div>
             <!-- //container -->
             <script src="../../javascripts/plugin.js"></script>

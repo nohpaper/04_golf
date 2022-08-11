@@ -16,6 +16,7 @@
         <meta property="og:image" content="">
         <meta property="og:site_name" content="">
         <link rel="shortcut icon" href="" type="image/png"/>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../../stylesheets/css/common.css">
         <script src="../../javascripts/jquery-1.8.2.min.js"></script>
     </head>
@@ -29,6 +30,79 @@
                 <button type="button" class="btn_alarm">알람</button>
                 <button type="button" class="btn_nav">메뉴</button>
             </header>
+
+            <!-- 일반&VIP 메뉴 -->
+            <nav id="nav">
+                <div class="user_info_wrap">
+                    <div class="info">
+                        <div class="picture_wrap">
+                            <!-- 등록된 사진이 없는 경우 -->
+                            <span>등록된 사진 없음</span>
+
+                            <!-- 등록된 사진이 있는 경우 -->
+                            <!--<span style="background-image:url(../../images/common/user.png)">프로젝트위키 123님의 사진</span>-->
+                        </div>
+                        <p>
+                            <strong>용산 골프왕</strong>
+                            <a href="#">내 정보 수정</a>
+                        </p>
+                        <button type="button" class="btn_logout">로그아웃</button>
+                    </div>
+                </div>
+                <ul class="menu_list">
+                    <li><a href="#" class="bg_account">계정 설정</a></li>
+                    <li><a href="#" class="bg_payment">결제 내역</a></li>
+                    <li><a href="#" class="bg_alarm">알림 설정</a></li>
+                    <li><a href="#" class="bg_notice">공지사항</a></li>
+                    <li><a href="#" class="bg_customer">고객센터</a></li>
+                </ul>
+                <div class="bottom_wrap">
+                    <ul class="terms_list">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                    <p class="version_info"><span>앱 버전 v.1.0.0 (최신버전)</span></p>
+                </div>
+                <button type="button" class="btn_nav_close">메뉴 닫기</button>
+            </nav>
+
+            <!-- 셀럽 메뉴 -->
+            <!--<nav id="nav">
+                <div class="user_info_wrap">
+                    <div class="info">
+                        <div class="picture_wrap">
+                            &lt;!&ndash; 등록된 사진이 없는 경우 &ndash;&gt;
+                            <span>등록된 사진 없음</span>
+
+                            &lt;!&ndash; 등록된 사진이 있는 경우 &ndash;&gt;
+                            &lt;!&ndash;<span style="background-image:url(../../images/common/user.png)">프로젝트위키 123님의 사진</span>&ndash;&gt;
+                        </div>
+                        <p>
+                            <strong>셀럽 1004</strong>
+                            <a href="#">내 정보 수정</a>
+                        </p>
+                        <button type="button" class="btn_logout">로그아웃</button>
+                    </div>
+                </div>
+
+                <ul class="menu_list">
+                    <li><a href="#" class="bg_account">계정 설정</a></li>
+                    <li><a href="#" class="bg_pay">셀럽페이 환전</a></li>
+                    <li><a href="#" class="bg_alarm">알림 설정</a></li>
+                    <li><a href="#" class="bg_notice">공지사항</a></li>
+                    <li><a href="#" class="bg_customer">고객센터</a></li>
+                </ul>
+
+                <div class="bottom_wrap">
+                    <ul class="celeb_terms_list">
+                        <li><a href="#"><strong>셀럽 이용약관</strong></a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                    <p class="version_info"><span>앱 버전 v.1.0.0 (최신버전)</span></p>
+                </div>
+                <button type="button" class="btn_nav_close">메뉴 닫기</button>
+            </nav>-->
             <!--//header-->
         <!-- container -->
         <div class="mypage_wrap">

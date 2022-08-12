@@ -34,6 +34,29 @@ $window.load(function () {
 function customer() {
 }
 function join() {
+    // 조인 메뉴 고정
+    /*var $join = $(".join_wrap"),
+        $joinList = $(".join_list_wrap");
+
+    $(window).scroll(function(){
+        var $scrolltop = $(this).scrollTop();
+        var $headerH = $("#header").outerHeight(),
+            $joinTitleH = $(".sub_title_wrap2").outerHeight(),
+            $joinHeader = $(".join_top_wrap").outerHeight();
+
+        var _totalHeight = $headerH+$joinTitleH;
+
+        if($scrolltop < _totalHeight){
+            if($join.hasClass("join_wrap_fix")){
+                $join.removeClass("join_wrap_fix");
+                $joinList.css({"margin-top":0})
+            }
+        }else{
+            $join.addClass("join_wrap_fix");
+            $joinList.css({"margin-top":$joinHeader})
+        }
+    });*/
+
     // 정렬하기
     var $alignBtn = $(".btn_align"),
         $alignWrap = $(".align_wrap"),
@@ -49,7 +72,7 @@ function join() {
     // 필터
    var $filterBtn = $(".btn_filter"),
        $filterWrap = $(".filter_wrap"),
-       // $filterWrapBg = $(".filter_wrap .dimmed"),
+       $filterWrapBg = $(".filter_wrap .dimmed"),
        $filterCloseBtn = $(".filter_wrap .btn_close");
 
     $filterBtn.on("click", function(){
@@ -57,6 +80,10 @@ function join() {
         $filterWrap.addClass("active");
     });
     $filterCloseBtn.on("click", function(){
+        $("body,html").css({"overflow":"auto"});
+        $filterWrap.removeClass("active");
+    });
+    $filterWrapBg.on("click", function(){
         $("body,html").css({"overflow":"auto"});
         $filterWrap.removeClass("active");
     });
@@ -106,10 +133,17 @@ function join() {
     var $textareaWrap = $(".textarea_wrap"),
         $textareaWrapArea = $textareaWrap.find("textarea");
     $textareaWrapArea.focus(function(){
-        $textareaWrap.addClass("active");
+        $textareaWrap.addClass("focus");
     });
     $textareaWrapArea.blur(function(){
-        $textareaWrap.removeClass("active");
+        $textareaWrap.removeClass("focus");
+    });
+
+    //후기 별점
+    var $star = $(".comments_star div button");
+    $star.on("click", function(){
+        $(this).parent().children('button').removeClass('active');
+        $(this).addClass('active').prevAll('button').addClass('active');
     });
 }
 function layout() {

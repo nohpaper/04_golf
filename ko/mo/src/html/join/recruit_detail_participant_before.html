@@ -16,10 +16,18 @@
                             <p>필드 모집 중</p>
                             <span>조회 21</span>
                         </div>
+                        <!--<div class="situation_green ok">
+                             <p>필드 조인 완료</p>
+                             <span>조회 21</span>
+                         </div>-->
+                        <!--<div class="situation_red cancel">
+                            <p>필드 모집 취소 완료</p>
+                            <span>조회 21</span>
+                        </div>-->
                     </div>
                     <div class="my_profile_ui">
                         <div class="picture_wrap">
-                            <!-- 등록된 사진이 있는 경우 -->
+                            <!-- 등록된 사진이 없는 경우 -->
                             <span>프로젝트위키 123님의 사진</span>
                         </div>
                         <div class="info_wrap">
@@ -56,12 +64,14 @@
                             <span>날짜</span>
                             <div>
                                 <strong class="list_number">2022.07.01(금) 12:00</strong>
+                                <!--<p>~ 2022.07.16(토)<span>1박2일</span></p>-->
                             </div>
                         </li>
                         <li>
                             <span>참가비</span>
                             <div>
                                 <strong class="list_number">100,000<span>원</span></strong>
+                                <!--<p>라운딩 관련 모든 비용 무료</p>-->
                             </div>
                         </li>
                         <li>
@@ -73,8 +83,10 @@
                                         <span class="people_male">남성</span>
                                         <span class="people_empty">비어있음</span>
                                         <span class="people_empty">비어있음</span>
+                                        <!--<span class="people_female">여성</span>-->
                                     </div>
                                     <p class="msg_type msg_type_ing">2자리 비었어요!</p>
+                                    <!--<p class="msg_type msg_type_done">모집 완료되었어요!</p>-->
                                 </div>
                             </div>
                         </li>
@@ -100,43 +112,93 @@
                         </div>
                     </div>
                     <div class="profile_ui">
-                        <div class="picture_wrap">
-                            <!-- 등록된 사진이 있는 경우 -->
-                            <span>프로젝트위키 123님의 사진</span>
-                        </div>
-                        <div class="info_wrap">
-                            <strong class="user_name">프로젝트위키 123</strong>
-                            <div class="user_info">
-                                <ul>
-                                    <li>30세</li>
-                                    <li>남</li>
-                                </ul>
-                                <ul>
-                                    <li>서울</li>
-                                    <li>평균 90타</li>
-                                    <li>2년</li>
-                                </ul>
+                        <a href="#">
+                            <div class="picture_wrap">
+                                <!-- 등록된 사진이 없는 경우 -->
+                                <span>프로젝트위키 123님의 사진</span>
                             </div>
-                        </div>
+                            <div class="info_wrap">
+                                <strong class="user_name">프로젝트위키 123</strong>
+                                <div class="user_info">
+                                    <ul>
+                                        <li>30세</li>
+                                        <li>남</li>
+                                    </ul>
+                                    <ul>
+                                        <li>서울</li>
+                                        <li>평균 90타</li>
+                                        <li>2년</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                        <!--<button type="button">취소</button>-->
                     </div>
                     <div class="profile_ui">
-                        <div class="picture_wrap">
-                            <!-- 등록된 사진이 있는 경우 -->
-                            <span>동반자님의 사진</span>
-                        </div>
-                        <div class="info_wrap">
-                            <strong class="user_name">동반자</strong>
-                            <div class="user_info">
-                                <ul>
-                                    <li>30세</li>
-                                    <li>남</li>
-                                </ul>
-                                <ul>
-                                    <li>평균 90타</li>
-                                </ul>
+                        <a href="#">
+                            <div class="picture_wrap">
+                                <!-- 등록된 사진이 없는 경우 -->
+                                <span>동반자님의 사진</span>
                             </div>
-                        </div>
+                            <div class="info_wrap">
+                                <strong class="user_name">동반자</strong>
+                                <div class="user_info">
+                                    <ul>
+                                        <li>31세</li>
+                                        <li>남</li>
+                                    </ul>
+                                    <ul>
+                                        <li>평균 90타</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- <button type="button">취소</button>-->
                     </div>
+                    <!--<div class="profile_ui">
+                        <a href="#">
+                            <div class="picture_wrap picture_blur">
+                                &lt;!&ndash; 등록된 사진이 있는 경우 &ndash;&gt;
+                                <span style="background-image:url(../../images/common/user_celeb.png)">셀럽 1004님의 사진</span>
+                            </div>
+                            <div class="info_wrap">
+                                <strong class="user_name">셀럽 1004</strong>
+                                <div class="user_info">
+                                    <ul>
+                                        <li>31세</li>
+                                        <li>여</li>
+                                    </ul>
+                                    <ul>
+                                        <li>방송 연예인</li>
+                                        <li>평균 90타</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                        <button type="button">취소</button>
+                    </div>-->
+                    <!--<div class="profile_ui">
+                        <a href="#">
+                            <div class="picture_wrap">
+                                &lt;!&ndash; 등록된 사진이 있는 경우 &ndash;&gt;
+                                <span style="background-image:url(../../images/common/user_celeb2.png)">mmiiii</span>
+                            </div>
+                            <div class="info_wrap">
+                                <strong class="user_name">mmiiii</strong>
+                                <div class="user_info">
+                                    <ul>
+                                        <li>30세</li>
+                                        <li>여</li>
+                                    </ul>
+                                    <ul>
+                                        <li>인플루언서</li>
+                                        <li>평균 90타</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                        <button type="button">취소</button>
+                    </div>-->
                 </div>
                 <div class="field_wrap">
                     <div class="title_wrap">
@@ -146,42 +208,48 @@
                         </div>
                     </div>
                     <div class="profile_ui">
-                        <div class="picture_wrap">
-                            <!-- 등록된 사진이 있는 경우 -->
-                            <span>프로젝트위키 123님의 사진</span>
-                        </div>
-                        <div class="info_wrap">
-                            <strong class="user_name">프로젝트위키 123</strong>
-                            <div class="user_info">
-                                <ul>
-                                    <li>30세</li>
-                                    <li>남</li>
-                                </ul>
-                                <ul>
-                                    <li>서울</li>
-                                    <li>평균 90타</li>
-                                    <li>2년</li>
-                                </ul>
+                        <a href="#">
+                            <div class="picture_wrap">
+                                <!-- 등록된 사진이 없는 경우 -->
+                                <span>프로젝트위키 123님의 사진</span>
                             </div>
-                        </div>
+                            <div class="info_wrap">
+                                <strong class="user_name">프로젝트위키 123</strong>
+                                <div class="user_info">
+                                    <ul>
+                                        <li>30세</li>
+                                        <li>남</li>
+                                    </ul>
+                                    <ul>
+                                        <li>서울</li>
+                                        <li>평균 90타</li>
+                                        <li>2년</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                        <!--<button type="button">확정</button>-->
                     </div>
                     <div class="profile_ui">
-                        <div class="picture_wrap">
-                            <!-- 등록된 사진이 있는 경우 -->
-                            <span>동반자님의 사진</span>
-                        </div>
-                        <div class="info_wrap">
-                            <strong class="user_name">닉네임입니다닉네임입니다닉닉네임입니다닉네임입니다닉닉네임입니다닉네임입니다닉</strong>
-                            <div class="user_info">
-                                <ul>
-                                    <li>31세</li>
-                                    <li>남</li>
-                                </ul>
-                                <ul>
-                                    <li>평균 90타</li>
-                                </ul>
+                        <a href="#">
+                            <div class="picture_wrap">
+                                <!-- 등록된 사진이 없는 경우 -->
+                                <span>동반자님의 사진</span>
                             </div>
-                        </div>
+                            <div class="info_wrap">
+                                <strong class="user_name">닉네임입니다닉네임입니다닉닉네임입니다닉네임입니다닉닉네임입니다닉네임입니다닉</strong>
+                                <div class="user_info">
+                                    <ul>
+                                        <li>31세</li>
+                                        <li>남</li>
+                                    </ul>
+                                    <ul>
+                                        <li>평균 90타</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                        <!--<button type="button">확정</button>-->
                     </div>
                     <div class="apply_btn">
                         <button type="button">조인 모집 신청하기</button>
@@ -194,17 +262,189 @@
                             <span>0</span>
                         </div>
                     </div>
+                    <!-- 댓글 노출 영역 start -->
+                    <!--<div class="comments_wrap">
+                        &lt;!&ndash; 댓글 영역 start &ndash;&gt;
+                        <div class="comments_items">
+                            <div>
+                                <a href="#">
+                                    <div class="comments_profile_ui">
+                                        <div class="picture_wrap">
+                                            &lt;!&ndash; 등록된 사진이 있는 경우 &ndash;&gt;
+                                            <span style="background-image:url(../../images/common/user2.png)">프로젝트위키 123님의 사진</span>
+                                        </div>
+                                        <div class="info_wrap">
+                                            <div class="user_name_wrap">
+                                                <strong class="user_name">프로젝트위키 123</strong>
+                                                <span class="state_label label_lock">비공개</span>
+                                            </div>
+                                            <div class="user_info">
+                                                <ul>
+                                                    <li>30세</li>
+                                                    <li>남</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="swiper mySwiper silde_photo_wrap">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"  style="background-image:url(../../images/common/user.png)"></div>
+                                        <div class="swiper-slide"  style="background-image:url(../../images/common/user2.png)"></div>
+                                        <div class="swiper-slide"  style="background-image:url(../../images/common/user2.png)"></div>
+                                        <div class="swiper-slide"  style="background-image:url(../../images/common/user2.png)"></div>
+                                        <div class="swiper-slide"  style="background-image:url(../../images/common/user2.png)"></div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                                <div class="comments_cont_wrap">
+                                    <p>캐디비는 일반적으로 인당 10만원 정도 나오는 것 같으니
+                                        참고해주세요!</p>
+                                    <span>2022.06.14</span>
+                                </div>
+                                <div class="comments_btn_wrap">
+                                    <button type="button" class="white_bg">댓글</button>
+                                    <div>
+                                        <button type="button" class="gray_bg">수정</button>
+                                        <button type="button" class="gray_bg">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        &lt;!&ndash; 댓글 영역 end &ndash;&gt;
+                        &lt;!&ndash; 댓글 영역 start &ndash;&gt;
+                        <div class="comments_items">
+                            <div>
+                                <a href="#">
+                                    <div class="comments_profile_ui">
+                                        <div class="picture_wrap">
+                                            &lt;!&ndash; 등록된 사진이 없는 경우 &ndash;&gt;
+                                            <span>프로젝트위키 123님의 사진</span>
+                                        </div>
+                                        <div class="info_wrap">
+                                            <div class="user_name_wrap">
+                                                <strong class="user_name">프로젝트위키 123</strong>
+                                                <span class="state_label label_lock">비공개</span>
+                                            </div>
+                                            <div class="user_info">
+                                                <ul>
+                                                    <li>30세</li>
+                                                    <li>남</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="swiper mySwiper silde_photo_wrap">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"  style="background-image:url(../../images/common/user.png)"></div>
+                                        <div class="swiper-slide"  style="background-image:url(../../images/common/user.png)"></div>
+                                        <div class="swiper-slide"  style="background-image:url(../../images/common/user.png)"></div>
+                                        <div class="swiper-slide"  style="background-image:url(../../images/common/user.png)"></div>
+                                        <div class="swiper-slide"  style="background-image:url(../../images/common/user.png)"></div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                                <div class="comments_cont_wrap">
+                                    <p>캐디비는 일반적으로 인당 10만원 정도 나오는 것 같으니
+                                        참고해주세요!</p>
+                                    <span>2022.06.14</span>
+                                </div>
+                                <div class="comments_btn_wrap">
+                                    <button type="button" class="white_bg">댓글</button>
+                                    <div>
+                                        <button type="button" class="gray_bg">수정</button>
+                                        <button type="button" class="gray_bg">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <div class="comments_profile_ui">
+                                        <div class="picture_wrap">
+                                            &lt;!&ndash; 등록된 사진이 없는 경우 &ndash;&gt;
+                                            <span>닉네임입니다닉네임입니다닉네임입님의 사진</span>
+                                        </div>
+                                        <div class="info_wrap">
+                                            <div class="user_name_wrap">
+                                                <strong class="user_name">닉네임입니다닉네임입니다닉네임입</strong>
+                                                <span class="state_label label_lock">비공개</span>
+                                            </div>
+                                            <div class="user_info">
+                                                <ul>
+                                                    <li>31세</li>
+                                                    <li>남</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="comments_cont_wrap">
+                                    <p><em>@프로젝트위키 123</em> 캐디비는 일반적으로 인당 10만원 정도 나오는 것 같으니
+                                        참고해주세요!</p>
+                                    <span>2022.06.14</span>
+                                </div>
+                                <div class="comments_btn_wrap">
+                                    <button type="button" class="white_bg">댓글</button>
+                                    <div>
+                                        <button type="button" class="gray_bg">수정</button>
+                                        <button type="button" class="gray_bg">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <div class="comments_profile_ui">
+                                        <div class="picture_wrap">
+                                            &lt;!&ndash; 등록된 사진이 없는 경우 &ndash;&gt;
+                                            <span>닉네임입니다닉네임입니다닉네임입님의 사진</span>
+                                        </div>
+                                        <div class="info_wrap">
+                                            <div class="user_name_wrap">
+                                                <strong class="user_name">닉네임입니다닉네임입니다닉네임입</strong>
+                                                <span class="state_label label_lock">비공개</span>
+                                            </div>
+                                            <div class="user_info">
+                                                <ul>
+                                                    <li>31세</li>
+                                                    <li>남</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="comments_cont_wrap">
+                                    <p><em>@프로젝트위키 123</em> 캐디비는 일반적으로 인당 10만원 정도 나오는 것 같으니
+                                        참고해주세요!</p>
+                                    <span>2022.06.14</span>
+                                </div>
+                                <div class="comments_btn_wrap">
+                                    <button type="button" class="white_bg">댓글</button>
+                                    <div>
+                                        <button type="button" class="gray_bg">수정</button>
+                                        <button type="button" class="gray_bg">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        &lt;!&ndash; 댓글 영역 end &ndash;&gt;
+                    </div>-->
+                    <!-- 댓글 노출 영역 end -->
                     <!-- 댓글 작성 start -->
                     <div class="comments_write_wrap">
                         <!--<div class="photo_wrap">
-                                <div style="background-image:url(../../images/common/user.png)">
-                                    <button type="button" class="photo_delete"></button>
-                                </div>
-                                <div style="background-image:url(../../images/common/user2.png)">
-                                    <button type="button" class="photo_delete"></button>
-                                </div>
-                            </div>-->
+                            <div style="background-image:url(../../images/common/user.png)">
+                                <button type="button" class="photo_delete"></button>
+                            </div>
+                            <div style="background-image:url(../../images/common/user2.png)">
+                                <button type="button" class="photo_delete"></button>
+                            </div>
+                        </div>-->
                         <div class="textarea_wrap">
+                            <!-- textarea에 focus됐을 때 <div class="textarea_wrap">태그 class에 active 추가 -->
+                            <!-- 대댓글 달 때 <strong class="call_name"> 태그 class에 active 추가 -->
                             <strong class="call_name">@프로젝트위키</strong>
                             <textarea placeholder="내용을 입력해주세요"></textarea>
                             <div class="textarea_number">

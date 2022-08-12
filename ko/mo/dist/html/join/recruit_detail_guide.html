@@ -16,7 +16,6 @@
         <meta property="og:image" content="">
         <meta property="og:site_name" content="">
         <link rel="shortcut icon" href="" type="image/png"/>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../../stylesheets/css/common.css">
         <script src="../../javascripts/jquery-1.8.2.min.js"></script>
     </head>
@@ -148,7 +147,7 @@
                             </div>
                         </li>
                     </ul>
-                    <div class="field_guidance">캐디비는 별도입니다.캐디비는 별도입니다.캐디비는 별도입니다.캐디비는 별도입니다.캐디비는 별도입니다.캐디비는 별도입니다.캐디비는 별도입니다.캐디비는 별도입니다.</div>
+                    <div class="field_guidance">캐디비는 별도입니다.</div>
                     <div class="field_guidance">잘 부탁드립니다~!</div>
                 </div>
                 <div class="field_wrap">
@@ -759,7 +758,10 @@
                                 <button type="button" class="photo_delete"></button>
                             </div>
                         </div>
+
                         <div class="textarea_wrap">
+                            <!-- textarea에 focus됐을 때 <div class="textarea_wrap">태그 class에 active 추가 -->
+                            <!-- 대댓글 달 때 <strong class="call_name"> 태그 class에 active 추가 -->
                             <strong class="call_name">@프로젝트위키</strong>
                             <textarea placeholder="내용을 입력해주세요"></textarea>
                             <div class="textarea_number">
@@ -785,8 +787,9 @@
                             <span>1</span>
                         </div>
                     </div>
+                    <!-- 후기 노출 영역 start -->
                     <div class="comments_wrap">
-                        <!-- 댓글 영역 start -->
+                        <!-- 후기 영역 start -->
                         <div class="comments_items">
                             <div>
                                 <a href="#">
@@ -870,8 +873,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 댓글 영역 end -->
-                        <!-- 댓글 영역 start -->
+                        <!-- 후기 영역 end -->
+                        <!-- 후기 영역 start -->
                         <div class="comments_items">
                             <div>
                                 <a href="#">
@@ -955,8 +958,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 댓글 영역 end -->
+                        <!-- 후기 영역 end -->
                     </div>
+                    <!-- 후기 노출 영역 end -->
                     <!-- 후기 작성 start -->
                     <div class="comments_write_profile">
                         <a href="#">
@@ -1007,7 +1011,7 @@
                             </div>
                         </div>
                         <div class="textarea_wrap">
-                            <!-- textarea에 focus됐을 때 <div class="textarea_wrap">태그에 active 추가 -->
+                            <!-- textarea에 focus됐을 때 <div class="textarea_wrap">태그 class에 active 추가 -->
                             <textarea placeholder="내용을 입력해주세요"></textarea>
                             <div class="textarea_number">
                                 <span>0</span>

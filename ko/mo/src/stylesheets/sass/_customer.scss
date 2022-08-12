@@ -2,7 +2,7 @@
 
 /* 서비스 이용약관 */
 .terms_service_wrap {
-  padding:vw(50) vw(40);
+  padding:vw(50) vw(40) vw(120);
   .service_title { padding:0 0 vw(50); font-size:vw(44); line-height:vw(64); font-weight:$semi-bold; letter-spacing:vw(-0.6); }
   .service_cont { color:$gray5; font-size:vw(24); line-height:vw(38); letter-spacing:vw(-0.6); }
 }

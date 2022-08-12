@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
+#wrap { padding:vw(120) 0 0; }
+
 /* header */
 #header {
-  height:vw(120); padding:0 vw(8); display:flex; justify-content:flex-end; align-items:center;
+  width:100%; position:fixed; top:0; left:0; z-index:90; height:vw(120); padding:0 vw(8); display:flex; justify-content:flex-end; align-items:center; background-color:$white;
   button {
-    width:vw(72); height:vw(72); margin:0 vw(6); text-indent:-999999px; background-position:0 0; background-size:cover; background-repeat:no-repeat;
+    width:vw(72); height:vw(72); margin:0 vw(6); text-indent:-9999px; background-position:0 0; background-size:cover; background-repeat:no-repeat;
     &.btn_alarm {
       background-image:url('../../images/common/btn_alarm.svg'); position:relative;
       &.active:after { width:vw(10); height:vw(10); content:""; position:absolute; top:vw(14); right:vw(14); border-radius:100%; background-color:$red; }
@@ -169,7 +171,7 @@
 
 /* 페이지 타이틀 */
 .page_wrap {
-  position:relative; height:vw(120);
+  width:100%; position:fixed; top:0; left:0; z-index:90; /*position:relative;*/ height:vw(120); background-color:$white;
   h2 { width:100%; font-size:vw(34); line-height:vw(120); letter-spacing:vw(-0.6); color:$gray9; font-weight:$semi-bold; position:absolute; top:0; left:0; text-align:center; }
   .btn_align_left, .btn_align_right {
     position:absolute; top:50%; font-size:0; z-index:1;

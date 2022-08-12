@@ -162,7 +162,7 @@
 
   /* 기간제 멤버십  */
   .fixed_term {
-    padding:vw(10) 0 vw(40); letter-spacing:vw(-0.6);
+    padding:vw(10) 0 vw(50); letter-spacing:vw(-0.6);
     .membership_list {
       padding:0 vw(40);
       ul { margin:0 0 vw(16); }
@@ -349,7 +349,8 @@
     .form_type03_2 input[type=checkbox]:checked ~ label:before { background-color:$violet1; }
   }
   .btn_wrap_fix {
-    width:100%; box-sizing:border-box; padding:0 vw(40); position:fixed; bottom:vw(120); left:0;
+    /*width:100%; box-sizing:border-box; padding:0 vw(40); position:fixed; bottom:vw(120); left:0;*/
+    padding:0 vw(40) vw(120);
     &.btn_half {
       display:flex; justify-content:space-between;
       .btn_default { width:calc(50% - 0.83333vw) }
@@ -446,7 +447,7 @@
     .btn_default { background-color:#e1e5e8; }
   }
   .membership_list_wrap {
-    padding:vw(15) vw(40) vw(100);
+    padding:vw(15) vw(40) vw(50);
     > strong { line-height:vw(32); font-size:vw(30); font-weight:$semi-bold; }
 
     /* 멤버십 선택 */
@@ -480,8 +481,9 @@
 
     /* 신용카드 등록 */
     .credit_list {
-      padding:vw(30) 0 0;
+      padding:vw(30) 0 vw(50);
       .form_type01 { padding:0 0 vw(24); }
+      .form_type01:last-child { padding:0; }
     }
 
     /* 결제정보 확인 */
@@ -540,6 +542,7 @@
             width:vw(48); height:vw(48); text-indent:-999999px; background:url(../../images/common/icon_arrow3_gray.svg) center/cover no-repeat;
           }
           input[type="checkbox"]:checked ~ .btn { background-image:url(../../images/common/icon_arrow3_black.svg); }
+          &:last-child { padding:0; }
         }
       }
 
@@ -605,7 +608,7 @@
         input[type=text]:disabled, input[type=password]:disabled { font-weight:$medium; }
       }
     }
-    .withdrawal_again { margin:vw(50) 0 vw(50) 0; }
+    .withdrawal_again { margin:vw(50) 0; }
   }
   .withderwal_chk_wrap {
     margin:0 0 vw(50);

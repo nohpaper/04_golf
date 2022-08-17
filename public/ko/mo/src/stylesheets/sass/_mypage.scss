@@ -41,16 +41,38 @@
       padding:vw(32) 0; display:flex; justify-content:space-around; background-color:$green05; border-radius:vw(20);
       &:after { width:50%; height:vw(82); content:""; background-color:$green1; position:absolute; top:0; right:0; border-radius:0 0 vw(50) 0; z-index:-1; }
       li {
-        width:33.333%; text-align:center; position:relative;
+        width:33.333%; text-align:center; position:relative; padding:vw(10) 0 0;
         a { display:block; }
-        strong { display:block; color:#03a084; font-weight:$bold; font-size:vw(40); line-height:vw(50); letter-spacing:vw(0); }
+        strong { display:block; color:#03a084; font-weight:$bold; font-size:vw(40); /*line-height:vw(50);*/ letter-spacing:vw(0); }
         span { display:block; color:$gray9; font-size:vw(24); line-height:vw(36); letter-spacing:vw(-1); font-weight:$medium; padding:vw(10) 0 0; }
         &:before { width:vw(2); height:100%; background-color:#ccede7; content:""; position:absolute; top:0; left:0; }
         &:first-child:before { display:none; }
         p strong, p span { color:$gray9; @include opacity(.2); }
       }
+
+      .pay_noti {
+        strong { color:$red; }
+        p {
+          width:vw(200); padding:vw(11) 0 vw(9); position:absolute; top:vw(-50); left:50%; background-color:$red; color:$white; font-size:vw(20); border-radius:vw(50); font-weight:$semi-bold;
+          @include translate(-50%, 0);
+          &:after {
+            width:vw(22); height:vw(17); position:absolute; bottom:vw(-10); left:50%; background:url(../../images/common/icon_polygon.svg) no-repeat 50% 50%; background-size:cover; content:"";
+            @include translate(-50%, 0);
+          }
+        }
+      }
     }
     div { margin:vw(18) 0 0; position:relative; z-index:1; }
+    .celeb_pay {
+      background-color:#f2defe; border-radius:vw(20); padding:vw(40) vw(30); display:flex; align-items:center; justify-content:space-between;
+      strong { position:relative; display:block; color:$violet1; font-size:vw(28); line-height:vw(42); padding:0 0 0 vw(55); font-weight:$semi-bold; }
+      strong:before {
+        width:vw(42); height:vw(42); background:url(../../images/common/icon_celeb_pay.svg) no-repeat 50% 50%; background-size:cover; position:absolute; top:50%; left:0; content:"";
+        @include translate(0, -50%);
+      }
+      p { font-size:vw(32); color:$violet1 }
+      span { font-size:vw(36); font-weight:$bold; }
+    }
   }
 
   /* 기본 타이틀 */
@@ -122,7 +144,7 @@
           &:nth-of-type(3n+2) .photo_box { margin:0 auto; }
           &:nth-of-type(3n+3) .photo_box { float:right; }
           &.my_pick {
-            .photo_box:before { content:"대표"; padding:vw(8) vw(12); font-size:vw(20); border-radius:0 0 vw(10) 0; font-weight:$medium; background-color:$green1; color:$white; display:inline-block; position:absolute; top:0; left:0; z-index:1; }
+            .photo_box:before { content:"대표"; padding:vw(14) vw(16) vw(12); font-size:vw(20); border-radius:0 0 vw(10) 0; font-weight:$medium; background-color:$green1; color:$white; display:inline-block; position:absolute; top:0; left:0; z-index:1; }
           }
           .photo_box { width:97%; padding:97% 0 0; background-position:50% 50%; background-repeat:no-repeat; background-size:cover; position:relative; }
           .btn_add_photo {
@@ -162,7 +184,7 @@
 
   /* 기간제 멤버십  */
   .fixed_term {
-    padding:vw(10) 0 vw(40); letter-spacing:vw(-0.6);
+    padding:vw(10) 0 vw(50); letter-spacing:vw(-0.6);
     .membership_list {
       padding:0 vw(40);
       ul { margin:0 0 vw(16); }
@@ -229,7 +251,7 @@
         padding:0 vw(40);
       }
       .buy {
-        position:relative; padding:0 0 0 vw(174); margin:0 0 vw(40);
+        position:relative; padding:vw(20) 0 vw(20) vw(174); margin:0 0 vw(40);
         &:before {
           width:vw(150); height:vw(150); content:""; position:absolute; top:50%; left:0; background-size:cover !important;
           @include translate(0, -50%);
@@ -240,7 +262,7 @@
         &.buy_6month:before { background:url(../../images/common/icon_membership_6m.svg) no-repeat 50% 50%; }
         &.buy_1year:before { background:url(../../images/common/icon_membership_1y.svg) no-repeat 50% 50%; }
         &.buy_spring:before { background:url(../../images/common/icon_membership_spring.svg) no-repeat 50% 50%; }
-        p { font-size:vw(26); line-height:vw(38); font-weight:$semi-bold; color:$gray9; }
+        p { font-size:vw(28); line-height:vw(38); font-weight:$semi-bold; color:$gray9; }
         span { display:block; font-size:vw(28); font-weight:$semi-bold; padding:vw(20) 0 vw(5); }
         em { font-size:vw(36); font-weight:$bold }
       }
@@ -262,7 +284,7 @@
       }
     }
     .payment_type {
-      padding:vw(60) vw(40) vw(70);
+      padding:vw(75) vw(40) vw(70);
       > strong { display:block; font-size:vw(30); line-height:vw(52); color:$black; font-weight:$semi-bold; padding:0 0 vw(30); }
       .form_type03_2 label:before { background-color:$gray4; }
       .form_type03_2 input[type=checkbox]:checked ~ label:before { background-color:$violet1; }
@@ -291,19 +313,35 @@
       }
     }
     .payment_terms {
-      padding:vw(50) vw(40) 0; border-top:vw(16) solid $gray05;
-      .form_type03_2 label { color:$gray7; font-weight:$medium; }
+      padding:vw(60) vw(40) 0; border-top:vw(16) solid $gray05;
+      .form_type03_2{ background-color:$gray1; padding:vw(34) vw(44); border-radius:vw(20) }
+      .form_type03_2 label { color:$gray7; font-weight:$medium; padding:0 0 0 vw(72) }
       .form_type03_2 label:before { background-color:$gray4; }
       .form_type03_2 input[type=checkbox]:checked ~ label:before { background-color:$violet1; }
-      .form_type03_1 label { color:$gray5; font-size:vw(26); font-weight:$medium; }
+      .form_type03_1 label { color:$gray4; font-size:vw(26); font-weight:$medium; }
+      .form_type03_1 label:after { background-image:url(../../images/common/icon_chk_gray2.svg) }
       .form_type03_1 input[type=checkbox]:checked ~ label { color:$gray9; }
-      .form_type03_1 input[type=checkbox]:checked ~ a { background-image:url(../../images/common/icon_arrow3_black.svg) }
-      ul { margin:vw(39) 0 0; }
+      .form_type03_1 input[type=checkbox]:checked ~ label:after { background-image:url(../../images/common/icon_chk_black.svg) }
+      //.form_type03_1 input[type=checkbox]:checked ~ a { background-image:url(../../images/common/icon_arrow3_black.svg) }
+      ul { margin:vw(39) 0 0; padding:0 vw(20) 0 vw(44) }
       li {
         display:flex; margin:vw(30) 0 0;
         &:first-child { margin:0; }
         div { width:100%; box-sizing:border-box; padding:0 vw(60) 0 0; }
         a { width:vw(48); height:vw(48); position:absolute; top:0; right:0; display:block; text-indent:-99999px; background:url(../../images/common/icon_arrow3_gray.svg) no-repeat 50% 50%; background-size:cover; }
+      }
+    }
+    .membership_field_wrap {
+      padding:vw(80) vw(40) 0;
+      dt { margin:0 0 vw(30); }
+      strong { line-height:vw(32); font-size:vw(30); font-weight:$semi-bold; color:$gray9; }
+      .notification_type02 { margin:vw(14) 0 0; }
+      .correct_msg{
+        & + span { padding-bottom:vw(12); }
+        &:after { top:vw(102); }
+      }
+      .error_msg {
+        & + span { padding-bottom:vw(12); }
       }
     }
   }
@@ -349,7 +387,8 @@
     .form_type03_2 input[type=checkbox]:checked ~ label:before { background-color:$violet1; }
   }
   .btn_wrap_fix {
-    width:100%; box-sizing:border-box; padding:0 vw(40); position:fixed; bottom:vw(120); left:0;
+    /*width:100%; box-sizing:border-box; padding:0 vw(40); position:fixed; bottom:vw(120); left:0;*/
+    padding:0 vw(40) vw(120);
     &.btn_half {
       display:flex; justify-content:space-between;
       .btn_default { width:calc(50% - 0.83333vw) }
@@ -368,16 +407,16 @@
       .form_type02 {
         margin:0 0 vw(39);
         dd {
-          display: flex; justify-content: space-between;
+          display:flex; justify-content: space-between;
           input[type=text]:disabled, input[type=password]:disabled, { font-weight:$medium; font-size:vw(30); }
         }
         &.account_password {
-          #txt_password { width:vw(486); }
+          #txt_password { /*width:vw(486);*/ width:calc(100% - 21.38889vw) }
           .btn_default { width:vw(142); height:vw(98); font-size:vw(26); }
         }
         &.account_phone {
           margin:0 0 vw(29);
-          #txt_phone { width:vw(438); }
+          #txt_phone { /*width:vw(438);*/ width:calc(100% - 28.05556vw) }
           .btn_default { width:vw(190); height:vw(98); font-size:vw(26);  }
         }
       }
@@ -441,12 +480,49 @@
       }
     }
   }
+  .referral_code {
+    margin:vw(70) 0 0;
+    .title_wrap {
+      display:flex; align-items:center; margin:0 0 vw(34);
+      strong { font-size:vw(30); font-weight:$semi-bold; }
+      p { margin:vw(-2) 0 0 vw(24); font-size:vw(20); padding:vw(10) vw(14); position:relative; color:$white; background-color:$violet1; font-weight:$semi-bold; border-radius:vw(6) }
+      p:before {
+        width:vw(18); height:vw(22); position:absolute; top:50%; left:vw(-11.5); background:url(../../images/common/icon_polygon_violet.svg) no-repeat 50% 50%; background-size:cover; content:"";
+        @include translate(0, -50%);
+      }
+    }
+    .code_wrap {
+      display:flex; background-color:$gray1; border-radius:vw(20); padding:vw(40) vw(35); align-items:center; justify-content:center;
+      strong { color:$gray9; font-size:vw(30); font-weight:$semi-bold; margin:0 vw(16) 0 0 }
+      button { font-size:vw(23); padding:vw(10) vw(20); font-weight:$semi-bold; color:$gray7; background-color:$white; border-radius:vw(10) }
+    }
+  }
+
+  // 셀럽 - 계정설정
+  .referral_code_celeb {
+    border-top:vw(16) solid $gray1; margin:vw(30) 0 0; padding:vw(50) vw(40) 0;
+    .title_wrap {
+      display:flex; align-items:center; margin:0 0 vw(34);
+      strong { font-size:vw(30); font-weight:$semi-bold; }
+      p { margin:vw(-2) 0 0 vw(24); font-size:vw(20); padding:vw(10) vw(14); position:relative; color:$white; background-color:$violet1; font-weight:$semi-bold; border-radius:vw(6) }
+      p:before {
+        width:vw(18); height:vw(22); position:absolute; top:50%; left:vw(-11.5); background:url(../../images/common/icon_polygon_violet.svg) no-repeat 50% 50%; background-size:cover; content:"";
+        @include translate(0, -50%);
+      }
+    }
+    .code_wrap {
+      display:flex; background-color:$gray1; border-radius:vw(20); padding:vw(40) vw(35); align-items:center; justify-content:center;
+      strong { color:$gray9; font-size:vw(30); font-weight:$semi-bold; margin:0 vw(16) 0 0 }
+      button { font-size:vw(23); padding:vw(10) vw(20); font-weight:$semi-bold; color:$gray7; background-color:$white; border-radius:vw(10) }
+    }
+  }
+
   .account_btn {
-    margin:vw(78) 0 0 0;
+    margin:vw(120) 0 0;
     .btn_default { background-color:#e1e5e8; }
   }
   .membership_list_wrap {
-    padding:vw(15) vw(40) vw(100);
+    padding:vw(15) vw(40) vw(50);
     > strong { line-height:vw(32); font-size:vw(30); font-weight:$semi-bold; }
 
     /* 멤버십 선택 */
@@ -480,8 +556,9 @@
 
     /* 신용카드 등록 */
     .credit_list {
-      padding:vw(30) 0 0;
+      padding:vw(30) 0 vw(50);
       .form_type01 { padding:0 0 vw(24); }
+      .form_type01:last-child { padding:0; }
     }
 
     /* 결제정보 확인 */
@@ -512,6 +589,7 @@
       .membership_disclaimer { padding:vw(22) 0 0 0; }
     }
     .payment_agree_wrap {
+      padding:vw(60) 0 0;
       .payment_agree_all {
         padding:vw(32) vw(42); background-color:$gray1; border-radius:vw(15);
         .form_type03_2 {
@@ -529,21 +607,37 @@
         }
       }
       .payment_agree_singly {
-        padding:vw(36) vw(40) 0 vw(44); overflow:hidden;
+        padding:vw(36) vw(20) 0 vw(44); overflow:hidden;
         .form_type03_1 {
           display:flex; padding:0 0 vw(30); justify-content:space-between; align-items:center;
           label {
             width:80%; font-size:vw(26); font-weight:$medium;
-            &:after { top:vw(-3); }
+            &:after { top:vw(-3); background-image:url(../../images/common/icon_chk_gray2.svg) }
           }
           .btn {
             width:vw(48); height:vw(48); text-indent:-999999px; background:url(../../images/common/icon_arrow3_gray.svg) center/cover no-repeat;
           }
-          input[type="checkbox"]:checked ~ .btn { background-image:url(../../images/common/icon_arrow3_black.svg); }
+          input[type="checkbox"]:checked ~ label:after { background-image:url(../../images/common/icon_chk_black.svg); }
+          /*input[type="checkbox"]:checked ~ .btn { background-image:url(../../images/common/icon_arrow3_black.svg); }*/
+          &:last-child { padding:0; }
         }
       }
 
       &.active .form_type03_2 button:after { @include rotate(90) }
+    }
+    .membership_field_wrap {
+      position:relative; padding:vw(30) 0 vw(78);
+      dt { margin:0 0 vw(30); }
+      strong { line-height:vw(32); font-size:vw(30); font-weight:$semi-bold; color:$gray9; }
+      .notification_type02 { margin:vw(14) 0 0; }
+      .correct_msg{
+        & + span { padding-bottom:vw(12); }
+        &:after { top:vw(102); }
+      }
+      .error_msg {
+        & + span { padding-bottom:vw(12); }
+      }
+      &:after { width:vw(720); height:vw(16); content:""; position:absolute; bottom:0; left:vw(-40); background-color:$gray05;  }
     }
 
     /* 등록된 결제 수단 */
@@ -605,7 +699,7 @@
         input[type=text]:disabled, input[type=password]:disabled { font-weight:$medium; }
       }
     }
-    .withdrawal_again { margin:vw(50) 0 vw(50) 0; }
+    .withdrawal_again { margin:vw(50) 0; }
   }
   .withderwal_chk_wrap {
     margin:0 0 vw(50);

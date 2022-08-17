@@ -2,7 +2,7 @@
 
 /* 로그인 */
 .login_form_wrap {
-  padding:vw(74) vw(40) vw(184);
+  padding:vw(74) vw(40) vw(120);
   .login_title {
     font-size:vw(44); line-height:vw(64); letter-spacing:vw(-0.6); color:$gray9; margin:0 0 vw(70);
     strong { font-weight:$bold; }
@@ -49,7 +49,7 @@
 
 /* 아이디 찾기 & 비밀번호 변경 */
 .find_idpw_wrap {
-   padding:vw(50) vw(40) vw(262); box-sizing:border-box; position:relative;
+   /*padding:vw(50) vw(40) vw(262);*/padding:vw(50) vw(40) 0; box-sizing:border-box; position:relative;
   .pass_chk {
     > p { font-size:vw(26); line-height:vw(40); letter-spacing:vw(-0.6); margin:0 0 vw(40) }
     .user_id {
@@ -67,7 +67,7 @@
     }
   }
   .btn_wrap {
-    width:100%; position:fixed; bottom:vw(120); left:0; box-sizing:border-box; padding:0 vw(40);
+    padding:vw(100) 0 vw(120); /*width:100%; position:fixed; bottom:vw(120); left:0; box-sizing:border-box; padding:0 vw(40);*/
     &.btn_half {
       display:flex; justify-content:space-between;
       .btn_default { width:calc(50% - 0.83333vw) }
@@ -77,7 +77,7 @@
 
 /* 비밀번호 변경완료 */
 .pw_change_done {
-  padding:vw(74) vw(40);
+  padding:vw(74) vw(40) vw(120);
   .title_wrap {
     margin:0 0 vw(168);
     p { font-size:vw(44); line-height:vw(64); color:$gray9; letter-spacing:vw(-0.6); padding:0 0 vw(34) }
@@ -88,14 +88,14 @@
 
 /* 회원가입 */
 .signup_wrap {
-  padding:0 0 vw(262); position:relative;
+  /*padding:0 0 vw(262);*/ position:relative;
   .signup_content {
     padding:vw(40) vw(40) 0;
     .signup_process {
       position:relative; display:flex; justify-content:space-between;
       &:before { width:100%; height:vw(6); background-color:$gray2; content:""; z-index:-1; position:absolute; top:vw(42); left:0; }
       li {
-        width:vw(90); font-size:vw(24); line-height:vw(35); padding:vw(106) 0 0; color:$gray4; position:relative;
+        width:vw(90); font-size:vw(24); line-height:vw(35); padding:vw(106) 0 0; color:$gray4; position:relative; white-space:nowrap;
         &:before,&:after { width:vw(90); position:absolute; left:0; }
         &:before { top:0; content:""; height:vw(90); background-color:$gray1; border-radius:100%; box-sizing:border-box; }
         &:after { top:vw(4); font-size:vw(36); line-height:vw(90); color:$gray4; text-align:center; font-weight:$bold; }
@@ -141,7 +141,7 @@
             &:after { top:vw(-3); }
           }
           & input[type="checkbox"]:checked + label { color: $gray9; }
-          & input[type="checkbox"]:checked ~ .btn { background-image:url(../../images/common/icon_arrow3_black.svg); }
+          /*& input[type="checkbox"]:checked ~ .btn { background-image:url(../../images/common/icon_arrow3_black.svg); }*/
         }
       }
     }
@@ -149,7 +149,7 @@
       padding:vw(70) 0 0;
       .form_type01 {
         margin:0 0 vw(24);
-        &:last-child { padding:0; }
+        &:last-child { margin:0; }
       }
     }
     .pass_chk {
@@ -171,7 +171,7 @@
     }
   }
   .btn_wrap_fix {
-    width:100%; position:fixed; bottom:vw(120); left:0; box-sizing:border-box; padding:0 vw(40); z-index:50;
+    box-sizing:border-box; padding:vw(100) vw(40) vw(120);/*width:100%; position:fixed; bottom:vw(120); left:0; box-sizing:border-box; padding:0 vw(40); z-index:50;*/
     &.btn_half {
       display:flex; justify-content:space-between;
       .btn_default { width:calc(50% - 0.83333vw) }
@@ -191,7 +191,7 @@
 
 /* 회원가입 완료 */
 .signup_done_wrap {
-  padding:vw(70) vw(40);
+  padding:vw(70) vw(40) vw(120);
   .done_title { font-size:vw(44); line-height:vw(64); letter-spacing:vw(-0.6); }
   .done_explanation { padding:vw(34) 0 vw(160); font-size:vw(28); line-height:vw(40); color:$gray7; }
   .join {
@@ -202,7 +202,7 @@
 
 /* 회원 리스트 */
 .member_wrap {
-  h2 { color:$gray9; font-size:vw(40); font-weight:$semi-bold; padding:vw(12) vw(40) vw(34); }
+  h2 { color:$gray9; font-size:vw(40); line-height:vw(64); font-weight:$semi-bold; padding:0 vw(40) vw(30); /*padding:vw(12) vw(40) vw(34);*/ }
   .member_menu {
     position:relative; padding:0 vw(40); display:flex;
     &:after { width:100%; height:vw(2); content:""; position:absolute; bottom:0; left:0; z-index:-1; background-color:$gray2; }
@@ -234,6 +234,10 @@
       }
     }
   }
+
+  /* 상단메뉴 fix */
+  padding:vw(192) 0 0;
+  .member_fix { width:100%; position:fixed; top:vw(120); left:0; z-index:91; background-color:$white; }
 }
 
 /* 회원 상세 */
@@ -299,8 +303,8 @@
 }
 
 /* 셀럽 회원가입 승인 상태 */
-.celeb_singup_wrap {
-  padding:vw(50) vw(40) vw(262); box-sizing:border-box; position:relative;
+.celeb_signup_wrap {
+  /*padding:vw(50) vw(40) vw(262);*/padding:vw(50) vw(40) 0; box-sizing:border-box; position:relative;
   .status_wrap {
     background-color:$gray1; padding:vw(40); border-radius:vw(20); margin:0 0 vw(21);
     strong {
@@ -321,23 +325,102 @@
     li { margin:vw(16) 0 0; }
     li:first-child { margin:0; }
     a { display:block; text-align:center; padding:vw(40) 0; background-color:$gray1; border-radius:vw(20); }
-    span { display:inline-block; font-size:vw(28); line-height:vw(40); position:relative; color:$gray9; font-weight:$semi-bold; letter-spacing:vw(-0.6); padding:0 0 0 vw(54) }
+    span { display:inline-block; font-size:vw(28); line-height:vw(40); position:relative; font-weight:$semi-bold; letter-spacing:vw(-0.6); padding:0 0 0 vw(54) }
     span:before { width:vw(40); height:vw(40); content:""; position:absolute; top:0; left:0; }
     li.ask_tel {
-      span { font-size:vw(32); }
-      span:before { background:url(../../images/common/icon_tel.svg) no-repeat 50% 50%; background-size:cover; }
+      a { background-color:$green1; }
+      span { font-size:vw(32); color:$white; letter-spacing:0 }
+      span:before { background:url(../../images/common/icon_tel_white.svg) no-repeat 50% 50%; background-size:cover; }
     }
-    li.ask_kakao span:before { background:url(../../images/common/icon_kakao.svg) no-repeat 50% 50%; background-size:cover; }
+    li.ask_kakao {
+      a { background-color:#fae100; }
+      span { color:$gray9; }
+      span:before { background:url(../../images/common/icon_kakao.svg) no-repeat 50% 50%; background-size:cover; }
+    }
   }
   .btn_wrap {
     box-sizing:border-box; padding:vw(100) 0 vw(120);
   }
 
   /* 버튼영역 fix 아닌경우 */
-  &.celeb_singup_wrap_none {
+  &.celeb_signup_wrap_none {
     padding:vw(50) vw(40) 0;
   }
   .btn_wrap_fix {
-    width:100%; position:fixed; bottom:vw(120); left:0; box-sizing:border-box; padding:0 vw(40);
+    /*width:100%; position:fixed; bottom:vw(120); left:0; box-sizing:border-box; padding:0 vw(40);*/
+    padding:vw(100) 0 vw(120);
+  }
+}
+
+/* 서비스 이용수칙 안내 팝업 */
+.popup_service_info {
+  width:100%; height:100%; position:fixed; top:0; left:0; letter-spacing:vw(-0.6); z-index:101; visibility:hidden; overflow:hidden;
+  .content_wrap {
+    width:100%; position:absolute; bottom:0; left:0; border-radius:vw(20) vw(20) 0 0; padding:vw(50) 0 0; background-color:$white;
+    @include translate(0, 100%);
+    @include transition(all, .5s, ease);
+    .popup_title_wrap {
+      position:relative; padding:0 vw(40); margin:0 0 vw(50);
+      > strong { display:block; font-size:vw(34); font-weight:$semi-bold; line-height:vw(48); }
+      .btn_popup_close {
+        position:absolute; top:50%; right:vw(40); width:vw(60); height:vw(60); text-indent:-999999999px; background:url(../../images/common/btn_page_close.svg) center/cover no-repeat;
+        @include translate(0, -50%);
+      }
+    }
+    .popup_cont_wrap {
+      padding:vw(20) vw(40) vw(50); max-height:40vh; overflow-y:auto; box-sizing:border-box;
+      > p { font-size:vw(24); line-height:vw(36); font-weight:$medium; }
+      .notification_type01 { margin:vw(30) 0 vw(40); color:$gray7; }
+      > strong { display:inline-block; font-size:vw(24); font-weight:$semi-bold; line-height:vw(36); }
+    }
+  }
+  .btn_wrap {
+    padding:vw(30) vw(40) vw(120); background-color:$white; /*box-shadow:0px -4px 12px 0px rgba(0,0,0,0.1);*/
+    &.btn_half {
+      display: flex; justify-content: space-between;
+      .btn_default { width:calc(50% - 0.83333vw) }
+    }
+  }
+
+  .dimmed {
+    width:100%; height:100%; background:rgba(0, 0, 0, .5); position:absolute; top:0; left:0; z-index:-1; opacity:0;
+    @include transition(all, .3s, ease);
+  }
+
+  &.active {
+    visibility:visible; overflow:visible;
+    .content_wrap { @include translate(0, 0); }
+    .dimmed { opacity:1; }
+  }
+}
+
+/* 이용정지 */
+.supension_wrap {
+  padding:vw(60) vw(40); letter-spacing:vw(-0.6);
+  > p > strong { display:block; font-size:vw(44); line-height:vw(64); font-weight:$medium; }
+  > p > span { display:block; font-size:vw(26); line-height:vw(40); color:$gray7; margin:vw(34) 0 0 }
+  > p > span strong { font-weight:$bold; }
+  .service_info {
+    background-color:$gray1; padding:vw(40); border-radius:vw(20); margin:vw(60) 0 0;
+    > p { font-size:vw(28); line-height:vw(46); }
+    > p strong { font-weight:$bold; }
+  }
+  .ask_wrap {
+    margin:vw(30) 0 0;
+    li { margin:vw(16) 0 0; }
+    li:first-child { margin:0; }
+    a { display:block; text-align:center; padding:vw(40) 0; border-radius:vw(20); }
+    span { display:inline-block; font-size:vw(28); line-height:vw(40); position:relative; font-weight:$semi-bold; letter-spacing:vw(-0.6); padding:0 0 0 vw(54) }
+    span:before { width:vw(40); height:vw(40); content:""; position:absolute; top:0; left:0; }
+    li.ask_tel {
+      a { background-color:$green1; }
+      span { font-size:vw(32); color:$white; letter-spacing:0; }
+      span:before { background:url(../../images/common/icon_tel_white.svg) no-repeat 50% 50%; background-size:cover; }
+    }
+    li.ask_kakao {
+      a { background-color:#fae100; }
+      span { color:$gray9; }
+      span:before { background:url(../../images/common/icon_kakao.svg) no-repeat 50% 50%; background-size:cover; }
+    }
   }
 }

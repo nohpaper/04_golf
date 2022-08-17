@@ -4,6 +4,10 @@ var winH;
 var $window = $(window);
 var winSc = $(window).scrollTop();
 
+var $navBtn = $(".btn_nav"),
+    $navWrap = $("#nav"),
+    $navCloseBtn = $(".btn_nav_close");
+
 var $bottomBar = $(".bottom_navi_wrap"),
     $requestBtn = $bottomBar.find(".btn_request");
 
@@ -28,8 +32,35 @@ $window.load(function () {
     customer();
 });
 function customer() {
+    var $marketingWrap = $(".marketing_wrap div");
+    $marketingWrap.on("click", function(){
+        $marketingWrap.toggleClass("active");
+    });
 }
 function join() {
+    // 조인 메뉴 고정
+    /*var $join = $(".join_wrap"),
+        $joinList = $(".join_list_wrap");
+
+    $(window).scroll(function(){
+        var $scrolltop = $(this).scrollTop();
+        var $headerH = $("#header").outerHeight(),
+            $joinTitleH = $(".sub_title_wrap2").outerHeight(),
+            $joinHeader = $(".join_top_wrap").outerHeight();
+
+        var _totalHeight = $headerH+$joinTitleH;
+
+        if($scrolltop < _totalHeight){
+            if($join.hasClass("join_wrap_fix")){
+                $join.removeClass("join_wrap_fix");
+                $joinList.css({"margin-top":0})
+            }
+        }else{
+            $join.addClass("join_wrap_fix");
+            $joinList.css({"margin-top":$joinHeader})
+        }
+    });*/
+
     // 정렬하기
     var $alignBtn = $(".btn_align"),
         $alignWrap = $(".align_wrap"),
@@ -45,27 +76,53 @@ function join() {
     // 필터
    var $filterBtn = $(".btn_filter"),
        $filterWrap = $(".filter_wrap"),
-       // $filterWrapBg = $(".filter_wrap .dimmed"),
+       $filterWrapBg = $(".filter_wrap .dimmed"),
        $filterCloseBtn = $(".filter_wrap .btn_close");
 
     $filterBtn.on("click", function(){
-        $("body,html").css({"overflow-y":"hidden"});
+        $("body,html").css({"overflow":"hidden"});
         $filterWrap.addClass("active");
     });
     $filterCloseBtn.on("click", function(){
-        $("body,html").css({"overflow-y":"auto"});
+        $("body,html").css({"overflow":"auto"});
+        $filterWrap.removeClass("active");
+    });
+    $filterWrapBg.on("click", function(){
+        $("body,html").css({"overflow":"auto"});
         $filterWrap.removeClass("active");
     });
 
     // 매칭 요청 팝업
     var $matchPopup = $(".popup_match_wrap");
     $(".match_btn").on("click", function(){
-        $("body,html").css({"overflow-y":"hidden"});
+        $("body,html").css({"overflow":"hidden"});
         $matchPopup.addClass("match_active");
     });
-    $(".popup_match_wrap .dimmed, .popup_match_wrap button").on("click", function(){
-        $("body,html").css({"overflow-y":"auto"});
+    $(".popup_match_wrap .dimmed, .popup_match_wrap .btn_popup_close").on("click", function(){
+        $("body,html").css({"overflow":"auto"});
         $matchPopup.removeClass("match_active");
+    });
+
+    // 매칭 안내 페이지 팝업
+    var $matchInfoPopup = $(".popup_match_info_wrap");
+    $(".match_info_btn").on("click", function(){
+        $("body,html").css({"overflow":"hidden"});
+        $matchInfoPopup.addClass("match_active");
+    });
+    $(".popup_match_info_wrap .dimmed, .popup_match_info_wrap .btn_popup_close").on("click", function(){
+        $("body,html").css({"overflow":"auto"});
+        $matchInfoPopup.removeClass("match_active");
+    });
+
+    // 조인 매칭 이용수칙 안내 팝업
+    var $matchGuidePopup = $(".popup_match_guide_wrap");
+    $(".match_guide_btn").on("click", function(){
+        $("body,html").css({"overflow":"hidden"});
+        $matchGuidePopup.addClass("match_active");
+    });
+    $(".popup_match_guide_wrap .dimmed, .popup_match_guide_wrap .btn_popup_close").on("click", function(){
+        $("body,html").css({"overflow":"auto"});
+        $matchGuidePopup.removeClass("match_active");
     });
 
     // 날짜선택
@@ -88,9 +145,10 @@ function join() {
     });
 
     //이미지 업로드 슬라이드
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        spaceBetween: 10,
+    var swiper = new Swiper(".silde_photo_wrap", {
+        // slidesPerView: 4,
+        // spaceBetween: 10,
+        slidesPerView: "auto",
         loop: false,
         navigation: {
             nextEl: ".swiper-button-next",
@@ -108,8 +166,26 @@ function join() {
         $textareaWrap.removeClass("focus");
     });
 
+    //후기 별점
+    var $star = $(".comments_star div button");
+    $star.on("click", function(){
+        $(this).parent().children('button').removeClass('active');
+        $(this).addClass('active').prevAll('button').addClass('active');
+    });
 }
 function layout() {
+    // nav
+    $navBtn.click(function(){
+        // TweenMax.to($navWrap, .3, { opacity:1, visibility:"visible" });
+        TweenMax.to($navWrap, .3, { left:0 });
+        TweenMax.to("body,html", .3, { "overflow-y":"hidden" });
+    });
+
+    $navCloseBtn.click(function(){
+        TweenMax.to($navWrap, .3, { left:"100vw" });
+        TweenMax.to("body,html", .3, { "overflow-y":"auto" });
+    });
+
     // bottomBar
     $requestBtn.on("click", function(){
         $bottomBar.toggleClass("navi_active");
@@ -129,11 +205,48 @@ function layout() {
     });
 }
 function main() {
+    var swiper_schedule = new Swiper(".schedule_slide", {
+        pagination: {
+            el: ".swiper-pagination"
+        },
+    });
+
+    var swiper_recuit = new Swiper(".recruit_slide", {
+        // spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination"
+        },
+    });
+
+    var swiper_review = new Swiper(".review_slide", {
+        pagination: {
+            el: ".swiper-pagination"
+        },
+    });
+
+    var swiper_review_photo = new Swiper(".review_photo_slide", {
+        slidesPerView: "auto",
+        loop: false,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 }
 function member() {
+    // 서비스 이용수칙 안내 팝업
+    var $serviePopup = $(".popup_service_info");
+    /*$(".service_info_btn").on("click", function(){
+        $("body,html").css({"overflow":"hidden"});
+        $serviePopup.addClass("active");
+    });*/
+    $(".popup_service_info .dimmed, .popup_service_info .btn_popup_close").on("click", function(){
+        $("body,html").css({"overflow":"auto"});
+        $serviePopup.removeClass("active");
+    });
 }
 function mypage() {
-    var $termsWrap = $(".payment_agree_wrap"),
+    /*var $termsWrap = $(".payment_agree_wrap"),
         $termsAllBtn = $(".payment_agree_all button"),
         $termsContent = $(".payment_agree_singly");
 
@@ -145,5 +258,5 @@ function mypage() {
             $termsWrap.addClass("active");
             TweenMax.to($termsContent, .3, {height: 0});
         }
-    });
+    });*/
 }

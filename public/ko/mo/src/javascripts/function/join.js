@@ -1,4 +1,27 @@
 function join() {
+    // 조인 메뉴 고정
+    /*var $join = $(".join_wrap"),
+        $joinList = $(".join_list_wrap");
+
+    $(window).scroll(function(){
+        var $scrolltop = $(this).scrollTop();
+        var $headerH = $("#header").outerHeight(),
+            $joinTitleH = $(".sub_title_wrap2").outerHeight(),
+            $joinHeader = $(".join_top_wrap").outerHeight();
+
+        var _totalHeight = $headerH+$joinTitleH;
+
+        if($scrolltop < _totalHeight){
+            if($join.hasClass("join_wrap_fix")){
+                $join.removeClass("join_wrap_fix");
+                $joinList.css({"margin-top":0})
+            }
+        }else{
+            $join.addClass("join_wrap_fix");
+            $joinList.css({"margin-top":$joinHeader})
+        }
+    });*/
+
     // 정렬하기
     var $alignBtn = $(".btn_align"),
         $alignWrap = $(".align_wrap"),
@@ -14,27 +37,53 @@ function join() {
     // 필터
    var $filterBtn = $(".btn_filter"),
        $filterWrap = $(".filter_wrap"),
-       // $filterWrapBg = $(".filter_wrap .dimmed"),
+       $filterWrapBg = $(".filter_wrap .dimmed"),
        $filterCloseBtn = $(".filter_wrap .btn_close");
 
     $filterBtn.on("click", function(){
-        $("body,html").css({"overflow-y":"hidden"});
+        $("body,html").css({"overflow":"hidden"});
         $filterWrap.addClass("active");
     });
     $filterCloseBtn.on("click", function(){
-        $("body,html").css({"overflow-y":"auto"});
+        $("body,html").css({"overflow":"auto"});
+        $filterWrap.removeClass("active");
+    });
+    $filterWrapBg.on("click", function(){
+        $("body,html").css({"overflow":"auto"});
         $filterWrap.removeClass("active");
     });
 
     // 매칭 요청 팝업
     var $matchPopup = $(".popup_match_wrap");
     $(".match_btn").on("click", function(){
-        $("body,html").css({"overflow-y":"hidden"});
+        $("body,html").css({"overflow":"hidden"});
         $matchPopup.addClass("match_active");
     });
-    $(".popup_match_wrap .dimmed, .popup_match_wrap button").on("click", function(){
-        $("body,html").css({"overflow-y":"auto"});
+    $(".popup_match_wrap .dimmed, .popup_match_wrap .btn_popup_close").on("click", function(){
+        $("body,html").css({"overflow":"auto"});
         $matchPopup.removeClass("match_active");
+    });
+
+    // 매칭 안내 페이지 팝업
+    var $matchInfoPopup = $(".popup_match_info_wrap");
+    $(".match_info_btn").on("click", function(){
+        $("body,html").css({"overflow":"hidden"});
+        $matchInfoPopup.addClass("match_active");
+    });
+    $(".popup_match_info_wrap .dimmed, .popup_match_info_wrap .btn_popup_close").on("click", function(){
+        $("body,html").css({"overflow":"auto"});
+        $matchInfoPopup.removeClass("match_active");
+    });
+
+    // 조인 매칭 이용수칙 안내 팝업
+    var $matchGuidePopup = $(".popup_match_guide_wrap");
+    $(".match_guide_btn").on("click", function(){
+        $("body,html").css({"overflow":"hidden"});
+        $matchGuidePopup.addClass("match_active");
+    });
+    $(".popup_match_guide_wrap .dimmed, .popup_match_guide_wrap .btn_popup_close").on("click", function(){
+        $("body,html").css({"overflow":"auto"});
+        $matchGuidePopup.removeClass("match_active");
     });
 
     // 날짜선택
@@ -57,9 +106,10 @@ function join() {
     });
 
     //이미지 업로드 슬라이드
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        spaceBetween: 10,
+    var swiper = new Swiper(".silde_photo_wrap", {
+        // slidesPerView: 4,
+        // spaceBetween: 10,
+        slidesPerView: "auto",
         loop: false,
         navigation: {
             nextEl: ".swiper-button-next",
@@ -77,4 +127,10 @@ function join() {
         $textareaWrap.removeClass("focus");
     });
 
+    //후기 별점
+    var $star = $(".comments_star div button");
+    $star.on("click", function(){
+        $(this).parent().children('button').removeClass('active');
+        $(this).addClass('active').prevAll('button').addClass('active');
+    });
 }

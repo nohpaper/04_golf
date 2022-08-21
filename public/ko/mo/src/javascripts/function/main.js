@@ -19,6 +19,8 @@ function main() {
     });
 
     var swiper_review_photo = new Swiper(".review_photo_slide", {
+        resistance: true,
+        resistanceRatio : 0,
         slidesPerView: "auto",
         loop: false,
         navigation: {

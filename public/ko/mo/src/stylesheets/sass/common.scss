@@ -123,7 +123,10 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 				&::-webkit-input-placeholder { color: $gray4; font-weight:$regular; } /* Edge */
 				&:-ms-input-placeholder { color: $gray4; font-weight:$regular; } /* Internet Explorer 10-11 */
 				&::placeholder { color: $gray4; font-weight:$regular; }
-				&:disabled { background-color:$gray2; color:$gray4; border-color:$gray2; }
+				&:disabled {
+					background-color:$gray2; color:$gray5; border-color:$gray2;
+					@include opacity(1);
+				}
 			}
 			input[type=time] {
 				width:100%; font-size:vw(26); line-height:vw(38); min-height:vw(98); padding:vw(26) vw(30); border-radius:vw(16); color:$gray9; border:vw(2) solid $gray1; background-color:$gray1; box-sizing:border-box; letter-spacing:vw(-0.6); font-weight:$semi-bold;
@@ -131,7 +134,10 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 				&::-webkit-input-placeholder { color: $gray4; font-weight:$regular; } /* Edge */
 				&:-ms-input-placeholder { color: $gray4; font-weight:$regular; } /* Internet Explorer 10-11 */
 				&::placeholder { color: $gray4; font-weight:$regular; }
-				&:disabled { background-color:$gray2; color:$gray4; border-color:$gray2; }
+				&:disabled {
+					background-color:$gray2; color:$gray5; border-color:$gray2;
+					@include opacity(1);
+				}
 
 				/* ios */
 				&::-webkit-date-and-time-value { text-align:left; }
@@ -147,7 +153,10 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 				&:focus { outline:none; background-color:$white; border-color:$black; color:$gray9; }
 				&:visited { color:$gray9; }
 				&.validField { color:$gray9; font-weight:$semi-bold; }
-				&:disabled { background-color:$gray2; color:$gray4; border-color:$gray2; }
+				&:disabled {
+					background-color:$gray2; color:$gray5; border-color:$gray2;
+					@include opacity(1);
+				}
 			}
 			textarea {
 				width:100%; font-size:vw(26); line-height:vw(40); border-radius:vw(20); padding:vw(30) vw(36) vw(100); color:$gray9; font-weight:$semi-bold; border:vw(2) solid $gray1; background-color:$gray1; box-sizing:border-box;
@@ -180,7 +189,10 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 			&::-webkit-input-placeholder { color: $gray4; font-weight:$regular; } /* Edge */
 			&:-ms-input-placeholder { color: $gray4; font-weight:$regular; } /* Internet Explorer 10-11 */
 			&::placeholder { color: $gray4; font-weight:$regular; }
-			&:disabled { background-color:$gray2; color:$gray4; border-color:$gray2; }
+			&:disabled {
+				background-color:$gray2; color:$gray5; border-color:$gray2;
+				@include opacity(1);
+			}
 		}
 		> input[type=time] {
 			text-align:left; width:100%; font-size:vw(26); line-height:vw(38); min-height:vw(98); padding:vw(26) vw(30); border-radius:vw(16); color:$gray9; border:vw(2) solid $gray1; background-color:$gray1; box-sizing:border-box; letter-spacing:vw(-0.6); font-weight:$semi-bold;
@@ -188,7 +200,10 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 			&::-webkit-input-placeholder { color: $gray4; font-weight:$regular; } /* Edge */
 			&:-ms-input-placeholder { color: $gray4; font-weight:$regular; } /* Internet Explorer 10-11 */
 			&::placeholder { color: $gray4; font-weight:$regular; }
-			&:disabled { background-color:$gray2; color:$gray4; border-color:$gray2; }
+			&:disabled {
+				background-color:$gray2; color:$gray5; border-color:$gray2;
+				@include opacity(1);
+			}
 
 			/* ios */
 			&::-webkit-date-and-time-value { text-align:left; }
@@ -204,7 +219,10 @@ legend {width:0; height:0; overflow:hidden; display:inline-block; text-indent:-9
 			&:focus { outline:none; background-color:$white; border-color:$black; color:$gray9; }
 			&:visited { color:$gray9; }
 			&.validField { color:$gray9; font-weight:$semi-bold; }
-			&:disabled { background-color:$gray2; color:$gray4; border-color:$gray2; }
+			&:disabled {
+				background-color:$gray2; color:$gray5; border-color:$gray2;
+				@include opacity(1);
+			}
 		}
 		&.correct_msg {
 			position:relative;

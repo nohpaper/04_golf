@@ -355,7 +355,7 @@
 }
 
 /* 매칭 요청하기 팝업 & 조인 매칭 안내 페이지 & 조인 매칭 이용 수칙 안내 */
-.popup_match_wrap, .popup_match_info_wrap, .popup_match_guide_wrap {
+.popup_match_wrap, .popup_match_info_wrap, .popup_match_guide_wrap, .popup_celeb_match_guide_wrap {
   width:100%; height:100%; position:fixed; top:0; left:0; letter-spacing:vw(-0.6); z-index:101; visibility:hidden; overflow:hidden;
   .content_wrap {
     width:100%; position:absolute; bottom:0; left:0; border-radius:vw(20) vw(20) 0 0; padding:vw(50) 0 0; background-color:$white;
@@ -571,7 +571,7 @@
   }
   .field_btn_wrap02 { padding:vw(30) 0 0;
     > button:nth-child(n+2) { margin:vw(12) 0 0; } }
-  .notification_type01 { margin:vw(35) 0 0; }
+  .notification_type01 { margin:vw(30) 0 0; }
   .match_inner_notification { margin:vw(100) 0 0; }
   .field_guidance {
     position:relative; padding:vw(24) vw(0) vw(19) vw(90); margin:vw(40) 0 vw(10); background-color:$gray1; border-radius:vw(50); font-size:vw(24); line-height:vw(38); font-weight:$semi-bold;
@@ -827,7 +827,7 @@
 
 /* 달력 */
 .ui-datepicker {
-  width:vw(600); display:none; position:fixed !important; top:50% !important; left:50% !important; padding:vw(60) vw(30) vw(40); box-sizing:border-box; border-radius:vw(20); background-color:$white; z-index:5 !important; letter-spacing:vw(-0.6);
+  width:vw(600); display:none; position:fixed !important; top:50% !important; left:50% !important; padding:vw(60) vw(30) vw(40); box-sizing:border-box; border-radius:vw(20); background-color:$white; z-index:92 !important; letter-spacing:vw(-0.6);
   @include translate(-50%, -50%);
   .ui-datepicker-header {
     margin:0 0 vw(60); position:relative; text-align:center;
@@ -863,4 +863,4 @@
     }
   }
 }
-.datepicker_dimmed { width:100vw; height:100vh; background:rgba(0, 0, 0, 0.5); position:fixed; top:0; left:0; z-index:1; }
+.datepicker_dimmed { width:100vw; height:100vh; background:rgba(0, 0, 0, 0.5); position:fixed; top:0; left:0; z-index:91; }

@@ -86,6 +86,17 @@ function join() {
         $matchGuidePopup.removeClass("match_active");
     });
 
+    // 조인 매칭 이용수칙 안내 팝업 (셀럽)
+    var $matchCelebGuidePopup = $(".popup_celeb_match_guide_wrap");
+    $(".match_celeb_guide_btn").on("click", function(){
+        $("body,html").css({"overflow":"hidden"});
+        $matchCelebGuidePopup.addClass("match_active");
+    });
+    $(".popup_celeb_match_guide_wrap .dimmed, .popup_celeb_match_guide_wrap .btn_popup_close").on("click", function(){
+        $("body,html").css({"overflow":"auto"});
+        $matchCelebGuidePopup.removeClass("match_active");
+    });
+
     // 날짜선택
     $(".datepicker").datepicker({
         dateFormat: 'yy.mm.dd (D)',

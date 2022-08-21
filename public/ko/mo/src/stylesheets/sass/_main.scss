@@ -67,9 +67,11 @@
     &.bg_winter:after { background-image:url(../../images/main/recruit_bg_winter.svg); }
   }
   .review_wrap {
-    overflow:hidden;
-    padding:vw(60) vw(40) vw(72); margin:0 0 vw(80); position:relative; min-height:vw(732); box-sizing:border-box;
-    .recruit_slide { overflow:hidden; }
+    overflow:hidden; padding:vw(60) 0 vw(72); margin:0 0 vw(80); position:relative; min-height:vw(732); box-sizing:border-box;
+    > strong { padding:0 vw(40) vw(35) }
+    .review_slide { overflow:hidden; }
+    .review_slide .swiper-slide { padding:0 vw(40); box-sizing:border-box; }
+    .review_photo_slide .swiper-slide { padding:0; }
     .swiper-pagination { bottom:vw(20); }
     .swiper-pagination-bullet {
       width:vw(12); height:vw(12); margin:0 vw(6) !important; background-color:$gray2;
@@ -202,7 +204,7 @@
       padding:vw(20) 0 0;
       @extend %clearfix;
       > div {
-        width:vw(12.1); height:vw(22); float: left; text-indent:-9999px; background-position:center; background-size:100%; background-repeat:no-repeat;
+        width:vw(12); height:vw(22); float: left; text-indent:-9999px; background-position:center; background-size:100%; background-repeat:no-repeat;
         &:nth-of-type(odd) {
           background-image: url(../../images/join/star_off1.svg);
           &.active { background-image: url(../../images/join/star_on1.svg); }

@@ -481,7 +481,7 @@
     }
   }
   .referral_code {
-    margin:vw(70) 0 0;
+    margin:vw(90) 0 0;
     .title_wrap {
       display:flex; align-items:center; margin:0 0 vw(34);
       strong { font-size:vw(30); font-weight:$semi-bold; }
@@ -492,9 +492,14 @@
       }
     }
     .code_wrap {
-      display:flex; background-color:$gray1; border-radius:vw(20); padding:vw(40) vw(35); align-items:center; justify-content:center;
+      position:relative; display:flex; background-color:$gray1; border-radius:vw(20); padding:vw(40) vw(35); align-items:center; justify-content:center;
       strong { color:$gray9; font-size:vw(30); font-weight:$semi-bold; margin:0 vw(16) 0 0 }
       button { font-size:vw(23); padding:vw(10) vw(20); font-weight:$semi-bold; color:$gray7; background-color:$white; border-radius:vw(10) }
+      .copied_txt {
+        width:100%; padding:vw(26) 0; text-align:center; border-radius:vw(10); position:absolute; top:vw(200); left:0; color:$white; font-size:vw(26); font-weight:$medium; background-color:rgba(1, 5, 9, 0.8); visibility:hidden;
+        @include opacity(0);
+        @include translate(0, 150%);
+      }
     }
   }
 
@@ -751,9 +756,86 @@
     }
     &.list_no {
       display:flex; justify-content:center; align-content:center; align-items: center;
-      > div { padding:vw(229) 0; }
-      > div > img { width:vw(235); display:block; margin:0 auto; }
-      > div > p { padding:vw(42) 0 0; font-size: vw(26); font-weight:$medium; text-align:center; line-height: vw(38); color:$gray5; }
+      > div { padding:vw(150) 0; }
+      > div > img { width:vw(298 ); display:block; margin:0 auto; }
+      > div > p { padding:vw(50) 0 0; font-size: vw(26); font-weight:$medium; text-align:center; line-height: vw(38); color:$gray5; }
     }
+  }
+}
+
+/* 셀럽페이 환전 */
+.exchange_wrap {
+  .sub_title_wrap {
+    position:relative; margin:0 0 vw(50); padding:0 vw(40);
+    h2 { color:$gray9; font-size:vw(40); line-height:vw(64); font-weight:$semi-bold; }
+    .exchange_btn {
+      position:absolute; top:0; right:vw(40); padding:vw(17) vw(56) vw(13) vw(20);font-size:vw(24); font-weight:$medium; line-height:vw(32); color:$gray7; background-color:#F5F6F7; border-radius:vw(10);
+      &:after { width:vw(48); height:vw(48); content:""; position:absolute; top:vw(8); right:vw(8); background:url(../../images/common/icon_arrow2.svg) center/100% no-repeat; }
+    }
+  }
+  /* 셀럽페이 환전 요청 */
+  .exchange_celeb {
+    padding:0 vw(40) vw(260); letter-spacing:vw(-0.6);
+    li {
+      padding:vw(20) 0; margin:0 0 vw(30);
+      > p { font-size:vw(30); line-height:vw(32); font-weight:$medium; color:$gray7; }
+      > strong {
+        display:block; padding:vw(18) 0 0 0; font-size:vw(50); line-height:vw(60); font-weight:$bold;
+        span { font-weight:$medium; }
+      }
+      > div {
+        position:relative; border-bottom:vw(2) solid $gray4;
+        input {
+          width:vw(400); margin:vw(22) 0 vw(20); padding:0; font-size:vw(50); line-height:vw(60); font-weight:$bold;
+          &:focus, &:focus-visible { outline:0; }
+          &::placeholder { color:$gray4; font-weight:$medium; }
+        }
+        .txt_delete {
+          width:vw(40); height:vw(40); position:absolute; top:50%; right:vw(28); text-indent:-9999px; visibility:hidden; background:url(../../images/mypage/icon_delete_all.svg) center /100%;
+          @include translate(0, -50%);
+          &.active { visibility:inherit; }
+        }
+        &.error_msg {
+          border-color:$red;
+          input { color:$red; }
+          & ~ span { display:block; padding:vw(11) 0 0; font-size:vw(24); line-height:vw(36); color:$red; }
+        }
+
+      }
+    }
+    &:last-child { margin:0; }
+  }
+
+  /* 셀럽페이 환전내역 */
+  .exchange_list {
+    padding:0 vw(40);
+    > div {
+      padding:vw(26) 0; background-color:$gray1; border-radius:vw(16); text-align:center; font-size: vw(24); font-weight:$medium;
+      line-height: vw(36);
+      strong { font-weight:$semi-bold; }
+    }
+    ul {
+      padding:vw(60) 0 0;
+      li {
+        display:flex; justify-content:space-between; padding:vw(40) 0; letter-spacing:vw(-0.6); border-bottom:vw(2) solid $gray2;
+        > p {
+          width:vw(410);
+          strong { display:block; font-size:vw(30); line-height:vw(42); font-weight:$semi-bold; }
+          span { display:block; padding:vw(10) 0 0; font-size:vw(26); line-height:vw(32); font-weight:$medium; color:$gray5; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+        }
+        > span {
+          line-height:vw(42); font-size:vw(28); text-align:right;
+          em { font-size:vw(32); font-weight:$bold; }
+        }
+      }
+
+    }
+  }
+
+  /* 셀럽 페이 버튼 */
+  .exchange_btn {
+    padding:0 vw(40) vw(120);
+    &.btn_wrap_fix { position:fixed; bottom:0; }
+    .btn_default { margin:vw(50) 0 0; }
   }
 }

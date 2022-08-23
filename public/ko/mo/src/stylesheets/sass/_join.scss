@@ -781,7 +781,6 @@
   }
   .comments_write_btn {
     width:100%; padding:vw(10) 0 0; text-align:center;
-    /*&.active { padding-bottom:vw(300); }*/
     &.fix { position:fixed; bottom:vw(120); left:0; z-index: 10; }
     button { padding:vw(20) vw(50); background-color:rgba(1,5,9,.7); border-radius:vw(50); font-size:vw(26); line-height:vw(38); color:$white; letter-spacing:vw(-1); }
   }

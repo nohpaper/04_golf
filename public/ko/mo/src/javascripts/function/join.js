@@ -145,35 +145,28 @@ function join() {
 
 
     //댓글 부분
-    var writeBtnScrollWrap;
-    var $writeBtnWrap = $(".comments_write_btn, .comments_write_fix");
-    var commentsWrap = $(".comments_wrap").offset().top;
+    var $writeBtnWrap = $(".comments_write_fix");
+    var commentsWrap = $(".field_wrap02").offset().top;
 
+    commentsWriteBtnShow();
     $(window).scroll(function(){
-        if (winSc >= (commentsWrap - 500)){ //사진까지 나오는 댓글 높이 vw값만큼 빼기
-            $(".comments_write_btn").addClass("fix");
-        }else {
-            $(".comments_write_btn").removeClass("fix");
-        }
+        commentsWriteBtnShow();
     });
-    if (winSc >= (commentsWrap - 500)){ //사진까지 나오는 댓글 높이 vw값만큼 빼기
-        $(".comments_write_btn").addClass("fix");
-    }else {
-        $(".comments_write_btn").removeClass("fix");
-    }
-    $(".comments_write_btn button").click(function(){
-        writeBtnScrollWrap = $(document).height();
 
+    $(".comments_write_btn button, .comments_btn_wrap .btn_comments").click(function(){
         $writeBtnWrap.addClass("active");
-        $("body, html").css("overflow-y", "hidden");
-       /* $("body, html").css("scroll-behavior", "smooth");
-        $("body, html").animate({
-            scrollTop : writeBtnScrollWrap
-        },10);*/
     });
     $(".comments_write_fix .btn_close").click(function(){
         $writeBtnWrap.removeClass("active");
-        $("body, html").css("overflow-y", "auto");
-        /*$("body, html").css("scroll-behavior", "auto");*/
     });
+
+
+    function commentsWriteBtnShow(){
+        if (winSc >= (commentsWrap)){
+            $(".comments_write_btn").addClass("fix");
+
+        }else {
+            $(".comments_write_btn").removeClass("fix");
+        }
+    }
 }

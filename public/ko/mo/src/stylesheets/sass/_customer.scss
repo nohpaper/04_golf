@@ -217,6 +217,7 @@
     /* 채팅 입력 */
     .chat_write {
       padding:vw(20) vw(40) vw(160); background-color:$white; box-sizing:border-box;
+      @include transition();
       .write_frm {
         position:relative; font-size:0;
         textarea {
@@ -225,10 +226,15 @@
           &:-ms-input-placeholder { color: $gray4; } /* Internet Explorer 10-11 */
           &::placeholder { color: $gray4; }
           &:focus { outline:none; }
+          @include transition();
         }
         .btn_write { font-size:vw(24); padding:vw(16) vw(20) vw(12); background-color:$gray1; color:$gray9; position:absolute; bottom:vw(26); right:vw(30); visibility:hidden; border-radius:vw(10); font-weight:$medium; }
         .btn_write:disabled { background-color:$gray2; color:$gray4; }
       }
+
+      &.keyup { padding:vw(20) vw(40) }
+      &.keyup textarea { height:vw(120); overflow-y:auto; border-color:$gray9; background-color:$white; }
+      &.keyup .btn_write { visibility:visible; }
 
       &.active { padding:vw(20) vw(40) vw(120) }
       &.active textarea { height:vw(120); overflow-y:auto; border-color:$gray9; background-color:$white; }

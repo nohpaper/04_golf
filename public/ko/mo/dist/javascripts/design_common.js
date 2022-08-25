@@ -36,6 +36,35 @@ function customer() {
     $marketingWrap.on("click", function(){
         $marketingWrap.toggleClass("active");
     });
+
+    /* 채팅 입력란 */
+    var $chatWrite = $(".chat_write"),
+        $chatBtn = $(".chat_write .btn_write"),
+        $chatTextArea = $(".chat_write textarea");
+
+    $chatTextArea.on({
+        focus: function() {
+            $chatWrite.addClass("keyup");
+        },
+        keyup: function() {
+            $chatWrite.addClass("keyup");
+            if($chatTextArea.val() !== ""){
+                $chatBtn.removeAttr("disabled");
+            }else{
+                $chatWrite.removeClass("active");
+                $chatBtn.attr("disabled","disabled")
+            }
+        },
+        blur: function() {
+            $chatWrite.removeClass("keyup");
+
+            if($chatTextArea.val() !== ""){
+                $chatWrite.addClass("active");
+            }else{
+                $chatWrite.removeClass("active");
+            }
+        }
+    });
 }
 function join() {
     // 조인 메뉴 고정
@@ -182,30 +211,31 @@ function join() {
         $starWrap.addClass("star_active_"+_idx);
     });
 
-
     //댓글 부분
-    var $writeBtnWrap = $(".comments_write_fix");
-    var commentsWrap = $(".field_wrap02").offset().top;
+    var $fieldReply = $(".field_reply"),
+        $replyWriteWrap = $(".reply_write_wrap"),
+        $replyWriteBtn = $(".reply_write_btn_wrap");
 
-    commentsWriteBtnShow();
-    $(window).scroll(function(){
+    $(".reply_write_btn_wrap button, .reply_btn_wrap .btn_comments").click(function(){
+        $replyWriteWrap.addClass("active");
+    });
+    $(".reply_write_wrap .btn_close").click(function(){
+        $replyWriteWrap.removeClass("active");
+    });
+
+    if($fieldReply.length > 0) {
         commentsWriteBtnShow();
-    });
-
-    $(".comments_write_btn button, .comments_btn_wrap .btn_comments").click(function(){
-        $writeBtnWrap.addClass("active");
-    });
-    $(".comments_write_fix .btn_close").click(function(){
-        $writeBtnWrap.removeClass("active");
-    });
-
+        $(window).scroll(function () {
+            commentsWriteBtnShow();
+        });
+    }
 
     function commentsWriteBtnShow(){
-        if (winSc >= (commentsWrap)){
-            $(".comments_write_btn").addClass("fix");
-
+        var _replySectionPos = $fieldReply.offset().top;
+        if (winSc > ((_replySectionPos - winH) * 1.2) && $(".reply_items").length > 0){
+            $replyWriteBtn.addClass("fix");
         }else {
-            $(".comments_write_btn").removeClass("fix");
+            $replyWriteBtn.removeClass("fix");
         }
     }
 }

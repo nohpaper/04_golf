@@ -38,7 +38,8 @@
       }
     }
     .schedule_slide { overflow:hidden; }
-    .notification_type03 { margin:0 0 vw(20);  }
+    .notification_type03 { margin:0 0 vw(20); padding:vw(20) vw(30) vw(24); text-align:left; }
+    .notification_type03 span:before { margin:vw(-2) 0 0; }
     .swiper-slide { padding:0 vw(40); box-sizing:border-box; }
     .swiper-pagination { bottom:vw(20); }
     .swiper-pagination-bullet {
@@ -211,17 +212,17 @@
       }
     }
     .review_star_wrap {
-      width:vw(170); height:vw(29); margin:vw(20) 0 0; text-indent:-9999px; background:url(../../images/join/star.svg) no-repeat 0 0; background-size:vw(170) vw(347);
-      &.star_active_1 { background-position:50% vw(-31.75) }
-      &.star_active_2 { background-position:50% vw(-63.5) }
-      &.star_active_3 { background-position:50% vw(-95.25) }
-      &.star_active_4 { background-position:50% vw(-127) }
-      &.star_active_5 { background-position:50% vw(-158.75) }
-      &.star_active_6 { background-position:50% vw(-190.5) }
-      &.star_active_7 { background-position:50% vw(-222.25) }
-      &.star_active_8 { background-position:50% vw(-254) }
-      &.star_active_9 { background-position:50% vw(-285.75) }
-      &.star_active_10 { background-position:50% vw(-317.5) }
+      width:vw(144); height:vw(22); margin:vw(20) 0 0; text-indent:-9999px; background:url(../../images/join/star.svg) no-repeat 0 0; background-size:vw(144) vw(280);
+      &.star_active_1 { background-position:50% vw(-25.75) }
+      &.star_active_2 { background-position:50% vw(-51.5) }
+      &.star_active_3 { background-position:50% vw(-77.25) }
+      &.star_active_4 { background-position:50% vw(-103) }
+      &.star_active_5 { background-position:50% vw(-128.75) }
+      &.star_active_6 { background-position:50% vw(-154.5) }
+      &.star_active_7 { background-position:50% vw(-180.25) }
+      &.star_active_8 { background-position:50% vw(-206) }
+      &.star_active_9 { background-position:50% vw(-231.75) }
+      &.star_active_10 { background-position:50% vw(-257.5) }
       /*@extend %clearfix;
       > div {
         width:vw(12); height:vw(22); float: left; text-indent:-9999px; background-position:center; background-size:100%; background-repeat:no-repeat;
@@ -237,11 +238,11 @@
       }*/
     }
     .review_value_wrap {
-      padding:vw(32) 0 0;
-      span { padding:vw(12) vw(20); letter-spacing:vw(-0.6); font-size:vw(24); font-weight:$medium; line-height:vw(32); background-color:$gray1; border-radius:vw(50); }
+      padding:vw(20) 0 0;
+      span { display:inline-block; padding:vw(10) vw(20) vw(6); letter-spacing:vw(-0.6); font-size:vw(24); font-weight:$medium; line-height:vw(32); background-color:$gray1; border-radius:vw(50); }
     }
     .review_photo_slide {
-      position:relative; overflow: hidden; margin:vw(40) 0 0;
+      position:relative; overflow: hidden; margin:vw(34) 0 0;
       .swiper-slide { /*width:vw(160); height:vw(160); background-position:center; background-size:100% auto; background-repeat:no-repeat;*/ border-radius:vw(10); overflow:hidden; }
       .swiper-slide { width:vw(160); margin:0 vw(10) 0 0; }
       .swiper-slide img { width:100%; }
@@ -366,7 +367,7 @@
             display:inline-block; font-size:vw(24); line-height:vw(32); font-weight:$regular; color:$gray5; position:relative; padding:0 0 0 vw(12); margin:0 0 0 vw(6);
             &:first-child { margin:0; padding:0; }
             &:first-child:before { display:none; }
-            &:before { content:""; width:vw(6); height:vw(6); background-color:$gray2; border-radius:100%; position:absolute; top:vw(12); left:0; }
+            &:before { content:""; width:vw(6); height:vw(6); background-color:$gray4; border-radius:100%; position:absolute; top:vw(12); left:0; }
           }
         }
       }
@@ -374,23 +375,23 @@
   }
   .review_value_wrap {
     padding:vw(8) 0 0;
-    span { display:inline-block; padding:vw(12) vw(20); margin:vw(12) 0 0; letter-spacing:vw(-0.6); font-size:vw(24); font-weight:$medium; line-height:vw(32); background-color:$gray1; border-radius:vw(50); }
+    span { display:inline-block; padding:vw(10) vw(20) vw(6); margin:vw(12) 0 0; letter-spacing:vw(-0.6); font-size:vw(24); font-weight:$medium; line-height:vw(32); background-color:$gray1; border-radius:vw(50); }
   }
   .review_wrap {
     .review_items {
       position:relative; padding:vw(50) vw(40) vw(50); border-bottom:vw(16) solid $gray05;
       .review_star_wrap {
-        width:vw(170); height:vw(29); margin:vw(20) 0 0; text-indent:-9999px; background:url(../../images/join/star.svg) no-repeat 0 0; background-size:vw(170) vw(347);
-        &.star_active_1 { background-position:50% vw(-31.75) }
-        &.star_active_2 { background-position:50% vw(-63.5) }
-        &.star_active_3 { background-position:50% vw(-95.25) }
-        &.star_active_4 { background-position:50% vw(-127) }
-        &.star_active_5 { background-position:50% vw(-158.75) }
-        &.star_active_6 { background-position:50% vw(-190.5) }
-        &.star_active_7 { background-position:50% vw(-222.25) }
-        &.star_active_8 { background-position:50% vw(-254) }
-        &.star_active_9 { background-position:50% vw(-285.75) }
-        &.star_active_10 { background-position:50% vw(-317.5) }
+        width:vw(144); height:vw(22); margin:vw(20) 0 0; text-indent:-9999px; background:url(../../images/join/star.svg) no-repeat 0 0; background-size:vw(144) vw(280);
+        &.star_active_1 { background-position:50% vw(-25.75) }
+        &.star_active_2 { background-position:50% vw(-51.5) }
+        &.star_active_3 { background-position:50% vw(-77.25) }
+        &.star_active_4 { background-position:50% vw(-103) }
+        &.star_active_5 { background-position:50% vw(-128.75) }
+        &.star_active_6 { background-position:50% vw(-154.5) }
+        &.star_active_7 { background-position:50% vw(-180.25) }
+        &.star_active_8 { background-position:50% vw(-206) }
+        &.star_active_9 { background-position:50% vw(-231.75) }
+        &.star_active_10 { background-position:50% vw(-257.5) }
         /*@extend %clearfix;
         > div {
           width:vw(12.1); height:vw(22); float: left; text-indent:-9999px; background-position:center; background-size:100%; background-repeat:no-repeat;
@@ -406,7 +407,7 @@
         }*/
       }
       .silde_photo_wrap {
-        position:relative; overflow: hidden; margin:vw(40) 0 0;
+        position:relative; overflow: hidden; margin:vw(34) 0 0;
         .swiper-slide { width:vw(160); height:vw(160); margin:0 vw(10) 0 0; background-position:center; background-size:100% auto; background-repeat:no-repeat; border-radius:vw(10); overflow:hidden; }
         .swiper-button-next, .swiper-button-prev {
           width:vw(65); height:vw(64); margin:0;

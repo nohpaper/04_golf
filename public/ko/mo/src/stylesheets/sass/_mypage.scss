@@ -88,7 +88,7 @@
     > div {
       margin:vw(50) 0 0; padding:vw(50) 0 0; border-top:vw(2) solid $gray2;
       &:first-child { padding:0; margin:0; border:none; }
-      > strong { display:block; font-size:vw(32); line-height:vw(52); margin:0 0 vw(29); }
+      > strong { display:block; font-size:vw(30); line-height:vw(52); margin:0 0 vw(29); font-weight:$semi-bold; }
     }
     .photo {
       margin:0 0 vw(25); display:flex; flex-wrap:wrap;
@@ -97,7 +97,7 @@
         &:last-child { margin:0; }
         &.my_pick {
           position:relative;
-          &:before { content:"대표"; padding:vw(8) vw(12); font-size:vw(20); border-radius:vw(10) 0; font-weight:$medium; background-color:$green1; color:$white; display:inline-block; }
+          &:before { content:"대표"; position:absolute; top:0; left:0; padding:vw(10) vw(12) vw(6); font-size:vw(20); border-radius:vw(10) 0; font-weight:$medium; background-color:$green1; color:$white; display:inline-block; }
         }
       }
     }
@@ -122,6 +122,13 @@
     }
     .info_type03 {
       p { background-color:$gray1; border-radius:vw(20); padding:vw(30); font-size:vw(26); line-height:vw(40); color:$gray7; }
+    }
+    .info_type04 {
+      p {
+        font-size:vw(26); font-weight:$medium; color:$gray9; position:relative; padding:0 0 0 vw(337);
+        span { color:$gray5; position:absolute; top:0; left:0; }
+      }
+      .notification_type01 { margin:vw(30) 0 0; }
     }
   }
 
@@ -423,7 +430,7 @@
         margin:0 0 vw(39);
         dd {
           display:flex; justify-content: space-between;
-          input[type=text]:disabled, input[type=password]:disabled, { font-weight:$medium; font-size:vw(30); }
+          input[type=text]:disabled, input[type=password]:disabled, { font-weight:$medium; font-size:vw(28); }
         }
         &.account_password {
           #txt_password { /*width:vw(486);*/ width:calc(100% - 21.38889vw) }
@@ -720,7 +727,7 @@
       .form_type02 {
         margin:0 0 vw(40);
         &:last-child { margin:0; }
-        input[type=text], input[type=password] { font-family:$SUIT; font-size:vw(30) }
+        input[type=text], input[type=password] { font-family:$SUIT; font-size:vw(28) }
         input[type=text]:disabled, input[type=password]:disabled { font-weight:$medium; }
       }
     }

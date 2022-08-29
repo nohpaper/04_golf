@@ -285,6 +285,10 @@
         }
       }
     }
+    .secret_photo {
+      margin:0 0 vw(35); border-radius:vw(10); font-size:vw(20); line-height:vw(32); font-weight:$medium; color:$gray5; background-color:$gray1;
+      .secret_img { width:fit-content; margin:0 auto; padding:vw(100) 0 vw(25); background:url("../../images/member/icon_lock.svg") center 4vw/55% no-repeat; }
+    }
     .info_type01 {
       .info_list {
         li {

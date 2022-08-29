@@ -1147,6 +1147,10 @@ label, button { cursor: pointer; }
 
 .member_view_wrap .profile_details .photo li.my_pick:before { content: "대표"; padding: 1.11111vw 1.66667vw; font-size: 2.77778vw; border-radius: 1.38889vw 0; font-weight: 500; background-color: #00a789; color: #fff; display: inline-block; }
 
+.member_view_wrap .profile_details .secret_photo { margin: 0 0 4.86111vw; border-radius: 1.38889vw; font-size: 2.77778vw; line-height: 4.44444vw; font-weight: 500; color: #919599; background-color: #f5f6f7; }
+
+.member_view_wrap .profile_details .secret_photo .secret_img { width: fit-content; margin: 0 auto; padding: 13.88889vw 0 3.47222vw; background: url("../../images/member/icon_lock.svg") center 4vw/55% no-repeat; }
+
 .member_view_wrap .profile_details .info_type01 .info_list li { margin: 2.63889vw 0 0; position: relative; font-size: 3.33333vw; line-height: 5.55556vw; color: #c1c5c9; padding: 0 0 0 26.66667vw; }
 
 .member_view_wrap .profile_details .info_type01 .info_list li span { position: absolute; top: 0; left: 0; color: #919599; font-size: 3.61111vw; }
@@ -1391,7 +1395,7 @@ label, button { cursor: pointer; }
 
 .recruit_wrap .form_wrap .form_date dd button { float: right; width: 19.72222vw; font-size: 3.61111vw; line-height: 4.16667vw; text-align: center; padding: 5vw 0 4.44444vw; font-weight: 600; display: block; box-sizing: border-box; letter-spacing: -0.13889vw; color: #616569; position: relative; border-radius: 2.22222vw; background-color: #fff; }
 
-.recruit_wrap .form_wrap .form_date dd button:after { width: 100%; height: 100%; content: ""; border: 0.27778vw solid #c1c5c9; box-sizing: border-box; position: absolute; top: 0; left: 0; border-radius: 2.22222vw; }
+.recruit_wrap .form_wrap .form_date dd button:after { width: 100%; height: 100%; content: ""; border: 0.27778vw solid #e4e7ec; box-sizing: border-box; position: absolute; top: 0; left: 0; border-radius: 2.22222vw; }
 
 .recruit_wrap .form_wrap .form_date dd button:active:after { border-color: #616569; }
 
@@ -2479,13 +2483,13 @@ label, button { cursor: pointer; }
 
 .mypage_wrap .profile_details.profile_line { border-top: 2.22222vw solid #f2f5f8; padding: 6.94444vw 5.55556vw 33.61111vw; }
 
-.mypage_wrap .profile_details > div { margin: 6.94444vw 0 0; padding: 6.94444vw 0 0; border-top: 0.27778vw solid #e4e7ec; }
+.mypage_wrap .profile_details > div { margin: 8.33333vw 0 0; padding: 8.33333vw 0 0; border-top: 0.27778vw solid #e4e7ec; }
 
 .mypage_wrap .profile_details > div:first-child { padding: 0; margin: 0; border: none; }
 
 .mypage_wrap .profile_details > div > strong { display: block; font-size: 4.16667vw; line-height: 7.22222vw; margin: 0 0 4.02778vw; font-weight: 600; }
 
-.mypage_wrap .profile_details .photo { margin: 0 0 3.47222vw; display: flex; flex-wrap: wrap; }
+.mypage_wrap .profile_details .photo { margin: 0 0 2.77778vw; display: flex; flex-wrap: wrap; }
 
 .mypage_wrap .profile_details .photo li { width: 22.22222vw; height: 22.22222vw; margin: 0 1.38889vw 1.38889vw 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; overflow: hidden; border-radius: 1.38889vw; }
 
@@ -2502,6 +2506,10 @@ label, button { cursor: pointer; }
 .mypage_wrap .profile_details .info_type01 .info_list li strong { color: #010509; font-weight: 600; font-size: 3.61111vw; }
 
 .mypage_wrap .profile_details .info_type01 .info_list li:first-child { margin: 0; }
+
+.mypage_wrap .profile_details .info_type01 .info_list:nth-child(3) { padding: 0.69444vw 0 0; }
+
+.mypage_wrap .profile_details .info_type01 .info_list:nth-child(n+4) { padding: 5.55556vw 0 0; }
 
 .mypage_wrap .profile_details .info_type02 .info_list li { margin: 2.63889vw 0 0; position: relative; font-size: 3.61111vw; line-height: 5.55556vw; color: #010509; padding: 0 0 0 37.77778vw; color: #010509; font-weight: 600; }
 
@@ -2547,9 +2555,13 @@ label, button { cursor: pointer; }
 
 .mypage_wrap .profile_modify .photo .photo_list li .btn_delete_photo { position: absolute; top: 0; right: 0; width: 6.11111vw; height: 6.11111vw; text-indent: -9999px; background: url(../../images/common/btn_page_close_white.svg) no-repeat 50% 50% rgba(1, 5, 9, 0.4); background-size: cover; }
 
-.mypage_wrap .profile_modify .photo .noti_wrap { text-align: center; }
+.mypage_wrap .profile_modify .photo .noti_wrap .form_type03_2 { margin: 2.77778vw 0 0; }
 
-.mypage_wrap .profile_modify .photo .noti_wrap p { display: inline-block; }
+.mypage_wrap .profile_modify .photo .noti_wrap .form_type03_2 input ~ label { color: #616569; font-size: 3.61111vw; }
+
+.mypage_wrap .profile_modify .photo .noti_wrap .form_type03_2 input:checked ~ label { color: #010509; }
+
+.mypage_wrap .profile_modify .photo .noti_wrap .notification_type01 { margin: 5.27778vw 0 0; }
 
 .mypage_wrap .profile_modify .modify_forms > div { margin: 6.94444vw 0 0; }
 

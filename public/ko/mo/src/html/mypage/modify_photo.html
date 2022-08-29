@@ -2,10 +2,11 @@
     "pathDefault" : "../..",
     "scrollHidden" : ""
 })
-@@include("../../include/nav.html", {
-    "className" : "",
-    "logo" : ""
-})
+            <div class="page_wrap">
+                <div class="btn_align_left">
+                    <button type="button" class="btn_page_prev2">이전페이지로 이동</button>
+                </div>
+            </div>
             <!-- container -->
             <div class="mypage_wrap">
                 <div class="my_profile">
@@ -72,7 +73,14 @@
                                         </li>
                                     </ul>
                                     <div class="noti_wrap">
-                                        <p class="notification_type02">대표 프로필 사진은 필수이며, 최대 6장까지 등록이 가능해요.</p>
+                                        <div class="form_type03_2">
+                                            <input type="checkbox" id="check_secret" checked="">
+                                            <label for="check_secret">프로필 이미지 비공개</label>
+                                        </div>
+                                        <ul class="notification_type01">
+                                            <li>대표 프로필 사진은 필수이며, 최대 6장까지 등록이 가능해요.</li>
+                                            <li>프로필 이미지를 비공개 체크하면 다른 회원들에게는 사진이 공개되지 않아요. (섬네일 이미지는 작게 보여져요.)</li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="modify_forms">

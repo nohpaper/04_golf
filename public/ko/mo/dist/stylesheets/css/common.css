@@ -1317,6 +1317,8 @@ label, button { cursor: pointer; }
 
 .join_wrap .sub_title_wrap.sub_title_wrap2 { padding: 0 5.55556vw 4.16667vw; }
 
+.join_wrap .sub_title_wrap.sub_title_wrap3 { padding: 0 5.55556vw 6.94444vw; }
+
 .join_wrap .btn_wrap { margin: 6.94444vw 0 0; box-sizing: border-box; padding: 0 5.55556vw 16.66667vw; }
 
 .join_wrap .btn_wrap.btn_half { display: flex; justify-content: space-between; }

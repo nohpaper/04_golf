@@ -160,6 +160,10 @@
 .join_list_wrap {
   background-color:#eff1f4; padding:vw(232) vw(40) vw(200); letter-spacing:vw(-0.6); position:relative;
   &:after { width:100%; /*height:calc(100% - 32.5vw);*/height:100%; content:""; position:fixed; bottom:0; left:0; z-index:-2; background-color:#eff1f4; }
+  // 셀럽 동반 라운딩 이벤트
+  &.join_list_event { padding:vw(682) vw(40) vw(200); }
+  // 셀럽 동반 라운딩 이벤트 뷰 페이지
+  &.join_list_event_view { padding:vw(40); }
   &.join_list_wrap_none { padding:vw(232) vw(40) vw(40); border:1px solid yellow }
   // 나의 조인 현황 (모집,신청,매칭)
   &.join_list_wrap_user { padding:vw(328) vw(40) vw(40); }
@@ -179,6 +183,7 @@
   .join_type_field { color:#f88000; background-color:#fdf3e6 }
   .join_type_screen { color:#1e7fe7; background-color:#e6f0fd }
   .join_status { font-size:vw(20); font-weight:$medium; color:$white; border-radius:vw(8); padding:vw(10) vw(12) vw(8); }
+  .join_status_wait { background-color:#F5306B; }
   .join_status_ing { background-color:$green1; }
   .join_status_done { background-color:$gray5; }
   .join_status_cancel { background-color:$red }
@@ -201,6 +206,54 @@
 /* 상단메뉴 fix */
 .join_fix { width:100%; position:fixed; top:vw(120); left:0; z-index:91; background-color:$white; }
 
+/* 셀럽 동반 라운딩 이벤트 영역 */
+.join_celeb_event {
+  position:relative; letter-spacing:vw(-0.6); padding:0 0 0 vw(40); margin:vw(32) 0 0;
+  .title_wrap {
+    > strong {
+      position:relative; font-size:vw(32); line-height:vw(48); font-weight:$bold; color:$pink;
+      &:after { width:vw(41); height:vw(41); content:""; position:absolute; top:vw(-6); right:vw(-53); background:url(../../images/join/icon_event.svg) center/cover no-repeat; }
+    }
+    .btn_more {
+      position:absolute; top:vw(6); right:vw(40); font-size:vw(24); color:$gray5; font-weight:$medium; padding:0 vw(36) 0 0;
+      &:after { width:vw(36); height:vw(36); position:absolute; top:50%; right:0; margin:vw(-20) 0 0; content:""; background:url(../../images/common/icon_arrow4_gray.svg) no-repeat 50% 50%; background-size:cover; }
+    }
+  }
+  .celeb_event_slide {
+    padding:vw(36) 0 vw(108);
+    .swiper-slide {
+      width:vw(380); margin:0 vw(20) 0 0;
+      .celeb_event_item {
+        width:100%; display:inline-block; border-radius:vw(16);
+        &.celeb_event_field {
+          background-color:#FDF3E6;
+          .label_txt { background-color:#F88000; }
+        }
+        &.celeb_event_screen {
+          background-color:#E6F0FD;
+          .label_txt { background-color:#1E7FE7; }
+        }
+        .label_txt {
+          display:inline-block; padding:vw(14) vw(14) vw(9); font-size:vw(20); line-height:vw(21); font-weight:$bold; color:$white; border-radius:vw(16) 0 0 0;
+        }
+        .info_wrap {
+          padding:vw(20) vw(30) 0; box-sizing:border-box;
+          > strong { display:block; font-size:vw(30); line-height:vw(42); font-weight:$semi-bold; }
+          > span { display:block; padding:vw(8) 0 0 0; font-size:vw(26); line-height:vw(32); font-weight:$medium; color:$gray5; }
+        }
+        .status_wrap { padding:vw(30); }
+      }
+      &:last-child { margin:0; }
+    }
+    .swiper-pagination {
+      bottom:vw(60);
+      .swiper-pagination-bullet {
+        width:vw(12); height:vw(12); background-color:$gray5;
+        &.swiper-pagination-bullet-active { background-color:$green1; }
+      }
+    }
+  }
+}
 /* 조인 필터 및 탭메뉴 영역 */
 .join_top_wrap {
   letter-spacing:vw(-0.6); background-color:$white;

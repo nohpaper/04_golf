@@ -90,6 +90,16 @@ function join() {
         }
     });*/
 
+    //셀럽 동반 라운딩 이벤트
+    var swiper_celeb_event = new Swiper(".celeb_event_slide", {
+        resistance: true,
+        resistanceRatio : 0,
+        slidesPerView: "auto",
+        pagination: {
+            el: ".swiper-pagination"
+        },
+    });
+
     // 정렬하기
     var $alignBtn = $(".btn_align"),
         $alignWrap = $(".align_wrap"),
